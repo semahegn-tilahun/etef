@@ -328,8 +328,8 @@ function Home() {
       <section className="section intro-section">
         <div className="container">
           <SectionHeading
-            eyebrow="ETEF"
-            title="About Us"
+            eyebrow="About Us"
+            title="ETEF"
             text="The ETEF website brings institutional information, membership access, events, opportunities and official contact channels together in one trusted public platform."
           />
           <div className="intro-grid">
