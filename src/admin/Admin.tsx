@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { api, API_ORIGIN } from "../api";
 import { useAuth } from "../auth/AuthContext";
+import logo from "../asset/etelogo.jpg";
 
 type Section =
   | "dashboard"
@@ -79,7 +80,7 @@ export default function Admin() {
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <Link className="admin-brand" to="/">
-          <span>ETEF</span>
+          <span className="admin-brand-mark"><img src={logo} alt="ETEF logo" /></span>
           <strong>ADMIN</strong>
         </Link>
         <div className="admin-sidebar-label">WORKSPACE</div>
