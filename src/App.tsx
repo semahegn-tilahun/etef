@@ -13,6 +13,7 @@ import Admin from "./admin/Admin";
 import { api, API_ORIGIN } from "./api";
 import AdminLogin from "./auth/AdminLogin";
 import ProtectedAdmin from "./auth/ProtectedAdmin";
+import logo from "./asset/etelogo.jpg";
 
 const nav = [
   ["/", "home"],
@@ -29,7 +30,7 @@ const nav = [
 function Brand() {
   return (
     <Link className="brand" to="/">
-      <span className="brand-seal">ETEF</span>
+      <span className="brand-seal"><img src={logo} alt="ETEF logo" /></span>
       <span className="brand-copy">
         <strong>ETHIOPIAN TRANSPORT</strong>
         <small>EMPLOYERS' FEDERATION</small>
@@ -157,9 +158,33 @@ function Footer() {
 
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} ETEF. All rights reserved.</span>
-        <span>Amharic · English</span>
+        <a className="powered-by" href="https://mulutilacodecomp.vercel.app/" target="_blank" rel="noreferrer">Powered by LXD TEAM</a>
+        <span>{t("languageFooter")}</span>
       </div>
     </footer>
+  );
+}
+
+function BackToTop() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 420);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  if (!visible) return null;
+  return (
+    <button
+      type="button"
+      className="back-to-top"
+      aria-label="Back to top"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    >
+      <span aria-hidden="true">⇈</span>
+    </button>
   );
 }
 
@@ -200,6 +225,7 @@ function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

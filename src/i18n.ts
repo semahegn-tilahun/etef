@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: { translation: {
     home:"Home", about:"About ETEF", membership:"Membership", faq:"FAQ", gallery:"Gallery", vacancies:"Vacancies", contact:"Contact",
-    register:"Register as a Member", language:"Language", explore:"Explore", connect:"Connect", officialEmail:"Official organizational email",
+    register:"Register as a Member", language:"Language", explore:"Explore", connect:"Connect", officialEmail:"Official organizational email", languageFooter:"Amharic · English",
     heroEyebrow:"ETHIOPIAN TRANSPORT EMPLOYERS' FEDERATION",
     hero:"A stronger voice for Ethiopia's transport employers.",
     heroText:"Connecting transport employers, protecting member interests and supporting a stronger, sustainable and peaceful transport industry.",
@@ -13,7 +13,7 @@ const resources = {
   }},
   am: { translation: {
     home:"መነሻ", about:"ስለ ETEF", membership:"አባልነት", faq:"ተደጋጋሚ ጥያቄዎች", gallery:"የፎቶ ማዕከል", vacancies:"የሥራ ዕድሎች", contact:"ያግኙን",
-    register:"አባል ለመሆን ይመዝገቡ", language:"ቋንቋ", explore:"ይመልከቱ", connect:"ያግኙን", officialEmail:"የድርጅቱ ኢሜይል",
+    register:"አባል ለመሆን ይመዝገቡ", language:"ቋንቋ", explore:"ይመልከቱ", connect:"ያግኙን", officialEmail:"የድርጅቱ ኢሜይል", languageFooter:"አማርኛ · እንግሊዝኛ",
     heroEyebrow:"የኢትዮጵያ ትራንስፖርት አሰሪዎች ፌዴሬሽን",
     hero:"ለኢትዮጵያ ትራንስፖርት አሰሪዎች ጠንካራ ድምፅ።",
     heroText:"የትራንስፖርት አሰሪዎችን በማገናኘት፣ የአባላትን ጥቅም በመጠበቅ እና ጠንካራ፣ ዘላቂ እና ሰላማዊ የትራንስፖርት ኢንዱስትሪን በመደገፍ።",
