@@ -387,7 +387,7 @@ function Home() {
           <div className="values-panel">
             <SectionHeading
               align="center"
-              eyebrow="VALUES · እሴቶች"
+              eyebrow="VALUES "
               title="Member satisfaction is our leading value."
               text="Integrity, respect, diligence, teamwork and industrial peace guide how ETEF serves and represents transport employers."
             />
