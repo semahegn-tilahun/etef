@@ -3360,3 +3360,13 @@ html {
   transform: translateY(-3px) rotate(-2deg);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
 }
+
+.auth-logo { display:block; width:92px; height:92px; object-fit:contain; margin:0 auto 1rem; border-radius:50%; transition:transform .3s ease, filter .3s ease; }
+.auth-logo:hover { transform:translateY(-3px) scale(1.04); filter:drop-shadow(0 10px 18px rgba(11,66,49,.18)); }
+.password-wrap { position:relative; display:flex; align-items:center; }
+.password-wrap input { padding-right:3rem !important; width:100%; }
+.password-toggle { position:absolute; right:.55rem; border:0; background:transparent; color:var(--green-900,#0b4231); cursor:pointer; padding:.45rem; border-radius:999px; }
+.password-toggle:hover { background:rgba(11,66,49,.09); }
+.forgot-link { display:inline-block; margin:.2rem 0 1rem; color:var(--green-900,#0b4231); font-weight:700; text-decoration:none; }
+.forgot-link:hover { text-decoration:underline; }
+.auth-success { margin:.8rem 0; padding:.8rem; border-radius:.8rem; background:#e5f5e9; color:#14532d; }

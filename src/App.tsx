@@ -12,6 +12,8 @@ import MembershipRegister from "./pages/MembershipRegister";
 import Admin from "./admin/Admin";
 import { api, API_ORIGIN } from "./api";
 import AdminLogin from "./auth/AdminLogin";
+import ForgotPassword from "./auth/ForgotPassword";
+import ResetPassword from "./auth/ResetPassword";
 import ProtectedAdmin from "./auth/ProtectedAdmin";
 import logo from "./asset/etelogo.jpg";
 
@@ -334,19 +336,19 @@ function Home() {
         <div className="container stats-grid">
           <div>
             <strong>01</strong>
-            <span>Unified representation</span>
+            <span>{t("stats1")}</span>
           </div>
           <div>
             <strong>02</strong>
-            <span>Member-focused support</span>
+            <span>{t("stats2")}</span>
           </div>
           <div>
             <strong>03</strong>
-            <span>Industry collaboration</span>
+            <span>{t("stats3")}</span>
           </div>
           <div>
             <strong>04</strong>
-            <span>Digital access</span>
+            <span>{t("stats4")}</span>
           </div>
         </div>
       </section>
@@ -354,9 +356,9 @@ function Home() {
       <section className="section intro-section">
         <div className="container">
           <SectionHeading
-            eyebrow="About Us"
+            eyebrow={t("aboutEyebrow")}
             title="ETEF"
-            text="The ETEF website brings institutional information, membership access, events, opportunities and official contact channels together in one trusted public platform."
+            text={t("aboutIntro")}
           />
           <div className="intro-grid">
             <div className="intro-copy-block">
@@ -391,39 +393,35 @@ function Home() {
         <div className="container">
           <div className="principles-grid">
             <article className="principle-card principle-featured">
-              <span className="principle-tag">MISSION</span>
-              <h2 className="principle-title">Mission</h2>
+              <span className="principle-tag">{t("missionTag")}</span>
+              <h2 className="principle-title">{t("missionTitle")}</h2>
               <p>
-                Safeguarding members' economic, legal, social and other rights
-                and benefits while supporting their performance through
-                training, education, legal support, technology and cooperation
-                toward industrial peace.
+                {t("missionText")}
               </p>
             </article>
 
             <article className="principle-card">
-              <span className="principle-tag">VISION</span>
-              <h2 className="principle-title">Vision</h2>
+              <span className="principle-tag">{t("visionTag")}</span>
+              <h2 className="principle-title">{t("visionTitle")}</h2>
               <h3>
-                Seeing strong and representing voice in Ethiopian transport
-                industry.
+                {t("visionText")}
               </h3>
             </article>
           </div>
           <div className="values-panel">
             <SectionHeading
               align="center"
-              eyebrow="VALUES "
-              title="Member satisfaction is our leading value."
-              text="Integrity, respect, diligence, teamwork and industrial peace guide how ETEF serves and represents transport employers."
+              eyebrow={t("valuesTag")}
+              title={t("valuesTitle")}
+              text={t("valuesText")}
             />
             <div className="values-list">
-              <span>Member satisfaction</span>
-              <span>Integrity</span>
-              <span>Respect</span>
-              <span>Diligence</span>
-              <span>Teamwork</span>
-              <span>Industrial peace</span>
+              <span>{t("value1")}</span>
+              <span>{t("value2")}</span>
+              <span>{t("value3")}</span>
+              <span>{t("value4")}</span>
+              <span>{t("value5")}</span>
+              <span>{t("value6")}</span>
             </div>
           </div>
         </div>
@@ -433,33 +431,33 @@ function Home() {
         <div className="container">
           <SectionHeading
             align="center"
-            eyebrow="SERVICES"
-            title="Supporting a stronger transport industry."
-            text="ETEF advocates for transport employers, builds constructive dialogue and protects members’ rights and benefits."
+            eyebrow={t("servicesTag")}
+            title={t("servicesTitle")}
+            text={t("servicesText")}
           />
           <div className="feature-grid">
             <FeatureCard
               number="01"
-              title="Advocacy"
-              text="Representing the shared interests and priorities of transport employers."
+              title={t("advocacy")}
+              text={t("advocacyText")}
               to="/about"
             />
             <FeatureCard
               number="02"
-              title="Lobby & dialogue"
-              text="Engaging stakeholders to encourage practical, fair and sustainable transport policies."
+              title={t("dialogue")}
+              text={t("dialogueText")}
               to="/contact"
             />
             <FeatureCard
               number="03"
-              title="Rights & benefits"
-              text="Protecting members’ legal, economic and social rights and benefits."
+              title={t("rights")}
+              text={t("rightsText")}
               to="/membership"
             />
             <FeatureCard
               number="04"
-              title="Training & support"
-              text="Connecting members with education, legal support and industry collaboration."
+              title={t("training")}
+              text={t("trainingText")}
               to="/about"
             />
           </div>
@@ -1341,6 +1339,8 @@ function App() {
   return (
     <Routes>
       <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/admin/forgot-password" element={<ForgotPassword />} />
+      <Route path="/admin/reset-password" element={<ResetPassword />} />
       <Route element={<ProtectedAdmin />}>
         <Route path="/admin" element={<Admin />} />
       </Route>
