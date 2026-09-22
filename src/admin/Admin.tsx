@@ -51,13 +51,51 @@ type Application = {
   id: string;
   reference: string;
   organization_name: string;
-  transport_sector: string;
-  submitted_at: string;
+  organization_type?: string;
+  transport_sector?: string;
+  region?: string;
+  city?: string;
+  sub_city?: string;
+  woreda?: string;
+  office_address?: string;
+  phone?: string;
+  email?: string;
+  member_count?: number | null;
+  vehicle_count?: number | null;
+  general_manager_name?: string;
+  general_manager_phone?: string;
+  general_manager_email?: string;
+  federation_representative_name?: string;
+  federation_representative_phone?: string;
   status: string;
+  submitted_at: string;
+  reviewed_at?: string | null;
 };
+
+function ActionIcon({ name }: { name: "dashboard" | "applications" | "faq" | "gallery" | "vacancies" | "content" | "partners" | "news" | "hero" | "view" | "edit" | "delete" | "close" | "menu" | "external" }) {
+  const paths = {
+    dashboard: <><path d="M4 13h6V4H4v9Zm10 7h6v-9h-6v9ZM4 20h6v-3H4v3Zm10-10h6V4h-6v6Z"/></>,
+    applications: <><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></>,
+    faq: <><circle cx="12" cy="12" r="9"/><path d="M9.7 9.2a2.5 2.5 0 1 1 4.4 1.6c-.9 1-2.1 1.3-2.1 2.8M12 17h.01"/></>,
+    gallery: <><rect x="4" y="5" width="16" height="14" rx="2"/><circle cx="9" cy="10" r="1.4"/><path d="m5 17 4.5-4.5 3 3 2-2 4.5 4.5"/></>,
+    vacancies: <><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M9 6V4h6v2M4 11h16M10 14h4"/></>,
+    content: <><path d="M6 5h12M6 9h12M6 13h8M6 17h10"/><circle cx="4" cy="5" r=".7" fill="currentColor" stroke="none"/><circle cx="4" cy="9" r=".7" fill="currentColor" stroke="none"/><circle cx="4" cy="13" r=".7" fill="currentColor" stroke="none"/><circle cx="4" cy="17" r=".7" fill="currentColor" stroke="none"/></>,
+    partners: <><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><path d="m10.2 10.2 3.6 3.6"/></>,
+    news: <><path d="M5 5h14v14H5z"/><path d="M8 9h8M8 12h8M8 15h5"/></>,
+    hero: <><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="m6 16 4-4 2.5 2.5L15 12l3 4M7.5 9.5h.01"/></>,
+    view: <><path d="M2.2 12s3.2-5 9.8-5 9.8 5 9.8 5-3.2 5-9.8 5-9.8-5-9.8-5Z"/><circle cx="12" cy="12" r="2.7"/></>,
+    edit: <><path d="M4 20h4l10.4-10.4a2.1 2.1 0 0 0 0-3L16.4 4.6a2.1 2.1 0 0 0-3 0L3 15v5Z"/><path d="m12.1 6.9 5 5"/></>,
+    delete: <><path d="M4 7h16"/><path d="M9 7V4h6v3M7 7l.8 13h8.4L17 7M10 11v5M14 11v5"/></>,
+    close: <><path d="m6 6 12 12M18 6 6 18"/></>,
+    menu: <><path d="M4 7h16M4 12h16M4 17h16"/></>,
+    external: <><path d="M14 5h5v5M19 5l-8 8"/><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></>,
+  } as const;
+  return <svg className="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
+}
 
 export default function Admin() {
   const [section, setSection] = useState<Section>("dashboard"),
+    [mobileOpen, setMobileOpen] = useState(false),
     [toast, setToast] = useState(""),
     [stats, setStats] = useState<any>({
       total: 0,
@@ -78,36 +116,47 @@ export default function Admin() {
   }, []);
   return (
     <div className="admin-shell">
-      <aside className="admin-sidebar">
+      {mobileOpen && (
+        <button
+          type="button"
+          className="admin-drawer-backdrop"
+          aria-label="Close admin navigation"
+          onClick={() => setMobileOpen(false)}
+        />
+      )}
+      <aside className={`admin-sidebar ${mobileOpen ? "is-open" : ""}`}>
         <Link className="admin-brand" to="/">
           <span className="admin-brand-mark"><img src={logo} alt="ETEF logo" /></span>
-          <strong>ADMIN</strong>
+          <span className="admin-brand-copy">
+            <strong>ADMIN</strong>
+            <small>ETEF CONTROL CENTER</small>
+          </span>
         </Link>
-        <div className="admin-sidebar-label">WORKSPACE</div>
-        <nav className="admin-nav">
-          {(
-            [
-              ["dashboard", "⌂", "Dashboard"],
-              ["applications", "◎", "Applications"],
-              ["faq", "?", "FAQ"],
-              ["gallery", "▧", "Gallery"],
-              ["vacancies", "▤", "Vacancies"],
-              ["content", "◈", "Content"],
-              ["partners", "◇", "Partners & sponsors"],
-              ["news", "▣", "News updates"],
-              ["hero", "▰", "Hero backgrounds"],
-            ] as [Section, string, string][]
-          ).map(([k, i, l]) => (
-            <button
-              key={k}
-              className={section === k ? "active" : ""}
-              onClick={() => setSection(k)}
-            >
-              <span>{i}</span>
-              {l}
-            </button>
-          ))}
-        </nav>
+        <div className="admin-nav-groups">
+          <AdminNavGroup
+            label="WORKSPACE"
+            items={[
+              ["dashboard", "Dashboard"],
+              ["applications", "Applications"],
+            ]}
+            section={section}
+            onSelect={(next) => { setSection(next); setMobileOpen(false); }}
+          />
+          <AdminNavGroup
+            label="WEBSITE"
+            items={[
+              ["content", "Content"],
+              ["faq", "FAQ"],
+              ["gallery", "Gallery"],
+              ["vacancies", "Vacancies"],
+              ["news", "News updates"],
+              ["partners", "Partners & sponsors"],
+              ["hero", "Hero backgrounds"],
+            ]}
+            section={section}
+            onSelect={(next) => { setSection(next); setMobileOpen(false); }}
+          />
+        </div>
         <div className="admin-sidebar-bottom">
           <span>SIGNED IN</span>
           <strong>{user?.fullName}</strong>
@@ -120,12 +169,29 @@ export default function Admin() {
       </aside>
       <main className="admin-main">
         <header className="admin-topbar">
-          <div>
+          <button
+            type="button"
+            className="admin-mobile-menu"
+            aria-label="Open admin navigation"
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen(true)}
+          >
+            <ActionIcon name="menu" />
+          </button>
+          <div className="admin-topbar-copy">
             <span className="eyebrow">ETEF DIGITAL PLATFORM</span>
             <h1>{sectionTitle(section)}</h1>
+            <p>Manage and publish the federation's public digital content.</p>
           </div>
-          <div className="admin-status">
-            <i /> Secure session
+          <div className="admin-topbar-right">
+            <div className="admin-status"><i /> Secure session</div>
+            <div className="admin-user-chip">
+              <span className="admin-user-avatar">{(user?.fullName || "A").slice(0, 1).toUpperCase()}</span>
+              <span>
+                <strong>{user?.fullName || "Administrator"}</strong>
+                <small>{user?.role || "ADMIN"}</small>
+              </span>
+            </div>
           </div>
         </header>
         {section === "dashboard" && (
@@ -144,6 +210,40 @@ export default function Admin() {
     </div>
   );
 }
+function AdminNavGroup({
+  label,
+  items,
+  section,
+  onSelect,
+}: {
+  label: string;
+  items: [Section, string][];
+  section: Section;
+  onSelect: (section: Section) => void;
+}) {
+  return (
+    <section className="admin-nav-group">
+      <span className="admin-sidebar-label">{label}</span>
+      <nav className="admin-nav">
+        {items.map(([key, text]) => (
+          <button
+            key={key}
+            type="button"
+            className={section === key ? "active" : ""}
+            aria-current={section === key ? "page" : undefined}
+            onClick={() => onSelect(key)}
+          >
+            <span className="admin-nav-icon">
+              <ActionIcon name={key} />
+            </span>
+            <span className="admin-nav-text">{text}</span>
+          </button>
+        ))}
+      </nav>
+    </section>
+  );
+}
+
 function sectionTitle(s: Section) {
   return (
     {
@@ -276,13 +376,33 @@ function Quick({
 function Applications({ notify }: { notify: (m: string) => void }) {
   const [rows, setRows] = useState<Application[]>([]);
   const [filter, setFilter] = useState("ALL");
+  const [sectorFilter, setSectorFilter] = useState("ALL");
+  const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
+  const [selected, setSelected] = useState<Application | null>(null);
+
   const load = () =>
     api<{ items: Application[] }>(
       `/admin/applications${filter === "ALL" ? "" : `?status=${filter}`}`,
-    ).then((r) => setRows(r.items));
+    ).then((r) => {
+      setRows(r.items || []);
+      setPage(1);
+    });
+
   useEffect(() => {
     load().catch(() => notify("Unable to load applications"));
   }, [filter]);
+
+  useEffect(() => {
+    if (!selected) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelected(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selected]);
+
   const update = async (id: string, status: string) => {
     try {
       await api(`/admin/applications/${id}`, {
@@ -290,74 +410,360 @@ function Applications({ notify }: { notify: (m: string) => void }) {
         body: JSON.stringify({ status }),
       });
       notify("Application status updated");
-      load();
+      setSelected((current) =>
+        current?.id === id ? { ...current, status } : current,
+      );
+      await load();
     } catch (e: any) {
       notify(e.message);
     }
   };
+
+  const sectors = useMemo(() => {
+    return Array.from(new Set(rows.map((row) => row.transport_sector).filter(Boolean))) as string[];
+  }, [rows]);
+
+  const filteredRows = useMemo(() => {
+    const term = search.trim().toLowerCase();
+    return rows.filter((row) => {
+      const matchesSector = sectorFilter === "ALL" || row.transport_sector === sectorFilter;
+      if (!term) return matchesSector;
+      const haystack = [
+        row.reference,
+        row.organization_name,
+        row.organization_type,
+        row.transport_sector,
+        row.region,
+        row.city,
+        row.email,
+      ].filter(Boolean).join(" ").toLowerCase();
+      return matchesSector && haystack.includes(term);
+    });
+  }, [rows, search, sectorFilter]);
+
+  useEffect(() => { setPage(1); }, [search, sectorFilter, pageSize]);
+
+  const pageCount = Math.max(1, Math.ceil(filteredRows.length / pageSize));
+  const safePage = Math.min(page, pageCount);
+  const visibleRows = filteredRows.slice(
+    (safePage - 1) * pageSize,
+    safePage * pageSize,
+  );
+  const firstItem = filteredRows.length ? (safePage - 1) * pageSize + 1 : 0;
+  const lastItem = Math.min(safePage * pageSize, filteredRows.length);
+
+  const formatDate = (value?: string | null) =>
+    value
+      ? new Date(value).toLocaleDateString(undefined, {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
+      : "—";
+
   return (
-    <div className="admin-content">
-      <div className="admin-toolbar">
-        <p>Real membership applications from PostgreSQL.</p>
-        <select value={filter} onChange={(e) => setFilter(e.target.value)}>
-          <option value="ALL">All</option>
-          <option value="PENDING">Pending</option>
-          <option value="REVIEW">Review</option>
-          <option value="APPROVED">Approved</option>
-          <option value="REJECTED">Rejected</option>
-        </select>
+    <div className="admin-content applications-page">
+      <div className="admin-toolbar applications-toolbar">
+        <div>
+          <strong>Membership applications</strong>
+          <p>Review complete registration records submitted by organizations.</p>
+        </div>
+        <div className="applications-toolbar-controls">
+          <label className="application-search">
+            <span className="search-icon" aria-hidden="true">⌕</span>
+            <input
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search organizations, reference, city..."
+              aria-label="Search membership applications"
+            />
+          </label>
+          <label className="admin-filter">
+            <span>Status</span>
+            <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+              <option value="ALL">All applications</option>
+              <option value="PENDING">Pending</option>
+              <option value="REVIEW">In review</option>
+              <option value="APPROVED">Approved</option>
+              <option value="REJECTED">Rejected</option>
+            </select>
+          </label>
+          <label className="admin-filter">
+            <span>Sector</span>
+            <select value={sectorFilter} onChange={(e) => setSectorFilter(e.target.value)}>
+              <option value="ALL">All sectors</option>
+              {sectors.map((sector) => <option key={sector} value={sector}>{sector}</option>)}
+            </select>
+          </label>
+        </div>
       </div>
-      <section className="admin-panel table-panel">
-        <table>
-          <thead>
-            <tr>
-              <th>Reference</th>
-              <th>Organization</th>
-              <th>Sector</th>
-              <th>Submitted</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((r) => (
-              <tr key={r.id}>
-                <td>{r.reference}</td>
-                <td>
-                  <strong>{r.organization_name}</strong>
-                </td>
-                <td>{r.transport_sector}</td>
-                <td>{new Date(r.submitted_at).toLocaleDateString()}</td>
-                <td>
-                  <span
-                    className={`status-pill ${r.status === "REJECTED" ? "closed" : ""}`}
-                  >
-                    {r.status}
-                  </span>
-                </td>
-                <td>
+
+      <section className="admin-panel applications-panel">
+        <div className="applications-table-wrap">
+          <table className="applications-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+                <th>Organization</th>
+                <th>Sector</th>
+                <th>Submitted</th>
+                <th>Status</th>
+                <th>Decision</th>
+                <th className="actions-heading">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {visibleRows.map((r) => (
+                <tr
+                  key={r.id}
+                  className="application-row"
+                  tabIndex={0}
+                  onClick={() => setSelected(r)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setSelected(r);
+                    }
+                  }}
+                >
+                  <td>
+                    <span className="application-reference">{r.reference}</span>
+                  </td>
+                  <td>
+                    <div className="application-org">
+                      <span className="application-avatar">
+                        {(r.organization_name || "ET").slice(0, 2).toUpperCase()}
+                      </span>
+                      <span>
+                        <strong>{r.organization_name}</strong>
+                        <small>{r.organization_type || "Organization"}</small>
+                      </span>
+                    </div>
+                  </td>
+                  <td>{r.transport_sector || "—"}</td>
+                  <td>{formatDate(r.submitted_at)}</td>
+                  <td>
+                    <span className={`status-pill status-${r.status.toLowerCase()}`}>
+                      {r.status}
+                    </span>
+                  </td>
+                  <td onClick={(event) => event.stopPropagation()}>
+                    <select
+                      className="mini-select application-status-select"
+                      value={r.status}
+                      aria-label={`Update status for ${r.organization_name}`}
+                      onChange={(e) => update(r.id, e.target.value)}
+                    >
+                      <option value="PENDING">Pending</option>
+                      <option value="REVIEW">Review</option>
+                      <option value="APPROVED">Approve</option>
+                      <option value="REJECTED">Reject</option>
+                    </select>
+                  </td>
+                  <td className="actions-cell" onClick={(event) => event.stopPropagation()}>
+                    <button
+                      type="button"
+                      className="icon-action view"
+                      data-tooltip="View application"
+                      aria-label={`View ${r.organization_name}`}
+                      onClick={() => setSelected(r)}
+                    >
+                      <ActionIcon name="view" />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {!filteredRows.length && (
+          <div className="admin-empty applications-empty">
+            <div className="empty-icon">◎</div>
+            <strong>{rows.length ? "No matching applications" : "No applications found"}</strong>
+            <p>{rows.length ? "Try another search or filter." : "Applications will appear here when organizations submit the membership form."}</p>
+          </div>
+        )}
+
+        {filteredRows.length > 0 && (
+          <div className="pagination-bar">
+            <div className="pagination-meta">
+              <span className="pagination-summary">
+                Showing <strong>{firstItem}</strong>–<strong>{lastItem}</strong> of <strong>{filteredRows.length}</strong>
+              </span>
+              <label className="page-size">
+                Rows
+                <select value={pageSize} onChange={(e) => setPageSize(Number(e.target.value))}>
+                  <option value={10}>10</option>
+                  <option value={25}>25</option>
+                  <option value={50}>50</option>
+                </select>
+              </label>
+            </div>
+            <div className="pagination-controls" aria-label="Pagination">
+              <button
+                type="button"
+                className="pagination-button"
+                disabled={safePage === 1}
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+              >
+                ← Previous
+              </button>
+              <div className="pagination-pages">
+                {Array.from({ length: pageCount }, (_, index) => index + 1)
+                  .filter(
+                    (number) =>
+                      number === 1 ||
+                      number === pageCount ||
+                      Math.abs(number - safePage) <= 1,
+                  )
+                  .map((number, index, numbers) => (
+                    <span key={number} className="pagination-page-wrap">
+                      {index > 0 && numbers[index - 1] !== number - 1 && (
+                        <span className="pagination-ellipsis">…</span>
+                      )}
+                      <button
+                        type="button"
+                        className={`pagination-page ${number === safePage ? "active" : ""}`}
+                        onClick={() => setPage(number)}
+                        aria-current={number === safePage ? "page" : undefined}
+                      >
+                        {number}
+                      </button>
+                    </span>
+                  ))}
+              </div>
+              <button
+                type="button"
+                className="pagination-button"
+                disabled={safePage === pageCount}
+                onClick={() => setPage((p) => Math.min(pageCount, p + 1))}
+              >
+                Next →
+              </button>
+            </div>
+          </div>
+        )}
+      </section>
+
+      {selected && (
+        <div
+          className="application-modal-backdrop"
+          role="presentation"
+          onMouseDown={(event) => {
+            if (event.currentTarget === event.target) setSelected(null);
+          }}
+        >
+          <section
+            className="application-detail-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="application-detail-title"
+          >
+            <header className="application-modal-header">
+              <div>
+                <span className="eyebrow">MEMBERSHIP APPLICATION</span>
+                <h2 id="application-detail-title">
+                  {selected.organization_name}
+                </h2>
+                <p>{selected.reference}</p>
+              </div>
+              <button
+                type="button"
+                className="modal-close"
+                aria-label="Close application details"
+                onClick={() => setSelected(null)}
+              >
+                <ActionIcon name="close" />
+              </button>
+            </header>
+
+            <div className="application-detail-body">
+              <div className="application-detail-status">
+                <div>
+                  <span>Current status</span>
+                  <strong className={`status-pill status-${selected.status.toLowerCase()}`}>
+                    {selected.status}
+                  </strong>
+                </div>
+                <label>
+                  <span>Update status</span>
                   <select
                     className="mini-select"
-                    value={r.status}
-                    onChange={(e) => update(r.id, e.target.value)}
+                    value={selected.status}
+                    onChange={(e) => update(selected.id, e.target.value)}
                   >
                     <option value="PENDING">Pending</option>
                     <option value="REVIEW">Review</option>
                     <option value="APPROVED">Approve</option>
                     <option value="REJECTED">Reject</option>
                   </select>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        {!rows.length && (
-          <div className="admin-empty">No applications found.</div>
-        )}
-      </section>
+                </label>
+              </div>
+
+              <div className="application-detail-grid">
+                <ApplicationDetail label="Organization name" value={selected.organization_name} />
+                <ApplicationDetail label="Organization type" value={selected.organization_type} />
+                <ApplicationDetail label="Transport sector" value={selected.transport_sector} />
+                <ApplicationDetail label="Region" value={selected.region} />
+                <ApplicationDetail label="City" value={selected.city} />
+                <ApplicationDetail label="Sub-city" value={selected.sub_city} />
+                <ApplicationDetail label="Woreda" value={selected.woreda} />
+                <ApplicationDetail label="Office address" value={selected.office_address} wide />
+                <ApplicationDetail label="Office phone" value={selected.phone} />
+                <ApplicationDetail label="Organization email" value={selected.email} />
+                <ApplicationDetail label="Member count" value={selected.member_count} />
+                <ApplicationDetail label="Vehicle count" value={selected.vehicle_count} />
+                <ApplicationDetail label="General manager" value={selected.general_manager_name} />
+                <ApplicationDetail label="Manager phone" value={selected.general_manager_phone} />
+                <ApplicationDetail label="Manager email" value={selected.general_manager_email} />
+                <ApplicationDetail
+                  label="Federation representative"
+                  value={selected.federation_representative_name}
+                />
+                <ApplicationDetail
+                  label="Representative phone"
+                  value={selected.federation_representative_phone}
+                />
+                <ApplicationDetail label="Submitted" value={formatDate(selected.submitted_at)} />
+                <ApplicationDetail label="Reviewed" value={formatDate(selected.reviewed_at)} />
+              </div>
+            </div>
+
+            <footer className="application-modal-footer">
+              <span>Click outside or press Esc to close.</span>
+              <button
+                type="button"
+                className="admin-button light"
+                onClick={() => setSelected(null)}
+              >
+                Close details
+              </button>
+            </footer>
+          </section>
+        </div>
+      )}
     </div>
   );
 }
+
+function ApplicationDetail({
+  label,
+  value,
+  wide = false,
+}: {
+  label: string;
+  value?: string | number | null;
+  wide?: boolean;
+}) {
+  return (
+    <div className={`application-detail-item ${wide ? "wide" : ""}`}>
+      <span>{label}</span>
+      <strong>{value === undefined || value === null || value === "" ? "—" : String(value)}</strong>
+    </div>
+  );
+}
+
 function FaqManager({ notify }: { notify: (m: string) => void }) {
   const [items, setItems] = useState<FAQ[]>([]),
     [editing, setEditing] = useState<FAQ | null>(null),
@@ -477,7 +883,8 @@ function FaqManager({ notify }: { notify: (m: string) => void }) {
                     setAAm(x.answer_am || "");
                   }}
                 >
-                  Edit
+                  <ActionIcon name="edit" />
+                  <span className="sr-only">Edit FAQ</span>
                 </button>
                 <button
                   onClick={async () => {
@@ -510,7 +917,8 @@ function FaqManager({ notify }: { notify: (m: string) => void }) {
                     }
                   }}
                 >
-                  Delete
+                  <ActionIcon name="delete" />
+                  <span className="sr-only">Delete FAQ</span>
                 </button>
               </div>
             </div>
@@ -714,12 +1122,12 @@ function GalleryManager({ notify }: { notify: (m: string) => void }) {
                 </p>
               </div>
               <div className="row-actions">
-                <button onClick={() => openAlbum(x)}>Manage photos</button>
+                <button className="icon-action view" data-tooltip="View photos" aria-label={`View photos in ${x.title_en}`} onClick={() => openAlbum(x)}><ActionIcon name="view" /></button>
                 <button onClick={() => toggle(x)}>
                   {x.is_published ? "Unpublish" : "Publish"}
                 </button>
-                <button className="danger-text" onClick={() => deleteAlbum(x)}>
-                  Delete
+                <button className="icon-action danger" data-tooltip="Delete album" aria-label={`Delete ${x.title_en}`} onClick={() => deleteAlbum(x)}>
+                  <ActionIcon name="delete" />
                 </button>
               </div>
             </article>
@@ -854,11 +1262,8 @@ function GalleryManager({ notify }: { notify: (m: string) => void }) {
                         ? "Cover"
                         : "Set cover"}
                     </button>
-                    <button
-                      className="danger-text"
-                      onClick={() => remove(photo)}
-                    >
-                      Delete
+                    <button className="icon-action danger" data-tooltip="Delete photo" aria-label="Delete photo" onClick={() => remove(photo)}>
+                      <ActionIcon name="delete" />
                     </button>
                   </div>
                 </div>
@@ -1097,7 +1502,8 @@ function VacancyManager({ notify }: { notify: (m: string) => void }) {
                         });
                       }}
                     >
-                      Edit
+                      <ActionIcon name="edit" />
+                      <span className="sr-only">Edit vacancy</span>
                     </button>
                     <button
                       onClick={async () => {
@@ -1335,7 +1741,8 @@ function PartnersManager({ notify }: { notify: (m: string) => void }) {
                     setLogo(null);
                   }}
                 >
-                  Edit
+                  <ActionIcon name="edit" />
+                  <span className="sr-only">Edit partner</span>
                 </button>
                 <button
                   onClick={async () => {
@@ -1381,7 +1788,8 @@ function PartnersManager({ notify }: { notify: (m: string) => void }) {
                     }
                   }}
                 >
-                  Delete
+                  <ActionIcon name="delete" />
+                  <span className="sr-only">Delete partner</span>
                 </button>
               </div>
             </div>
@@ -1506,7 +1914,8 @@ function NewsManager({ notify }: { notify: (m: string) => void }) {
                     });
                   }}
                 >
-                  Edit
+                  <ActionIcon name="edit" />
+                  <span className="sr-only">Edit news</span>
                 </button>
                 <button
                   onClick={async () => {
@@ -1516,7 +1925,8 @@ function NewsManager({ notify }: { notify: (m: string) => void }) {
                     }
                   }}
                 >
-                  Delete
+                  <ActionIcon name="delete" />
+                  <span className="sr-only">Delete news</span>
                 </button>
               </div>
             </div>
@@ -1708,7 +2118,10 @@ function HeroManager({ notify }: { notify: (m: string) => void }) {
                   {x.is_published ? "Unpublish" : "Publish"}
                 </button>
                 <button
-                  className="danger-text"
+                  type="button"
+                  className="icon-action danger"
+                  data-tooltip="Delete hero image"
+                  aria-label="Delete hero image"
                   onClick={async () => {
                     if (!confirm("Delete this hero image?")) return;
                     try {
@@ -1722,7 +2135,7 @@ function HeroManager({ notify }: { notify: (m: string) => void }) {
                     }
                   }}
                 >
-                  Delete
+                  <ActionIcon name="delete" />
                 </button>
               </div>
             </div>

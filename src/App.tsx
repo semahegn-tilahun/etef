@@ -43,7 +43,20 @@ function Brand() {
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
   const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
 
   const changeLanguage = (language: "en" | "am") => {
     i18n.changeLanguage(language);
@@ -53,12 +66,12 @@ function Header() {
   };
 
   return (
-    <header className="header">
+    <header className={`header ${location.pathname === "/" ? "header-home" : ""} ${scrolled ? "header-scrolled" : ""}`}>
       <div className="container header-inner">
         <Brand />
 
         <button
-          className="mobile-menu"
+          className={`mobile-menu ${open ? "is-open" : ""}`}
           aria-label="Toggle navigation"
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
@@ -67,6 +80,15 @@ function Header() {
           <span />
           <span />
         </button>
+
+        {open && (
+          <button
+            type="button"
+            className="nav-drawer-backdrop"
+            aria-label="Close navigation"
+            onClick={() => setOpen(false)}
+          />
+        )}
 
         <nav className={`navigation ${open ? "open" : ""}`}>
           <div className="nav-links">
@@ -128,39 +150,38 @@ function Footer() {
           <h3>{t("explore")}</h3>
           <Link to="/about">{t("about")}</Link>
           <Link to="/membership">{t("membership")}</Link>
+          <Link to="/news">{t("news")}</Link>
           <Link to="/gallery">{t("gallery")}</Link>
+        </div>
+
+        <div className="footer-column">
+          <h3>Discover</h3>
           <Link to="/vacancies">{t("vacancies")}</Link>
+          <Link to="/partners">{t("partners")}</Link>
+          <Link to="/faq">{t("faq")}</Link>
+          <Link to="/contact">{t("contact")}</Link>
         </div>
 
-        <div className="footer-column">
+        <div className="footer-column footer-contact-column">
           <h3>{t("connect")}</h3>
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            Facebook
-          </a>
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            LinkedIn
-          </a>
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            Telegram
-          </a>
-          <a href="#" onClick={(e) => e.preventDefault()}>
-            YouTube
-          </a>
-        </div>
-
-        <div className="footer-column">
-          <h3>{t("contact")}</h3>
           <p className="footer-label">{t("officialEmail")}</p>
           <p className="footer-pending">To be confirmed by ETEF</p>
           <Link to="/contact" className="footer-contact-link">
-            {t("contact")} →
+            Contact ETEF <span aria-hidden="true">→</span>
           </Link>
         </div>
       </div>
 
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} ETEF. All rights reserved.</span>
-        <a className="powered-by" href="https://mulutilacodecomp.vercel.app/" target="_blank" rel="noreferrer">Powered by LXD TEAM</a>
+        <a
+          className="powered-by"
+          href="https://mulutilacodecamp.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Powered by LXD TEAM
+        </a>
         <span>{t("languageFooter")}</span>
       </div>
     </footer>
@@ -306,29 +327,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="hero-art" aria-hidden="true">
-            <div className="hero-ring ring-one" />
-            <div className="hero-ring ring-two" />
-            <div className="hero-glow" />
-            <div className="hero-emblem">
-              <span className="emblem-top">ETHIOPIAN</span>
-              <strong>ETEF</strong>
-              <span className="emblem-bottom">
-                TRANSPORT EMPLOYERS' FEDERATION
-              </span>
-              <i />
-            </div>
-            <div className="floating-card floating-card-top">
-              <span className="floating-label">MEMBERSHIP</span>
-              <strong>Join the federation</strong>
-              <span>Online registration</span>
-            </div>
-            <div className="floating-card floating-card-bottom">
-              <span className="floating-label">ETHIOPIA</span>
-              <strong>Transport employers</strong>
-              <span>Connected through one voice</span>
-            </div>
-          </div>
+          <HeroUpdates />
         </div>
       </section>
 
@@ -489,6 +488,104 @@ function Home() {
         </div>
       </section>
     </>
+  );
+}
+
+function HeroUpdates() {
+  const { i18n } = useTranslation();
+  const am = i18n.language.startsWith("am");
+  const [updates, setUpdates] = useState<any[]>([]);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    let cancelled = false;
+    Promise.all([
+      api<{ items: any[] }>("/news").catch(() => ({ items: [] })),
+      api<{ items: any[] }>("/vacancies").catch(() => ({ items: [] })),
+      api<{ items: any[] }>("/gallery/albums").catch(() => ({ items: [] })),
+    ]).then(([news, vacancies, gallery]) => {
+      if (cancelled) return;
+      const latestNews = (news.items || []).slice(0, 2).map((item) => ({
+        id: `news-${item.id}`,
+        type: "NEWS",
+        title: am ? item.title_am || item.title_en : item.title_en || item.title_am,
+        summary: am ? item.excerpt_am || item.excerpt_en : item.excerpt_en || item.excerpt_am,
+        image: item.image_url ? `${API_ORIGIN}${item.image_url}` : "",
+        to: "/news",
+        label: am ? "ዜና" : "Latest news",
+      }));
+      const latestVacancies = (vacancies.items || []).slice(0, 1).map((item) => ({
+        id: `vacancy-${item.id}`,
+        type: "VACANCY",
+        title: am ? item.title_am || item.title_en : item.title_en || item.title_am,
+        summary: item.location || (am ? "የሥራ ዕድል" : "Current opportunity"),
+        image: "",
+        to: "/vacancies",
+        label: am ? "የሥራ ዕድል" : "Latest vacancy",
+      }));
+      const latestGallery = (gallery.items || []).slice(0, 2).map((item) => ({
+        id: `gallery-${item.id}`,
+        type: "GALLERY",
+        title: am ? item.title_am || item.title_en : item.title_en || item.title_am,
+        summary: am ? "የETEF ዝግጅት ማዕከል" : "Latest ETEF event album",
+        image: item.cover_image_url ? `${API_ORIGIN}${item.cover_image_url}` : "",
+        to: "/gallery",
+        label: am ? "ፎቶ ማዕከል" : "Latest gallery",
+      }));
+      setUpdates([...latestNews, ...latestVacancies, ...latestGallery].slice(0, 5));
+      setIndex(0);
+    });
+    return () => { cancelled = true; };
+  }, [am]);
+
+  useEffect(() => {
+    if (updates.length < 2) return;
+    const timer = window.setInterval(() => setIndex((value) => (value + 1) % updates.length), 6500);
+    return () => window.clearInterval(timer);
+  }, [updates.length]);
+
+  const active = updates[index];
+  const fallbackImage = "/etef-logo.jpg";
+
+  if (!active) {
+    return (
+      <div className="hero-updates hero-updates-empty">
+        <span className="hero-update-kicker">ETEF</span>
+        <strong>{am ? "የፌዴሬሽኑ ወቅታዊ መረጃ" : "Latest federation updates"}</strong>
+        <Link to="/news" className="hero-update-link">{am ? "ተጨማሪ ይመልከቱ" : "Explore more"} <span>→</span></Link>
+      </div>
+    );
+  }
+
+  return (
+    <div className="hero-updates" aria-label={am ? "የETEF ወቅታዊ ይዘት" : "Latest ETEF content"}>
+      <div className="hero-update-media" style={{ backgroundImage: `url(${active.image || fallbackImage})` }} />
+      <div className="hero-update-surface" />
+      <div className="hero-update-content">
+        <span className="hero-update-kicker">{active.label}</span>
+        <span className="hero-update-type">{active.type}</span>
+        <h2>{active.title}</h2>
+        {active.summary && <p>{active.summary}</p>}
+        <Link to={active.to} className="hero-update-link">
+          {am ? "ተጨማሪ ይመልከቱ" : "Explore more"} <span aria-hidden="true">↗</span>
+        </Link>
+      </div>
+      <div className="hero-update-controls" aria-label="Update slides">
+        <div className="hero-update-dots">
+          {updates.map((item, dotIndex) => (
+            <button
+              key={item.id}
+              type="button"
+              className={dotIndex === index ? "active" : ""}
+              aria-label={`${active.type} ${dotIndex + 1}`}
+              aria-current={dotIndex === index ? "true" : undefined}
+              onClick={() => setIndex(dotIndex)}
+            />
+          ))}
+        </div>
+        <span>{String(index + 1).padStart(2, "0")} / {String(updates.length).padStart(2, "0")}</span>
+      </div>
+    </div>
   );
 }
 
@@ -689,21 +786,40 @@ function NewsPreview() {
       label={am ? "ተጨማሪ ዜናዎች" : "Explore more news"}
       className="news-section"
     >
-      <div className="news-grid">
-        {items.map((x) => (
-          <article className="news-card" key={x.id}>
-            <span className="eyebrow">ETEF NEWS</span>
-            <h3>{am ? x.title_am || x.title_en : x.title_en || x.title_am}</h3>
-            <p>
-              {am ? x.excerpt_am || x.excerpt_en : x.excerpt_en || x.excerpt_am}
-            </p>
-            <small>
-              {x.published_at
-                ? new Date(x.published_at).toLocaleDateString()
-                : ""}
-            </small>
-          </article>
-        ))}
+      <div className="news-overflow" aria-label={am ? "የቅርብ ጊዜ ዜና" : "Latest news"}>
+        <div className="news-grid">
+          {items.map((x, index) => (
+            <article className="news-card" key={x.id}>
+              <div className={`news-card-media news-card-media-${(index % 4) + 1}`}>
+                {x.image_url ? (
+                  <img src={`${API_ORIGIN}${x.image_url}`} alt="" />
+                ) : (
+                  <>
+                    <span>ETEF</span>
+                    <b>NEWS</b>
+                  </>
+                )}
+              </div>
+              <div className="news-card-body">
+                <div className="news-card-topline">
+                  <span className="eyebrow">ETEF NEWS</span>
+                  <small>
+                    {x.published_at
+                      ? new Date(x.published_at).toLocaleDateString()
+                      : ""}
+                  </small>
+                </div>
+                <h3>{am ? x.title_am || x.title_en : x.title_en || x.title_am}</h3>
+                <p>
+                  {am ? x.excerpt_am || x.excerpt_en : x.excerpt_en || x.excerpt_am}
+                </p>
+                <Link className="news-page-link" to="/news">
+                  {am ? "ዝርዝር ይመልከቱ" : "Read update"} <span>↗</span>
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
       {!items.length && (
         <div className="empty-state">
@@ -901,31 +1017,76 @@ function News() {
   const { i18n } = useTranslation();
   const [items, setItems] = useState<any[]>([]);
   const am = i18n.language.startsWith("am");
+
   useEffect(() => {
     api<{ items: any[] }>("/news")
       .then((r) => setItems(r.items))
       .catch(() => setItems([]));
   }, []);
+
   return (
     <Page title={am ? "የፌዴሬሽኑ ዜና" : "News updates"} eyebrow="NEWS UPDATE">
-      <div className="news-grid">
-        {items.map((x) => (
-          <article className="news-card" key={x.id}>
-            <span className="eyebrow">ETEF NEWS</span>
-            <h2>{am ? x.title_am || x.title_en : x.title_en || x.title_am}</h2>
-            <p>
-              {am
-                ? x.body_am || x.excerpt_am || x.body_en || x.excerpt_en
-                : x.body_en || x.excerpt_en || x.body_am || x.excerpt_am}
-            </p>
-            <small>
-              {x.published_at
-                ? new Date(x.published_at).toLocaleDateString()
-                : ""}
-            </small>
-          </article>
-        ))}
-      </div>
+      <p className="page-lead">
+        {am
+          ? "የፌዴሬሽኑን ወቅታዊ ዜናዎች፣ ማስታወቂያዎች እና ተግባራት ይከታተሉ።"
+          : "Follow ETEF announcements, activities and the latest federation updates."}
+      </p>
+
+      {items.length ? (
+        <div className="news-page-grid">
+          {items.map((x, index) => {
+            const title = am
+              ? x.title_am || x.title_en
+              : x.title_en || x.title_am;
+            const body = am
+              ? x.excerpt_am || x.body_am || x.excerpt_en || x.body_en
+              : x.excerpt_en || x.body_en || x.excerpt_am || x.body_am;
+            const image = x.image_url ? `${API_ORIGIN}${x.image_url}` : "";
+
+            return (
+              <article className="news-page-card" key={x.id}>
+                <div className={`news-page-media news-page-media-${(index % 4) + 1}`}>
+                  {image ? (
+                    <img src={image} alt="" />
+                  ) : (
+                    <>
+                      <span>ETEF</span>
+                      <b>NEWS</b>
+                    </>
+                  )}
+                  <span className="news-page-date">
+                    {x.published_at
+                      ? new Date(x.published_at).toLocaleDateString(
+                          am ? "am-ET" : "en-US",
+                          { year: "numeric", month: "short", day: "numeric" },
+                        )
+                      : ""}
+                  </span>
+                </div>
+
+                <div className="news-page-meta">
+                  <span className="news-page-kicker">ETEF NEWS</span>
+                  <h2>{title}</h2>
+                  {body && <p>{body}</p>}
+                  <Link className="news-page-link" to="/news">
+                    {am ? "ዝርዝር ይመልከቱ" : "Read update"} <span>↗</span>
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="empty-state content-state-card">
+          <span>ETEF</span>
+          <h2>{am ? "አሁን የታተመ ዜና የለም" : "No news published yet"}</h2>
+          <p>
+            {am
+              ? "የፌዴሬሽኑ የታተመ ይዘት እዚህ በራስ-ሰር ይታያል።"
+              : "Published federation updates will automatically appear here."}
+          </p>
+        </div>
+      )}
     </Page>
   );
 }
@@ -1065,40 +1226,86 @@ function Membership() {
 function FAQ() {
   const { i18n } = useTranslation();
   const [items, setItems] = useState<any[]>([]);
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<string | null>(null);
+  const [search, setSearch] = useState("");
   const am = i18n.language.startsWith("am");
+
   useEffect(() => {
     api<{ items: any[] }>("/faqs")
-      .then((r) => setItems(r.items))
-      .catch(() => setItems([]));
+      .then((r) => {
+        const next = r.items || [];
+        setItems(next);
+        setOpen(next[0]?.id || null);
+      })
+      .catch(() => {
+        setItems([]);
+        setOpen(null);
+      });
   }, []);
+
   return (
     <Page
       title={am ? "ተደጋጋሚ ጥያቄዎች" : "Frequently asked questions"}
       eyebrow="FAQ"
     >
-      <div className="faq-list">
-        {items.map((x, index) => {
+      <div className="faq-page-intro">
+        <div>
+          <p>
+            {am
+              ? "ስለ ETEF አገልግሎቶች፣ አባልነት እና ሥራዎች በተደጋጋሚ የሚጠየቁ ጥያቄዎችን ያግኙ።"
+              : "Clear answers to common questions about ETEF, membership and the federation's work."}
+          </p>
+          <label className="faq-search">
+            <span aria-hidden="true">⌕</span>
+            <input
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder={am ? "ጥያቄ ይፈልጉ..." : "Search questions..."}
+              aria-label={am ? "ጥያቄዎችን ይፈልጉ" : "Search questions"}
+            />
+          </label>
+        </div>
+        <span>{items.length} {am ? "ጥያቄዎች" : items.length === 1 ? "question" : "questions"}</span>
+      </div>
+
+      <div className="faq-list faq-page-list">
+        {items.filter((x) => {
+          const q = am ? x.question_am || x.question_en : x.question_en || x.question_am;
+          const a = am ? x.answer_am || x.answer_en : x.answer_en || x.answer_am;
+          const term = search.trim().toLowerCase();
+          return !term || `${q} ${a}`.toLowerCase().includes(term);
+        }).map((x, visibleIndex) => {
           const q = am
             ? x.question_am || x.question_en
             : x.question_en || x.question_am;
           const a = am
             ? x.answer_am || x.answer_en
             : x.answer_en || x.answer_am;
+          const isOpen = open === x.id;
+
           return (
-            <button
-              className={`faq-row ${open === index ? "open" : ""}`}
-              key={x.id}
-              onClick={() => setOpen(open === index ? null : index)}
-            >
-              <span>
-                <strong>{q}</strong>
-                {open === index && <p>{a}</p>}
-              </span>
-              <b>{open === index ? "−" : "+"}</b>
-            </button>
+            <article className={`faq-item ${isOpen ? "open" : ""}`} key={x.id}>
+              <button
+                type="button"
+                className="faq-question"
+                aria-expanded={isOpen}
+                onClick={() => setOpen(isOpen ? null : x.id)}
+              >
+                <span className="faq-question-number">
+                  {String(visibleIndex + 1).padStart(2, "0")}
+                </span>
+                <span className="faq-question-text">{q}</span>
+                <span className="faq-toggle" aria-hidden="true">
+                  {isOpen ? "−" : "+"}
+                </span>
+              </button>
+              <div className={`faq-answer ${isOpen ? "visible" : ""}`}>
+                <p dir="auto">{a}</p>
+              </div>
+            </article>
           );
         })}
+
         {!items.length && (
           <div className="empty-state">
             <span>ETEF</span>
@@ -1110,10 +1317,22 @@ function FAQ() {
             </p>
           </div>
         )}
+        {items.length > 0 && search.trim() && !items.some((x) => {
+          const q = am ? x.question_am || x.question_en : x.question_en || x.question_am;
+          const a = am ? x.answer_am || x.answer_en : x.answer_en || x.answer_am;
+          return `${q} ${a}`.toLowerCase().includes(search.trim().toLowerCase());
+        }) && (
+          <div className="empty-state">
+            <span>⌕</span>
+            <h2>{am ? "የሚዛመድ ጥያቄ አልተገኘም" : "No matching questions"}</h2>
+            <p>{am ? "ሌላ የፍለጋ ቃል ይሞክሩ።" : "Try another search term."}</p>
+          </div>
+        )}
       </div>
     </Page>
   );
 }
+
 function FaqRow({
   question,
   answer,
@@ -1124,17 +1343,27 @@ function FaqRow({
   index: number;
 }) {
   const [open, setOpen] = useState(index === 0);
+
   return (
-    <button
-      className={`faq-row ${open ? "open" : ""}`}
-      onClick={() => setOpen((v) => !v)}
-    >
-      <span>
-        <strong>{question}</strong>
-        {open && <p>{answer}</p>}
-      </span>
-      <b>{open ? "−" : "+"}</b>
-    </button>
+    <article className={`faq-item ${open ? "open" : ""}`}>
+      <button
+        type="button"
+        className="faq-question"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+      >
+        <span className="faq-question-number">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <span className="faq-question-text">{question}</span>
+        <span className="faq-toggle" aria-hidden="true">
+          {open ? "−" : "+"}
+        </span>
+      </button>
+      <div className={`faq-answer ${open ? "visible" : ""}`}>
+        <p dir="auto">{answer}</p>
+      </div>
+    </article>
   );
 }
 
@@ -1201,67 +1430,88 @@ function Vacancies() {
   const { i18n } = useTranslation();
   const [items, setItems] = useState<any[]>([]);
   const am = i18n.language.startsWith("am");
+
   useEffect(() => {
     api<{ items: any[] }>("/vacancies")
       .then((r) => setItems(r.items))
       .catch(() => setItems([]));
   }, []);
+
   return (
     <Page title={am ? "የሥራ ዕድሎች" : "Job vacancies"} eyebrow="CAREERS">
       <p className="page-lead">
         {am
-          ? "በETEF የታተሙ የሥራ ዕድሎች።"
+          ? "በETEF የታተሙ የሥራ ዕድሎችን ይመልከቱ።"
           : "Current opportunities published by ETEF."}
       </p>
+
       {items.length ? (
-        <div className="vacancy-list">
-          {items.map((x) => (
-            <article className="page-card" key={x.id}>
-              <span className="eyebrow">
-                {x.employment_type || "OPPORTUNITY"}
-              </span>
-              <h2>
-                {am ? x.title_am || x.title_en : x.title_en || x.title_am}
-              </h2>
-              <p>
-                {x.location || ""}
-                {x.closing_date
-                  ? ` · ${am ? "የመጨረሻ ቀን" : "Deadline"}: ${new Date(x.closing_date).toLocaleDateString()}`
-                  : ""}
-              </p>
-              {(am
-                ? x.description_am || x.description_en
-                : x.description_en || x.description_am) && (
-                <p>
-                  {am
-                    ? x.description_am || x.description_en
-                    : x.description_en || x.description_am}
-                </p>
-              )}{" "}
-              {(am
-                ? x.requirements_am || x.requirements_en
-                : x.requirements_en || x.requirements_am) && (
-                <div className="page-block">
-                  <span className="eyebrow">
-                    {am ? "መስፈርቶች" : "REQUIREMENTS"}
-                  </span>
-                  <p>
-                    {am
-                      ? x.requirements_am || x.requirements_en
-                      : x.requirements_en || x.requirements_am}
-                  </p>
+        <div className="vacancy-page-grid">
+          {items.map((x, index) => {
+            const title = am
+              ? x.title_am || x.title_en
+              : x.title_en || x.title_am;
+            const description = am
+              ? x.description_am || x.description_en
+              : x.description_en || x.description_am;
+            const requirements = am
+              ? x.requirements_am || x.requirements_en
+              : x.requirements_en || x.requirements_am;
+
+            return (
+              <article className="vacancy-page-card" key={x.id}>
+                <div className={`vacancy-page-media vacancy-page-media-${(index % 4) + 1}`}>
+                  <span>ETEF</span>
+                  <b>{am ? "የሥራ ዕድል" : "OPPORTUNITY"}</b>
                 </div>
-              )}
-            </article>
-          ))}
+
+                <div className="vacancy-page-meta">
+                  <div className="vacancy-page-topline">
+                    <span className="vacancy-type">
+                      {x.employment_type || (am ? "የሥራ ዕድል" : "OPPORTUNITY")}
+                    </span>
+                    {x.closing_date && (
+                      <span className="vacancy-deadline">
+                        {am ? "መጨረሻ" : "Deadline"} ·{" "}
+                        {new Date(x.closing_date).toLocaleDateString(
+                          am ? "am-ET" : "en-US",
+                          { year: "numeric", month: "short", day: "numeric" },
+                        )}
+                      </span>
+                    )}
+                  </div>
+
+                  <h2>{title}</h2>
+
+                  {x.location && (
+                    <div className="vacancy-location">
+                      <span aria-hidden="true">⌖</span>
+                      {x.location}
+                    </div>
+                  )}
+
+                  {description && <p>{description}</p>}
+
+                  {requirements && (
+                    <div className="vacancy-requirements">
+                      <span className="eyebrow">
+                        {am ? "መስፈርቶች" : "REQUIREMENTS"}
+                      </span>
+                      <p>{requirements}</p>
+                    </div>
+                  )}
+                </div>
+              </article>
+            );
+          })}
         </div>
       ) : (
-        <div className="empty-state">
+        <div className="empty-state content-state-card">
           <span>ETEF</span>
           <h2>{am ? "አሁን የታተመ የሥራ ዕድል የለም" : "No vacancies published yet"}</h2>
           <p>
             {am
-              ? "የታተሙ የሥራ ዕድሎች እዚህ ይታያሉ።"
+              ? "የታተሙ የሥራ ዕድሎች እዚህ በራስ-ሰር ይታያሉ።"
               : "Published vacancies will automatically appear here."}
           </p>
         </div>
