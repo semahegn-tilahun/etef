@@ -8080,18 +8080,13 @@ button:focus-visible {
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5),
               inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
 }
-
-/* ======================================================
-   HERO ENHANCEMENTS: LATEST EVENT RECTANGLE CARD
-   - Removed logos
-   - Smooth corners (22px border radius)
-   - Faded, translucent borders with soft inner illumination
-   ====================================================== */
-.latest-event-card {
-  position: relative;
-  border-radius: 1.35rem; /* Smooth rounded corners */
-
-  .latest-updates-title{
+/* ======================================================  */
+/* ========== latest event title===== */  
+.hero-right-col{
+  margin-left: 6.5rem !important;
+  margin-top: 3.5rem !important;
+}
+.latest-updates-title{
     text-align: center !important;
     margin-top: .5rem !important;
     margin-bottom: 1rem !important;
@@ -8102,6 +8097,17 @@ button:focus-visible {
     text-shadow: 2px 2px 4px #000;
     background: none;
   } 
+/* ======================================================
+   HERO ENHANCEMENTS: LATEST EVENT RECTANGLE CARD
+   - Removed logos
+   - Smooth corners (22px border radius)
+   - Faded, translucent borders with soft inner illumination
+   ====================================================== */
+.latest-event-card {
+  position: relative;
+  border-radius: 1.35rem; /* Smooth rounded corners */
+
+
   /* Soft frosted translucent background */
   background: linear-gradient(
     135deg,
@@ -8124,6 +8130,7 @@ button:focus-visible {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
+
 
 /* Faded border gradient overlay on hover */
 .latest-event-card::before {
