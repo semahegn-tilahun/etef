@@ -379,6 +379,26 @@ function Home() {
               <span>Freight, Tanker, Bus &amp; Taxi</span>
             </div>
           </div>
+
+          {/* 4. Federation access pillars restored from the latest reference design. */}
+          <div className="hero-focus-strip" aria-label="ETEF federation priorities">
+            <div className="hero-focus-item">
+              <strong>01</strong>
+              <span>Unified representation</span>
+            </div>
+            <div className="hero-focus-item">
+              <strong>02</strong>
+              <span>Member-focused support</span>
+            </div>
+            <div className="hero-focus-item">
+              <strong>03</strong>
+              <span>Industry collaboration</span>
+            </div>
+            <div className="hero-focus-item">
+              <strong>04</strong>
+              <span>Digital access</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1185,7 +1205,7 @@ function Footer() {
         <span>© {new Date().getFullYear()} ETEF. All rights reserved.</span>
         <a
           className="powered-by"
-          href="https://mulutilacodecamp.vercel.app/"
+          href="https://mulutilacodecomp.vercel.app/"
           target="_blank"
           rel="noreferrer"
         >

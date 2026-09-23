@@ -8252,3 +8252,506 @@ button:focus-visible {
     transition: none !important;
   }
 }
+
+/* =========================================================
+   ETEF HERO / HEADER FINAL REFINEMENT — 2026-09-23
+   ========================================================= */
+
+/* Blue institutional header with white navigation. */
+.header {
+  background: linear-gradient(110deg, #1E2DBE 0%, #1E2DBE 72%, #230050 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,.14) !important;
+  box-shadow: 0 8px 30px rgba(16,25,105,.16) !important;
+  color: #fff !important;
+}
+
+.header .brand-copy strong,
+.header .brand-copy small,
+.header .nav-links a,
+.header .language-switcher button,
+.header .mobile-menu span {
+  color: #fff !important;
+}
+
+.header .brand-seal {
+  border-color: rgba(255,255,255,.92) !important;
+  color: #fff !important;
+}
+
+.header .brand-seal::after {
+  border-color: rgba(255,255,255,.52) !important;
+}
+
+.header .nav-links a:hover,
+.header .nav-links a.active {
+  color: #fff !important;
+  background: rgba(255,255,255,.14) !important;
+}
+
+.header .language-switcher {
+  border-color: rgba(255,255,255,.30) !important;
+  background: rgba(255,255,255,.06) !important;
+}
+
+.header .language-switcher button {
+  color: rgba(255,255,255,.78) !important;
+}
+
+.header .language-switcher button.active {
+  background: #fff !important;
+  color: #1E2DBE !important;
+}
+
+.header .nav-cta {
+  background: #fff !important;
+  color: #1E2DBE !important;
+}
+
+.header .nav-cta span {
+  color: #230050 !important;
+}
+
+/* The organizational information remains visible on mobile. */
+.org-topbar {
+  background: #1726A9 !important;
+  color: rgba(255,255,255,.90) !important;
+  border-bottom: 1px solid rgba(255,255,255,.13) !important;
+}
+
+.org-topbar-inner {
+  min-height: 38px !important;
+}
+
+.org-recognition {
+  color: #fff !important;
+  border-color: rgba(255,255,255,.30) !important;
+  background: rgba(255,255,255,.08) !important;
+}
+
+/* Full-width left blue cover: it starts at the viewport edge and fades into the image. */
+.hero-left-wash {
+  position: absolute !important;
+  z-index: 1 !important;
+  inset: 0 auto 0 0 !important;
+  width: min(76vw, 1120px) !important;
+  pointer-events: none !important;
+  background: linear-gradient(
+    90deg,
+    rgba(30,45,190,.88) 0%,
+    rgba(30,45,190,.78) 22%,
+    rgba(30,45,190,.56) 46%,
+    rgba(30,45,190,.28) 67%,
+    rgba(30,45,190,.06) 88%,
+    rgba(30,45,190,0) 100%
+  ) !important;
+}
+
+/* Do not allow the copy's pseudo-layer to create a second visible panel. */
+.hero-copy::before,
+.hero-copy::after {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Latest event is content laid over the image — no card, border, radius or box. */
+.latest-event-card {
+  position: absolute !important;
+  z-index: 7 !important;
+  right: 0 !important;
+  top: 50% !important;
+  width: min(680px, 53vw) !important;
+  min-height: 245px !important;
+  padding: 34px 0 22px 52px !important;
+  transform: translateY(-42%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  overflow: visible !important;
+}
+
+.latest-event-card::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  inset: 0 -24vw 0 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(30,45,190,.02) 0%,
+    rgba(30,45,190,.16) 30%,
+    rgba(19,27,92,.34) 72%,
+    rgba(15,20,65,.46) 100%
+  ) !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+  pointer-events: none !important;
+}
+
+.latest-event-card:hover {
+  transform: translateY(-42%) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.latest-event-topline {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+.latest-event-badge {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(255,255,255,.76) !important;
+  font-size: 10px !important;
+  font-weight: 850 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+}
+
+.latest-event-date {
+  color: rgba(255,255,255,.58) !important;
+  font-size: 10px !important;
+}
+
+.latest-event-title {
+  max-width: 610px !important;
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: clamp(30px, 3.3vw, 48px) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.04em !important;
+  text-shadow: 0 4px 24px rgba(5,10,40,.30) !important;
+}
+
+.latest-event-summary {
+  max-width: 560px !important;
+  margin: 12px 0 0 !important;
+  color: rgba(255,255,255,.82) !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  text-shadow: 0 2px 16px rgba(5,10,40,.22) !important;
+}
+
+.latest-event-footer {
+  margin-top: 16px !important;
+}
+
+.latest-event-link {
+  color: #fff !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 6px !important;
+}
+
+.latest-event-link:hover {
+  color: #fff !important;
+}
+
+.hero-update-controls {
+  position: static !important;
+  margin-top: 17px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 14px !important;
+  color: rgba(255,255,255,.62) !important;
+}
+
+/* Keep the executive statistics visible above the restored four-part strip. */
+.hero-statistics {
+  bottom: 100px !important;
+  max-width: 940px !important;
+}
+
+/* Restored content from the latest supplied reference image. */
+.hero-focus-strip {
+  position: absolute !important;
+  z-index: 8 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  min-height: 74px !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  background: linear-gradient(110deg, #1E2DBE 0%, #1E2DBE 72%, #230050 100%) !important;
+  border-top: 1px solid rgba(255,255,255,.10) !important;
+}
+
+.hero-focus-item {
+  min-width: 0;
+  padding: 12px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  border-right: 1px solid rgba(255,255,255,.12) !important;
+}
+
+.hero-focus-item:last-child {
+  border-right: 0 !important;
+}
+
+.hero-focus-item strong {
+  color: rgba(255,255,255,.98) !important;
+  font-size: 9px !important;
+  line-height: 1 !important;
+  letter-spacing: .12em !important;
+}
+
+.hero-focus-item span {
+  color: rgba(255,255,255,.92) !important;
+  font-size: 10px !important;
+  line-height: 1.3 !important;
+  font-weight: 750 !important;
+}
+
+/* Mobile: preserve the top organizational information and stack the hero cleanly. */
+@media (max-width: 900px) {
+  .org-topbar {
+    display: block !important;
+    min-height: 34px !important;
+  }
+
+  .org-topbar-inner {
+    width: min(100% - 24px, 1180px) !important;
+    min-height: 34px !important;
+    padding: 6px 0 !important;
+    gap: 5px !important;
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .org-topbar-left,
+  .org-topbar-right {
+    width: 100% !important;
+    min-width: 0 !important;
+    gap: 7px !important;
+    font-size: 9px !important;
+    line-height: 1.25 !important;
+  }
+
+  .org-topbar-left > span:last-child {
+    max-width: none !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+
+  .org-topbar-right {
+    white-space: normal !important;
+    justify-content: flex-start !important;
+  }
+
+  .org-recognition {
+    min-height: 20px !important;
+    padding: 0 7px !important;
+    font-size: 8px !important;
+  }
+
+  .org-divider,
+  .org-separator {
+    display: none !important;
+  }
+
+  .header {
+    position: sticky !important;
+    top: 0 !important;
+  }
+
+  .header-inner {
+    min-height: 68px !important;
+  }
+
+  .header .brand-copy strong {
+    font-size: 9px !important;
+  }
+
+  .header .brand-copy small {
+    font-size: 7px !important;
+  }
+
+  .header .mobile-menu span {
+    background: #fff !important;
+  }
+
+  .navigation.open {
+    background: linear-gradient(180deg, #1E2DBE 0%, #230050 100%) !important;
+    color: #fff !important;
+  }
+
+  .navigation.open .nav-links a,
+  .navigation.open .language-switcher button {
+    color: #fff !important;
+  }
+
+  .navigation.open .nav-links a:hover,
+  .navigation.open .nav-links a.active {
+    background: rgba(255,255,255,.14) !important;
+    color: #fff !important;
+  }
+
+  .hero {
+    min-height: 1010px !important;
+  }
+
+  .hero-grid {
+    min-height: 1010px !important;
+  }
+
+  .hero-left-wash {
+    width: 100% !important;
+    background: linear-gradient(
+      90deg,
+      rgba(30,45,190,.82) 0%,
+      rgba(30,45,190,.64) 52%,
+      rgba(30,45,190,.20) 82%,
+      rgba(30,45,190,.03) 100%
+    ) !important;
+  }
+
+  .hero-copy {
+    padding: 74px 0 410px !important;
+  }
+
+  .latest-event-card {
+    top: auto !important;
+    right: 0 !important;
+    bottom: 188px !important;
+    width: 100% !important;
+    min-height: 210px !important;
+    padding: 22px 22px 18px !important;
+    transform: none !important;
+  }
+
+  .latest-event-card:hover {
+    transform: none !important;
+  }
+
+  .latest-event-card::before {
+    inset: 0 -20vw 0 0 !important;
+    background: linear-gradient(
+      90deg,
+      rgba(30,45,190,.10) 0%,
+      rgba(30,45,190,.32) 42%,
+      rgba(15,20,65,.48) 100%
+    ) !important;
+  }
+
+  .latest-event-title {
+    font-size: clamp(27px, 8vw, 38px) !important;
+  }
+
+  .latest-event-summary {
+    max-width: 100% !important;
+    font-size: 12px !important;
+  }
+
+  .hero-statistics {
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 92px !important;
+    grid-template-columns: repeat(3, minmax(0,1fr)) !important;
+    gap: 7px !important;
+  }
+
+  .hero-stat-item {
+    min-height: 70px !important;
+    padding: 9px 10px !important;
+    border-radius: 10px !important;
+  }
+
+  .hero-stat-item strong {
+    font-size: 20px !important;
+  }
+
+  .hero-stat-item > span {
+    font-size: 8px !important;
+    line-height: 1.25 !important;
+  }
+
+  .hero-focus-strip {
+    min-height: 76px !important;
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  }
+
+  .hero-focus-item {
+    min-height: 38px !important;
+    padding: 8px 12px !important;
+  }
+
+  .hero-focus-item:nth-child(2) {
+    border-right: 0 !important;
+  }
+
+  .hero-focus-item:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(255,255,255,.10) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .org-topbar-left,
+  .org-topbar-right {
+    font-size: 8px !important;
+  }
+
+  .header-inner {
+    min-height: 62px !important;
+  }
+
+  .hero {
+    min-height: 1040px !important;
+  }
+
+  .hero-grid {
+    min-height: 1040px !important;
+  }
+
+  .hero-copy {
+    padding-top: 58px !important;
+    padding-bottom: 425px !important;
+  }
+
+  .latest-event-card {
+    bottom: 190px !important;
+    min-height: 205px !important;
+    padding: 20px 16px 14px !important;
+  }
+
+  .latest-event-title {
+    font-size: 27px !important;
+  }
+
+  .latest-event-summary {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .hero-statistics {
+    bottom: 84px !important;
+  }
+
+  .hero-focus-strip {
+    min-height: 72px !important;
+  }
+
+  .hero-focus-item span {
+    font-size: 9px !important;
+  }
+}
