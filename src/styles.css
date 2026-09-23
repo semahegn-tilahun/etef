@@ -8755,3 +8755,119 @@ button:focus-visible {
     font-size: 9px !important;
   }
 }
+
+
+/* =========================================================
+   ETEF TARGETED HERO FIX — 2026-09-23
+   Only the requested header/hero alignment issues are changed.
+   ========================================================= */
+
+/* 1. Restore the original top organizational information bar.
+      Do not recolor or restyle it like the blue navigation header. */
+.org-topbar {
+  display: block !important;
+  background: #050a18 !important;
+  color: rgba(255,255,255,.82) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  font-size: 12px !important;
+}
+
+.org-topbar-inner {
+  min-height: 40px !important;
+}
+
+.org-recognition {
+  color: #34e4ae !important;
+  border-color: rgba(0, 214, 150, .35) !important;
+  background: rgba(0, 214, 150, .035) !important;
+}
+
+/* 2. Remove the glass treatment from the left copy cover.
+      Keep only the blue gradient wash over the image. */
+.hero-copy::before,
+.hero-copy::after {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* 3. Latest event: content only, centered in the right side.
+      No rectangle, border, background or pseudo-cover. */
+.latest-event-card {
+  left: 60% !important;
+  right: auto !important;
+  top: 50% !important;
+  width: min(570px, 37vw) !important;
+  min-height: 245px !important;
+  padding: 34px 0 22px 0 !important;
+  transform: translateY(-42%) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  overflow: visible !important;
+}
+
+.latest-event-card::before {
+  display: none !important;
+  content: none !important;
+}
+
+.latest-event-card:hover {
+  transform: translateY(-42%) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* 4. Make the restored four-part strip span the entire viewport
+      and sit exactly at the bottom edge of the hero. */
+.hero-focus-strip {
+  left: 50% !important;
+  right: auto !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  min-height: 74px !important;
+  transform: translateX(-50%) !important;
+}
+
+/* Keep the organizational bar visible on mobile while preserving
+   its original dark background/style. */
+@media (max-width: 900px) {
+  .org-topbar {
+    display: block !important;
+    background: #050a18 !important;
+  }
+
+  .latest-event-card {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    padding: 22px 22px 18px !important;
+    transform: none !important;
+  }
+
+  .latest-event-card:hover {
+    transform: none !important;
+  }
+
+  .latest-event-card::before {
+    display: none !important;
+  }
+
+  .hero-focus-strip {
+    left: 50% !important;
+    right: auto !important;
+    width: 100vw !important;
+    transform: translateX(-50%) !important;
+    bottom: 0 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .latest-event-card {
+    padding: 20px 16px 14px !important;
+  }
+}
