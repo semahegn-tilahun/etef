@@ -226,7 +226,10 @@ function HeroUpdates() {
       className="latest-event-card"
       aria-label={am ? "የቅርብ ጊዜ ዝግጅት እና መረጃ" : "Latest Event and Information"}
     >
-      <div>
+      <div> <h2 className="latest-updates-title">Latest Updates</h2> 
+      <br />
+      <br />
+      <br />
         <div className="latest-event-topline">
           <span className="latest-event-badge">{active.type}</span>
           {active.date && <span className="latest-event-date">{active.date}</span>}
@@ -340,11 +343,13 @@ function Home() {
                 <span className="hero-note-dot" />
                 <span>{t("heroNote")}</span>
               </div>
+
             </div>
 
             {/* Right side: Latest event rectangle card without logos */}
             <div className="hero-right-col">
               <HeroUpdates />
+
             </div>
           </div>
 

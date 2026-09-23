@@ -8090,7 +8090,18 @@ button:focus-visible {
 .latest-event-card {
   position: relative;
   border-radius: 1.35rem; /* Smooth rounded corners */
-  
+
+  .latest-updates-title{
+    text-align: center !important;
+    margin-top: .5rem !important;
+    margin-bottom: 1rem !important;
+    font-weight: 990 !important;
+    font-size: 2.4rem !important;
+    letter-spacing: -0.02em !important;
+    text-transform: uppercase !important;
+    text-shadow: 2px 2px 4px #000;
+    background: none;
+  } 
   /* Soft frosted translucent background */
   background: linear-gradient(
     135deg,
