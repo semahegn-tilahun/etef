@@ -315,24 +315,8 @@ function Home() {
         <div className="hero-top-vignette" aria-hidden="true" />
 
         <div className="hero-grid container">
-          {/* 1. Very Top Information Announcement Strip */}
-          <div className="hero-top-announcement">
-            <span className="hero-top-pulse" aria-hidden="true">
-              <span className="hero-top-ping" />
-              <span className="hero-top-dot" />
-            </span>
-            <span className="hero-top-badge">
-              {am ? "ይፋዊ ማስታወቂያ" : "Official Announcement"}
-            </span>
-            <span className="hero-top-sep">•</span>
-            <p className="hero-top-text">
-              {am
-                ? "የኢትዮጵያ ትራንስፖርት አሰሪዎች ፌዴሬሽን ይፋዊ ፖርታል"
-                : "Ethiopian Transport Employers' Federation Institutional Portal"}
-            </p>
-          </div>
+          {/* Main Row: Left Copy & Right Event Content */}
 
-          {/* 2. Main Row: Left Copy & Right Event Card */}
           <div className="hero-main-row">
             <div className="hero-copy">
               <span className="eyebrow eyebrow-light">{t("heroEyebrow")}</span>
@@ -410,28 +394,37 @@ function Home() {
             title="ETEF"
             text={t("aboutIntro")}
           />
-          <div className="intro-grid">
-            <div className="intro-copy-block">
+          <div className="institutional-overview-grid">
+            <div className="institutional-overview-copy">
+              <span className="section-index">01 / ABOUT ETEF</span>
+              <h3>Connecting transport employers through representation, dialogue and practical federation services.</h3>
               <p>
-                ETEF is a unified platform for transport employers, members and
-                partners, providing clear institutional information and easier
-                access to federation services and opportunities.
+                ETEF provides a unified institutional platform for transport employers, members and partners. The federation brings together information about membership, advocacy, industry dialogue, member interests and opportunities in one accessible digital home.
               </p>
-              <Link className="arrow-link" to="/about">
-                Explore ETEF <span>→</span>
-              </Link>
+              <Link className="arrow-link" to="/about">Explore ETEF <span>→</span></Link>
             </div>
 
-            <div className="intro-visual">
-              <div className="visual-line line-a" />
-              <div className="visual-line line-b" />
-              <div className="visual-number">ETEF</div>
-              <div className="visual-caption">
-                <span>ETHIOPIAN</span>
-                <span>TRANSPORT</span>
-                <span>EMPLOYERS'</span>
-                <span>FEDERATION</span>
-              </div>
+            <div className="institutional-overview-grid-items">
+              <Link className="overview-item" to="/membership">
+                <span>01</span>
+                <div><strong>Membership</strong><p>Registration, member information and federation access.</p></div>
+                <b>↗</b>
+              </Link>
+              <Link className="overview-item" to="/about">
+                <span>02</span>
+                <div><strong>Representation</strong><p>Advocacy and engagement around transport employers' interests.</p></div>
+                <b>↗</b>
+              </Link>
+              <Link className="overview-item" to="/contact">
+                <span>03</span>
+                <div><strong>Industry dialogue</strong><p>Connections among employers, associations and institutional partners.</p></div>
+                <b>↗</b>
+              </Link>
+              <Link className="overview-item" to="/news">
+                <span>04</span>
+                <div><strong>Information &amp; updates</strong><p>News, announcements and current federation information.</p></div>
+                <b>↗</b>
+              </Link>
             </div>
           </div>
         </div>

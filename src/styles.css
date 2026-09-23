@@ -8871,3 +8871,882 @@ button:focus-visible {
     padding: 20px 16px 14px !important;
   }
 }
+
+/* =========================================================
+   ETEF MICRO REFINEMENT — 2026-09-23
+   Only the three requested hero spacing/treatment adjustments.
+   ========================================================= */
+
+/* 1. Tighten the hero's top announcement spacing without changing
+      the organizational/header styling. */
+.hero-top-announcement {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  line-height: 1.25 !important;
+}
+
+.hero-top-badge,
+.hero-top-text,
+.hero-top-sep {
+  margin: 0 !important;
+}
+
+.hero-top-text {
+  max-width: min(620px, 72vw) !important;
+}
+
+/* 2. Remove every remaining glass/panel treatment from the left hero copy.
+      The full-width blue gradient wash remains the only cover treatment. */
+.hero-copy {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.hero-copy::before,
+.hero-copy::after {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* 3. Move the latest-event content slightly left within the right side
+      for cleaner reading against the image. It remains borderless and
+      background-free. */
+.latest-event-card {
+  left: 56% !important;
+  right: auto !important;
+  width: min(570px, 39vw) !important;
+  padding-left: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.latest-event-card::before {
+  display: none !important;
+  content: none !important;
+}
+
+@media (max-width: 900px) {
+  .hero-top-announcement {
+    gap: 6px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .hero-top-text {
+    max-width: calc(100vw - 70px) !important;
+  }
+
+  .latest-event-card {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+}
+
+/* =========================================================
+   ETEF HERO / CONTENT DENSITY REFINEMENT — 2026-09-23
+   Only the latest requested refinements are applied.
+   ========================================================= */
+
+/* The hero announcement line was removed from the markup. Keep any legacy
+   styles inert so it cannot reserve visual space if referenced elsewhere. */
+.hero-top-announcement {
+  display: none !important;
+}
+
+/* Stronger left-side blue wash: improves headline contrast without creating
+   a panel, border or glass boundary. */
+.hero-left-wash {
+  background: linear-gradient(
+    90deg,
+    rgba(30,45,190,.96) 0%,
+    rgba(30,45,190,.88) 24%,
+    rgba(30,45,190,.68) 48%,
+    rgba(30,45,190,.38) 68%,
+    rgba(30,45,190,.10) 88%,
+    rgba(30,45,190,0) 100%
+  ) !important;
+}
+
+/* Latest update: keep it on the right with a deliberate visual gap from the
+   left copy. It remains pure content — no rectangle or pseudo-background. */
+.latest-event-card {
+  left: auto !important;
+  right: 2.5vw !important;
+  width: min(560px, 34vw) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  transform: translateY(-42%) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.latest-event-card::before,
+.latest-event-card::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.latest-event-title,
+.latest-event-summary {
+  max-width: 100% !important;
+}
+
+/* Compact information hub: adds useful institutional content without
+   inventing new facts or requiring new backend modules. */
+.information-hub-section {
+  padding-top: clamp(54px, 6vw, 82px) !important;
+  padding-bottom: clamp(54px, 6vw, 82px) !important;
+  background: #f7f8fb !important;
+}
+
+.information-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.information-hub-card {
+  min-height: 205px;
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #e3e6ef;
+  border-radius: 18px;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.information-hub-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(30,45,190,.24);
+  box-shadow: 0 16px 34px rgba(18,27,92,.09);
+}
+
+.information-hub-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1e2dbe;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .12em;
+}
+
+.information-hub-card h3 {
+  margin: 22px 0 8px;
+  color: #171b2f;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.information-hub-card p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.information-hub-line {
+  width: 42px;
+  height: 2px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-bottom: 2px solid #1e2dbe;
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .latest-event-card {
+    right: 1.5vw !important;
+    width: min(500px, 33vw) !important;
+  }
+
+  .information-hub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  /* Preserve the current mobile header/nav colors exactly. */
+  .header,
+  .navigation.open {
+    background: linear-gradient(110deg, #1E2DBE 0%, #1E2DBE 72%, #230050 100%) !important;
+  }
+
+  .hero-left-wash {
+    background: linear-gradient(
+      90deg,
+      rgba(30,45,190,.94) 0%,
+      rgba(30,45,190,.84) 42%,
+      rgba(30,45,190,.48) 72%,
+      rgba(30,45,190,.08) 100%
+    ) !important;
+  }
+
+  .latest-event-card {
+    right: 0 !important;
+    left: auto !important;
+    width: 86% !important;
+    margin-left: auto !important;
+    padding: 22px 22px 18px 0 !important;
+    transform: none !important;
+  }
+
+  .latest-event-card:hover {
+    transform: none !important;
+  }
+
+  .information-hub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .information-hub-card {
+    min-height: 185px;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .information-hub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .information-hub-card {
+    min-height: 165px;
+  }
+}
+
+/* =========================================================
+   ETEF HERO / CONTENT DENSITY REFINEMENT — 2026-09-23
+   ========================================================= */
+.hero-top-announcement {
+  display: none !important;
+}
+
+/* Stronger blue wash for clearer hero typography; no glass panel. */
+.hero-left-wash {
+  background: linear-gradient(
+    90deg,
+    rgba(30,45,190,.96) 0%,
+    rgba(30,45,190,.88) 24%,
+    rgba(30,45,190,.68) 48%,
+    rgba(30,45,190,.38) 68%,
+    rgba(30,45,190,.10) 88%,
+    rgba(30,45,190,0) 100%
+  ) !important;
+}
+
+/* Latest update stays on the right with a deliberate gap from the left copy.
+   It is content-only: no rectangle, border, shadow, blur or pseudo-cover. */
+.latest-event-card {
+  left: auto !important;
+  right: 2.5vw !important;
+  width: min(560px, 34vw) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  transform: translateY(-42%) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.latest-event-card::before,
+.latest-event-card::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.latest-event-title,
+.latest-event-summary {
+  max-width: 100% !important;
+}
+
+/* Relevant information hub, inspired by the content density of institutional
+   portals: topics, member services, dialogue, updates and digital access. */
+.information-hub-section {
+  padding-top: clamp(54px, 6vw, 82px) !important;
+  padding-bottom: clamp(54px, 6vw, 82px) !important;
+  background: #f7f8fb !important;
+}
+
+.information-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.information-hub-card {
+  min-height: 205px;
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #e3e6ef;
+  border-radius: 18px;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.information-hub-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(30,45,190,.24);
+  box-shadow: 0 16px 34px rgba(18,27,92,.09);
+}
+
+.information-hub-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1e2dbe;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .12em;
+}
+
+.information-hub-card h3 {
+  margin: 22px 0 8px;
+  color: #171b2f;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.information-hub-card p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.information-hub-line {
+  width: 42px;
+  height: 2px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-bottom: 2px solid #1e2dbe;
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .latest-event-card {
+    right: 1.5vw !important;
+    width: min(500px, 33vw) !important;
+  }
+
+  .information-hub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  /* Preserve the current mobile header/navbar appearance. */
+  .header,
+  .navigation.open {
+    background: linear-gradient(110deg, #1E2DBE 0%, #1E2DBE 72%, #230050 100%) !important;
+  }
+
+  .hero-left-wash {
+    background: linear-gradient(
+      90deg,
+      rgba(30,45,190,.94) 0%,
+      rgba(30,45,190,.84) 42%,
+      rgba(30,45,190,.48) 72%,
+      rgba(30,45,190,.08) 100%
+    ) !important;
+  }
+
+  .latest-event-card {
+    right: 0 !important;
+    left: auto !important;
+    width: 86% !important;
+    margin-left: auto !important;
+    padding: 22px 22px 18px 0 !important;
+    transform: none !important;
+  }
+
+  .latest-event-card:hover {
+    transform: none !important;
+  }
+
+  .information-hub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .information-hub-card {
+    min-height: 185px;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .information-hub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .information-hub-card {
+    min-height: 165px;
+  }
+}
+
+/* =========================================================
+   ETEF INSTITUTIONAL CONTENT GRID — 2026-09-23
+   Replace the removed generic information-card block with
+   denser, descriptive institutional content layouts.
+   ========================================================= */
+.institutional-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+  gap: clamp(42px, 6vw, 92px);
+  align-items: stretch;
+}
+
+.institutional-overview-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: clamp(0px, 2vw, 28px);
+}
+
+.institutional-overview-copy .section-index {
+  margin-bottom: 22px;
+}
+
+.institutional-overview-copy h3 {
+  max-width: 720px;
+  margin: 0 0 20px;
+  color: var(--blue-950);
+  font-size: clamp(30px, 3.6vw, 50px);
+  line-height: 1.06;
+  letter-spacing: -.045em;
+}
+
+.institutional-overview-copy p {
+  max-width: 650px;
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.institutional-overview-grid-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  background: #fff;
+}
+
+.overview-item {
+  min-height: 178px;
+  padding: 22px 20px;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 18px;
+  gap: 12px;
+  align-items: start;
+  color: inherit;
+  text-decoration: none;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background .2s ease, transform .2s ease;
+}
+
+.overview-item:hover {
+  background: #f7f8fd;
+}
+
+.overview-item > span {
+  color: var(--etef-primary);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .1em;
+}
+
+.overview-item > div strong {
+  display: block;
+  color: var(--blue-950);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.overview-item > div p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.overview-item > b {
+  color: var(--etef-primary);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Tighter institutional rhythm: use the available vertical space for
+   information rather than oversized empty section margins. */
+.intro-section,
+.principles-section,
+.services-section {
+  padding-top: clamp(68px, 7vw, 92px) !important;
+  padding-bottom: clamp(68px, 7vw, 92px) !important;
+}
+
+.principle-card {
+  min-height: 300px !important;
+}
+
+/* Latest update: clearly separated from the left copy and anchored to the
+   far-right side; it is never centered in the available right area. */
+.latest-event-card {
+  left: auto !important;
+  right: 1.25vw !important;
+  width: min(470px, 29vw) !important;
+  min-height: 245px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  transform: translateY(-42%) !important;
+}
+
+.latest-event-card:hover {
+  transform: translateY(-42%) !important;
+}
+
+/* The left cover remains a plain blue gradient wash: no glass panel,
+   boundary, border, shadow or blur around the text. */
+.hero-copy,
+.hero-copy::before,
+.hero-copy::after {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .latest-event-card {
+    right: 1.5vw !important;
+    width: min(410px, 29vw) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Preserve the current blue mobile navbar/header exactly. */
+  .header,
+  .navigation.open {
+    background: linear-gradient(110deg, #1E2DBE 0%, #1E2DBE 72%, #230050 100%) !important;
+  }
+
+  .latest-event-card {
+    left: auto !important;
+    right: 0 !important;
+    width: 78% !important;
+    margin-left: auto !important;
+    padding: 22px 18px 18px 0 !important;
+    transform: none !important;
+  }
+
+  .latest-event-card:hover {
+    transform: none !important;
+  }
+
+  .institutional-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .institutional-overview-copy {
+    padding-right: 0;
+  }
+
+  .institutional-overview-grid-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .institutional-overview-grid-items {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-item {
+    min-height: 142px;
+  }
+
+  .institutional-overview-copy h3 {
+    font-size: clamp(29px, 9vw, 42px);
+  }
+
+  .institutional-overview-copy p {
+    font-size: 15px;
+  }
+
+  .latest-event-card {
+    width: 82% !important;
+    padding-right: 12px !important;
+  }
+}
+
+/* =========================================================
+   ETEF INSTITUTIONAL CONTENT GRID — 2026-09-23
+   ========================================================= */
+.institutional-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+  gap: clamp(42px, 6vw, 92px);
+  align-items: stretch;
+}
+.institutional-overview-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: clamp(0px, 2vw, 28px);
+}
+.institutional-overview-copy .section-index { margin-bottom: 22px; }
+.institutional-overview-copy h3 {
+  max-width: 720px;
+  margin: 0 0 20px;
+  color: var(--blue-950);
+  font-size: clamp(30px, 3.6vw, 50px);
+  line-height: 1.06;
+  letter-spacing: -.045em;
+}
+.institutional-overview-copy p {
+  max-width: 650px;
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+.institutional-overview-grid-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  background: #fff;
+}
+.overview-item {
+  min-height: 178px;
+  padding: 22px 20px;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 18px;
+  gap: 12px;
+  align-items: start;
+  color: inherit;
+  text-decoration: none;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background .2s ease, transform .2s ease;
+}
+.overview-item:hover { background: #f7f8fd; }
+.overview-item > span {
+  color: var(--etef-primary);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .1em;
+}
+.overview-item > div strong {
+  display: block;
+  color: var(--blue-950);
+  font-size: 16px;
+  line-height: 1.25;
+}
+.overview-item > div p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.overview-item > b {
+  color: var(--etef-primary);
+  font-size: 15px;
+  font-weight: 700;
+}
+.intro-section,
+.principles-section,
+.services-section {
+  padding-top: clamp(68px, 7vw, 92px) !important;
+  padding-bottom: clamp(68px, 7vw, 92px) !important;
+}
+.principle-card { min-height: 300px !important; }
+
+/* Latest update is anchored to the far right, with a clear gap from the left copy. */
+.latest-event-card {
+  left: auto !important;
+  right: 1.25vw !important;
+  width: min(470px, 29vw) !important;
+  min-height: 245px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  transform: translateY(-42%) !important;
+}
+.latest-event-card:hover { transform: translateY(-42%) !important; }
+
+/* Plain blue wash only — no glass boundary around the left hero text. */
+.hero-copy,
+.hero-copy::before,
+.hero-copy::after {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .latest-event-card {
+    right: 1.5vw !important;
+    width: min(410px, 29vw) !important;
+  }
+}
+@media (max-width: 900px) {
+  /* Preserve the current blue mobile navbar/header. */
+  .header,
+  .navigation.open {
+    background: linear-gradient(110deg, #1E2DBE 0%, #1E2DBE 72%, #230050 100%) !important;
+  }
+  .latest-event-card {
+    left: auto !important;
+    right: 0 !important;
+    width: 78% !important;
+    margin-left: auto !important;
+    padding: 22px 18px 18px 0 !important;
+    transform: none !important;
+  }
+  .latest-event-card:hover { transform: none !important; }
+  .institutional-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  .institutional-overview-copy { padding-right: 0; }
+  .institutional-overview-grid-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .institutional-overview-grid-items { grid-template-columns: 1fr; }
+  .overview-item { min-height: 142px; }
+  .institutional-overview-copy h3 { font-size: clamp(29px, 9vw, 42px); }
+  .institutional-overview-copy p { font-size: 15px; }
+  .latest-event-card {
+    width: 82% !important;
+    padding-right: 12px !important;
+  }
+}
+
+
+/* =========================================================
+   ETEF MICRO TASK — MOBILE HEADER + LATEST UPDATE BLUE
+   Only the two requested presentation changes are applied.
+   ========================================================= */
+
+/* 1. Mobile header: keep the navigation bar definitively blue with white text.
+   This does not alter the separate top organizational information bar. */
+@media (max-width: 900px) {
+  .header,
+  .header.header-home,
+  .header.header-scrolled,
+  .header-home.header-scrolled {
+    background: linear-gradient(110deg, #1E2DBE 0%, #1E2DBE 72%, #230050 100%) !important;
+    color: #fff !important;
+    border-bottom-color: rgba(255,255,255,.14) !important;
+    box-shadow: 0 8px 30px rgba(16,25,105,.16) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .header .brand-copy strong,
+  .header .brand-copy small,
+  .header .nav-links a,
+  .header .language-switcher button,
+  .header .mobile-menu,
+  .header .mobile-menu span {
+    color: #fff !important;
+  }
+
+  .header .mobile-menu span {
+    background: #fff !important;
+  }
+
+  .header .nav-links a:hover,
+  .header .nav-links a.active {
+    color: #fff !important;
+    background: rgba(255,255,255,.14) !important;
+  }
+
+  .header .language-switcher {
+    background: rgba(255,255,255,.08) !important;
+    border-color: rgba(255,255,255,.30) !important;
+  }
+
+  .header .language-switcher button {
+    color: rgba(255,255,255,.82) !important;
+  }
+
+  .header .language-switcher button.active {
+    background: #fff !important;
+    color: #1E2DBE !important;
+  }
+
+  .header .nav-cta {
+    background: #fff !important;
+    color: #1E2DBE !important;
+    border-color: #fff !important;
+  }
+}
+
+/* 2. Latest update: restore a blue visual section on the right side.
+   It remains separated from the left hero copy and has no glass effect. */
+.latest-event-card {
+  background: linear-gradient(118deg, #1E2DBE 0%, #1E2DBE 72%, #230050 100%) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 34px 34px 24px !important;
+}
+
+.latest-event-card::before,
+.latest-event-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media (max-width: 900px) {
+  .latest-event-card {
+    background: linear-gradient(118deg, #1E2DBE 0%, #1E2DBE 72%, #230050 100%) !important;
+    padding: 22px 22px 18px !important;
+  }
+}
