@@ -29,6 +29,8 @@ body {
   background-color: #f8fafc;
   color: #0f172a;
   -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 #page-content {
@@ -112,4 +114,61 @@ body {
 /* Scoped dropdown menu hidden utility */
 .lang-dropdown-menu.hidden {
   display: none !important;
+}
+
+/* Slow-motion Ken Burns background animation for About page */
+@keyframes slowMotionKenBurns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1.5%, -1%);
+  }
+  100% {
+    transform: scale(1.03) translate(1%, -0.5%);
+  }
+}
+
+.animate-slow-motion {
+  animation: slowMotionKenBurns 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Horizontal slow-motion spinning auto-rotation for Corridors section */
+@keyframes corridorHorizontalAutoSpin {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+
+.corridor-spin-track {
+  display: flex;
+  width: max-content;
+  animation: corridorHorizontalAutoSpin 40s linear infinite;
+  will-change: transform;
+}
+
+.corridor-spin-track:hover,
+.corridor-carousel-wrapper:hover .corridor-spin-track {
+  animation-play-state: paused;
+}
+
+.corridor-card-interactive {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.corridor-card-interactive:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 20px 30px -10px rgba(29, 100, 214, 0.15), 0 10px 15px -3px rgba(15, 23, 42, 0.08);
+}
+
+/* Smooth back-to-top button styling */
+.back-to-top-btn {
+  box-shadow: 0 10px 25px -5px rgba(29, 100, 214, 0.4), 0 8px 10px -6px rgba(29, 100, 214, 0.3);
+}
+.back-to-top-btn:hover {
+  box-shadow: 0 15px 30px -5px rgba(29, 100, 214, 0.6), 0 10px 12px -5px rgba(29, 100, 214, 0.4);
 }

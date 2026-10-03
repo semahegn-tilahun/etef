@@ -4,26 +4,30 @@ const membershipEng = `
     ${renderNavbar("/membership", "ENG")}
 
     <main class="flex-grow pb-24">
-        <div class="bg-slate-50 pt-10 pb-8 border-b border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
-                <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2">
+                <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
-                            <a href="/" class="hover:text-primary-600 transition-colors">Home</a>
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> Home</a>
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <span class="mx-2 text-slate-400">/</span>
-                                <span class="text-primary-600 font-medium">Membership</span>
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">Membership</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
 
                 <!-- Page Title -->
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">Become an ETEF Member</h1>
-                <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">Become an ETEF Member</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     Join 17 employers' associations and over 6,652 commercial operators united under the Ethiopian Transport Employers' Federation. Certified under FDRE Constitution Article 31 and Labor Proclamation No. 1156/2012.
                 </p>
             </div>
@@ -31,7 +35,7 @@ const membershipEng = `
 
         <!-- FLEET TIER & DUES ESTIMATOR -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-12">
-            <div class="bg-primary-600 rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
+            <div class="bg-primary-600 rounded-lg p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
                 <div class="max-w-3xl mb-8 relative z-10">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white border border-white/25 mb-3">
                         <i class="fa-solid fa-calculator text-white"></i>
@@ -51,19 +55,19 @@ const membershipEng = `
                         <div>
                             <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Select Transport Sector / Operation Type</label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="calc-sector-selector">
-                                <button type="button" class="calc-sector-btn active px-3 py-2.5 rounded-xl border border-primary-400 bg-primary-600 text-white font-bold text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer shadow-sm" data-sector="Freight Transport" data-rate="450" data-base="15000">
+                                <button type="button" class="calc-sector-btn active px-3 py-2.5 rounded-lg border border-primary-400 bg-primary-600 text-white font-bold text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer shadow-sm" data-sector="Freight Transport" data-rate="450" data-base="15000">
                                     <i class="fa-solid fa-truck-moving text-base text-primary-200"></i>
                                     <span>Heavy Freight</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="Passenger Transport" data-rate="300" data-base="10000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="Passenger Transport" data-rate="300" data-base="10000">
                                     <i class="fa-solid fa-bus text-base text-primary-300"></i>
                                     <span>Intercity Bus</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="Urban Transit" data-rate="150" data-base="5000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="Urban Transit" data-rate="150" data-base="5000">
                                     <i class="fa-solid fa-van-shuttle text-base text-primary-300"></i>
                                     <span>Urban Transit</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="Logistics & Customs" data-rate="600" data-base="25000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="Logistics & Customs" data-rate="600" data-base="25000">
                                     <i class="fa-solid fa-boxes-stacked text-base text-primary-300"></i>
                                     <span>Logistics Depot</span>
                                 </button>
@@ -87,7 +91,7 @@ const membershipEng = `
                     </div>
 
                     <!-- Results Card -->
-                    <div class="lg:col-span-5 bg-white/5 border border-white/15 rounded-2xl p-6 backdrop-blur-md flex flex-col justify-between">
+                    <div class="lg:col-span-5 bg-white/5 border border-white/15 rounded-lg p-6 backdrop-blur-md flex flex-col justify-between">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Calculated Federation Tier</span>
@@ -121,7 +125,7 @@ const membershipEng = `
                             </div>
                         </div>
 
-                        <button type="button" id="calc-apply-btn" class="w-full py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-xl text-xs sm:text-sm transition-all shadow-lg hover:shadow-primary-600/30 flex items-center justify-center gap-2 cursor-pointer">
+                        <button type="button" id="calc-apply-btn" class="w-full py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-lg text-xs sm:text-sm transition-all shadow-lg hover:shadow-primary-600/30 flex items-center justify-center gap-2 cursor-pointer">
                             <span>Apply with This Profile</span>
                             <i class="fa-solid fa-arrow-down text-xs"></i>
                         </button>
@@ -157,14 +161,14 @@ const membershipEng = `
             <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
                 <!-- Registration Form -->
                 <div class="lg:w-7/12 xl:w-2/3">
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-10">
+                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-8 md:p-10">
                         <div class="mb-8">
                             <h2 class="text-2xl font-bold text-slate-900 mb-2">Organization Registration</h2>
                             <p class="text-slate-500 text-sm">Please fill out the form below to register your transport enterprise with ETEF.</p>
                         </div>
 
                         <form id="membership-form" class="space-y-6">
-                            <div id="membership-alert" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                            <div id="membership-alert" class="hidden p-4 rounded-lg text-sm font-medium"></div>
 
                             <div>
                                 <label for="orgName" class="block text-sm font-semibold text-slate-700 mb-1">Organization Name <span class="text-red-500">*</span></label>
@@ -221,7 +225,7 @@ const membershipEng = `
                     </div>
 
                     <div class="space-y-4 mb-8">
-                        <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
                             <div class="bg-primary-50 text-primary-600 h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-users text-lg"></i>
                             </div>
@@ -231,7 +235,7 @@ const membershipEng = `
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
                             <div class="bg-primary-50 text-primary-600 h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-scale-balanced text-lg"></i>
                             </div>
@@ -241,7 +245,7 @@ const membershipEng = `
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
                             <div class="bg-primary-50 text-primary-600 h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-globe text-lg"></i>
                             </div>
@@ -251,7 +255,7 @@ const membershipEng = `
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
                             <div class="bg-primary-50 text-primary-600 h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-award text-lg"></i>
                             </div>
@@ -262,7 +266,7 @@ const membershipEng = `
                         </div>
                     </div>
 
-                    <div class="bg-primary-50 border border-primary-100 rounded-xl p-6">
+                    <div class="bg-primary-50 border border-primary-100 rounded-lg p-6">
                         <h4 class="font-bold text-primary-800 mb-2">Need assistance?</h4>
                         <p class="text-primary-700 text-sm mb-4 leading-relaxed">
                             If you have questions regarding eligibility, documents, or annual membership fees, please reach out directly to our support desk.
@@ -283,26 +287,30 @@ const membershipAm = `
     ${renderNavbar("/membership", "አማ")}
 
     <main class="flex-grow pb-24">
-        <div class="bg-slate-50 pt-10 pb-8 border-b border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
-                <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2">
+                <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
-                            <a href="/" class="hover:text-primary-600 transition-colors">መነሻ</a>
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> መነሻ</a>
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <span class="mx-2 text-slate-400">/</span>
-                                <span class="text-primary-600 font-medium">አባልነት</span>
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">አባልነት</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
 
                 <!-- Page Title -->
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">የኢትራአፌ አባል ይሁኑ</h1>
-                <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">የኢትራአፌ አባል ይሁኑ</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     በኢፌዲሪ ሕገ-መንግሥት አንቀጽ 31 እና በአሠሪና ሠራተኛ ጉዳይ አዋጅ ቁጥር 1156/2012 መሠረት የተቋቋመውን የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን ይቀላቀሉ። ከ17 አሠሪ ማኅበራትና ከ6,652 በላይ የንግድ ትራንስፖርት ኦፕሬተሮች ጋር በአንድነት ይቁሙ።
                 </p>
             </div>
@@ -310,7 +318,7 @@ const membershipAm = `
 
         <!-- FLEET TIER & DUES ESTIMATOR (Amharic) -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-12">
-            <div class="bg-primary-600 rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
+            <div class="bg-primary-600 rounded-lg p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
                 <div class="max-w-3xl mb-8 relative z-10">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white border border-white/25 mb-3">
                         <i class="fa-solid fa-calculator text-white"></i>
@@ -330,19 +338,19 @@ const membershipAm = `
                         <div>
                             <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">የትራንስፖርት ዘርፍ / የስምሪት አይነት ይምረጡ</label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="calc-sector-selector">
-                                <button type="button" class="calc-sector-btn active px-3 py-2.5 rounded-xl border border-primary-400 bg-primary-600 text-white font-bold text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer shadow-sm" data-sector="የከባድ ጭነት ትራንስፖርት" data-rate="450" data-base="15000">
+                                <button type="button" class="calc-sector-btn active px-3 py-2.5 rounded-lg border border-primary-400 bg-primary-600 text-white font-bold text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer shadow-sm" data-sector="የከባድ ጭነት ትራንስፖርት" data-rate="450" data-base="15000">
                                     <i class="fa-solid fa-truck-moving text-base text-primary-200"></i>
                                     <span>የከባድ ጭነት</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="የሕዝብ አውቶቡስ" data-rate="300" data-base="10000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="የሕዝብ አውቶቡስ" data-rate="300" data-base="10000">
                                     <i class="fa-solid fa-bus text-base text-primary-300"></i>
                                     <span>የሀገር አቋራጭ</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="የከተማ ትራንስፖርት" data-rate="150" data-base="5000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="የከተማ ትራንስፖርት" data-rate="150" data-base="5000">
                                     <i class="fa-solid fa-van-shuttle text-base text-primary-300"></i>
                                     <span>የከተማ ትራንስፖርት</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="የሎጂስቲክስና ጉምሩክ" data-rate="600" data-base="25000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="የሎጂስቲክስና ጉምሩክ" data-rate="600" data-base="25000">
                                     <i class="fa-solid fa-boxes-stacked text-base text-primary-300"></i>
                                     <span>የሎጂስቲክስ መጋዘን</span>
                                 </button>
@@ -366,7 +374,7 @@ const membershipAm = `
                     </div>
 
                     <!-- Results Card -->
-                    <div class="lg:col-span-5 bg-white/5 border border-white/15 rounded-2xl p-6 backdrop-blur-md flex flex-col justify-between">
+                    <div class="lg:col-span-5 bg-white/5 border border-white/15 rounded-lg p-6 backdrop-blur-md flex flex-col justify-between">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">የአባልነት ደረጃ</span>
@@ -400,7 +408,7 @@ const membershipAm = `
                             </div>
                         </div>
 
-                        <button type="button" id="calc-apply-btn" class="w-full py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-xl text-xs sm:text-sm transition-all shadow-lg hover:shadow-primary-600/30 flex items-center justify-center gap-2 cursor-pointer">
+                        <button type="button" id="calc-apply-btn" class="w-full py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-lg text-xs sm:text-sm transition-all shadow-lg hover:shadow-primary-600/30 flex items-center justify-center gap-2 cursor-pointer">
                             <span>በዚህ መረጃ ያመልክቱ</span>
                             <i class="fa-solid fa-arrow-down text-xs"></i>
                         </button>
@@ -436,14 +444,14 @@ const membershipAm = `
             <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
                 <!-- Registration Form -->
                 <div class="lg:w-7/12 xl:w-2/3">
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-10">
+                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-8 md:p-10">
                         <div class="mb-8">
                             <h2 class="text-2xl font-bold text-slate-900 mb-2">የድርጅት ምዝገባ ማመልከቻ</h2>
                             <p class="text-slate-500 text-sm">የትራንስፖርት ድርጅትዎን በፌዴሬሽኑ አባልነት ለማስመዝገብ ከታች ያለውን ቅጽ በትክክል ይሙሉ::</p>
                         </div>
 
                         <form id="membership-form" class="space-y-6">
-                            <div id="membership-alert" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                            <div id="membership-alert" class="hidden p-4 rounded-lg text-sm font-medium"></div>
 
                             <div>
                                 <label for="orgName" class="block text-sm font-semibold text-slate-700 mb-1">የድርጅቱ / ማኅበሩ ስም <span class="text-red-500">*</span></label>
@@ -500,7 +508,7 @@ const membershipAm = `
                     </div>
 
                     <div class="space-y-4 mb-8">
-                        <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
                             <div class="bg-primary-50 text-primary-600 h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-users text-lg"></i>
                             </div>
@@ -510,7 +518,7 @@ const membershipAm = `
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
                             <div class="bg-primary-50 text-primary-600 h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-scale-balanced text-lg"></i>
                             </div>
@@ -520,7 +528,7 @@ const membershipAm = `
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
                             <div class="bg-primary-50 text-primary-600 h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-globe text-lg"></i>
                             </div>
@@ -530,7 +538,7 @@ const membershipAm = `
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm flex items-start gap-4 hover:border-primary-300 transition-colors">
                             <div class="bg-primary-50 text-primary-600 h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fa-solid fa-award text-lg"></i>
                             </div>
@@ -541,7 +549,7 @@ const membershipAm = `
                         </div>
                     </div>
 
-                    <div class="bg-primary-50 border border-primary-100 rounded-xl p-6">
+                    <div class="bg-primary-50 border border-primary-100 rounded-lg p-6">
                         <h4 class="font-bold text-primary-800 mb-2">ድጋፍ ይፈልጋሉ?</h4>
                         <p class="text-primary-700 text-sm mb-4 leading-relaxed">
                             ስለ አባልነት መስፈርቶች፣ አስፈላጊ ሰነዶች ወይም ክፍያዎች ጥያቄ ካለዎት በቀጥታ ሴክሬታሪያቱን ያነጋግሩ።

@@ -4,27 +4,30 @@ const vacancyEng = `
     ${renderNavbar("/vacancies", "ENG")}
 
     <main class="flex-grow pb-24">
-        <!-- Page Header -->
-        <div class="bg-slate-50 pt-10 pb-8 border-b border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
-                <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2">
+                <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
-                            <a href="/" class="hover:text-primary-600 transition-colors">Home</a>
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> Home</a>
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <span class="mx-2 text-slate-400">/</span>
-                                <span class="text-primary-600 font-medium">Vacancies</span>
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">Vacancies</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
 
                 <!-- Page Title -->
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">Career Opportunities</h1>
-                <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">Career Opportunities</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     Join ETEF Secretariat or our affiliated national network of member transport associations and commercial fleet operators.
                 </p>
             </div>
@@ -35,7 +38,7 @@ const vacancyEng = `
                 <!-- Left Column: Job Listings & Search -->
                 <div class="lg:w-2/3 xl:w-3/4">
                     <!-- Search and Filter Bar -->
-                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 mb-8 flex flex-col sm:flex-row gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 mb-8 flex flex-col sm:flex-row gap-4">
                         <div class="relative flex-grow">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
@@ -74,7 +77,7 @@ const vacancyEng = `
                     <!-- Job Listings -->
                     <div class="space-y-4">
                         <!-- Job Card 1 -->
-                        <div data-category="policy" data-employer="etef" class="job-listing-card bg-white rounded-xl border border-slate-200 p-6 hover:border-primary-300 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
+                        <div data-category="policy" data-employer="etef" class="job-listing-card bg-white rounded-lg border border-slate-200 p-6 hover:border-primary-300 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             
                             <div class="flex-grow">
@@ -98,7 +101,7 @@ const vacancyEng = `
                         </div>
 
                         <!-- Job Card 2 -->
-                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-xl border border-slate-200 p-6 hover:border-blue-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
+                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-lg border border-slate-200 p-6 hover:border-blue-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             
                             <div class="flex-grow">
@@ -122,7 +125,7 @@ const vacancyEng = `
                         </div>
 
                         <!-- Job Card 3 -->
-                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-xl border border-slate-200 p-6 hover:border-primary-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
+                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-lg border border-slate-200 p-6 hover:border-primary-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             
                             <div class="flex-grow">
@@ -146,7 +149,7 @@ const vacancyEng = `
                         </div>
 
                         <!-- Job Card 4 -->
-                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-xl border border-slate-200 p-6 hover:border-slate-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
+                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-lg border border-slate-200 p-6 hover:border-slate-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-slate-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             
                             <div class="flex-grow">
@@ -170,7 +173,7 @@ const vacancyEng = `
                         </div>
 
                         <!-- No Jobs Found State -->
-                        <div id="job-no-results" class="hidden text-center py-16 bg-white rounded-2xl border border-dashed border-slate-200 p-8">
+                        <div id="job-no-results" class="hidden text-center py-16 bg-white rounded-lg border border-dashed border-slate-200 p-8">
                             <div class="w-12 h-12 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-3 text-lg">
                                 <i class="fa-solid fa-briefcase"></i>
                             </div>
@@ -183,8 +186,11 @@ const vacancyEng = `
                 <!-- Right Column: Info Sidebar -->
                 <div class="lg:w-1/3 xl:w-1/4">
                     <!-- General Application Card -->
-                    <div class="bg-primary-600 rounded-xl p-6 text-white mb-8 shadow-md relative overflow-hidden">
-                        <div class="text-white bg-primary-500/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-xl border border-white/20">
+                    <div class="rounded-lg p-6 text-white mb-8 shadow-md relative overflow-hidden">
+                          <div class="absolute inset-0 z-0 bg-[url('/images/news_office_admin.jpg')] bg-cover bg-center animate-slow-motion"></div>
+                          <div class="absolute inset-0 z-0 bg-black/50"></div>
+                          <div class="relative z-10">
+                              <div class="text-white bg-primary-500/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-xl border border-white/20">
                             <i class="fa-solid fa-file-arrow-up"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Don't see a fit?</h3>
@@ -193,8 +199,9 @@ const vacancyEng = `
                         </p>
                         <button type="button" data-talent-modal class="talent-modal-trigger block w-full text-center px-4 py-3 bg-white text-primary-700 font-bold rounded-lg hover:bg-slate-50 transition-colors cursor-pointer border-none shadow-sm">
                             Submit General CV
-                        </button>
-                    </div>
+                          </button>
+                          </div>
+                      </div>
 
                     <div class="mb-6">
                         <h3 class="text-lg font-bold text-slate-900 mb-2">Working with Transport Employers</h3>
@@ -202,7 +209,7 @@ const vacancyEng = `
                     </div>
 
                     <div class="space-y-4">
-                        <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-sm flex items-start gap-4">
+                        <div class="bg-white border border-slate-200 p-4 rounded-lg shadow-sm flex items-start gap-4">
                             <div class="bg-blue-50 text-primary-600 h-10 w-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <i class="fa-solid fa-chart-line"></i>
                             </div>
@@ -212,7 +219,7 @@ const vacancyEng = `
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-sm flex items-start gap-4">
+                        <div class="bg-white border border-slate-200 p-4 rounded-lg shadow-sm flex items-start gap-4">
                             <div class="bg-blue-50 text-primary-600 h-10 w-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
@@ -222,7 +229,7 @@ const vacancyEng = `
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-sm flex items-start gap-4">
+                        <div class="bg-white border border-slate-200 p-4 rounded-lg shadow-sm flex items-start gap-4">
                             <div class="bg-blue-50 text-primary-600 h-10 w-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <i class="fa-solid fa-heart-pulse"></i>
                             </div>
@@ -244,27 +251,30 @@ const vacancyAm = `
     ${renderNavbar("/vacancies", "አማ")}
 
     <main class="flex-grow pb-24">
-        <!-- Page Header -->
-        <div class="bg-slate-50 pt-10 pb-8 border-b border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
-                <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2">
+                <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
-                            <a href="/" class="hover:text-primary-600 transition-colors">መነሻ</a>
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> መነሻ</a>
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <span class="mx-2 text-slate-400">/</span>
-                                <span class="text-primary-600 font-medium">ክፍት የሥራ ቦታዎች</span>
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">ክፍት የስራ ቦታዎች</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
 
                 <!-- Page Title -->
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">የሥራ ዕድሎች</h1>
-                <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">የሥራ ዕድሎች</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን ሴክሬታሪያትን ወይም በአባልነት የታቀፉ ብሔራዊ የትራንስፖርት ድርጅቶችን ይቀላቀሉ።
                 </p>
             </div>
@@ -275,7 +285,7 @@ const vacancyAm = `
                 <!-- Left Column: Job Listings & Search -->
                 <div class="lg:w-2/3 xl:w-3/4">
                     <!-- Search and Filter Bar -->
-                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 mb-8 flex flex-col sm:flex-row gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 mb-8 flex flex-col sm:flex-row gap-4">
                         <div class="relative flex-grow">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
@@ -314,7 +324,7 @@ const vacancyAm = `
                     <!-- Job Listings -->
                     <div class="space-y-4">
                         <!-- Job Card 1 -->
-                        <div data-category="policy" data-employer="etef" class="job-listing-card bg-white rounded-xl border border-slate-200 p-6 hover:border-primary-300 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
+                        <div data-category="policy" data-employer="etef" class="job-listing-card bg-white rounded-lg border border-slate-200 p-6 hover:border-primary-300 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             
                             <div class="flex-grow">
@@ -338,7 +348,7 @@ const vacancyAm = `
                         </div>
 
                         <!-- Job Card 2 -->
-                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-xl border border-slate-200 p-6 hover:border-blue-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
+                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-lg border border-slate-200 p-6 hover:border-blue-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             
                             <div class="flex-grow">
@@ -362,7 +372,7 @@ const vacancyAm = `
                         </div>
 
                         <!-- Job Card 3 -->
-                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-xl border border-slate-200 p-6 hover:border-primary-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
+                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-lg border border-slate-200 p-6 hover:border-primary-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             
                             <div class="flex-grow">
@@ -386,7 +396,7 @@ const vacancyAm = `
                         </div>
 
                         <!-- Job Card 4 -->
-                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-xl border border-slate-200 p-6 hover:border-slate-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
+                        <div data-category="logistics" data-employer="member" class="job-listing-card bg-white rounded-lg border border-slate-200 p-6 hover:border-slate-400 hover:shadow-md transition-all group flex flex-col sm:flex-row sm:items-center justify-between gap-6 cursor-pointer relative overflow-hidden">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-slate-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             
                             <div class="flex-grow">
@@ -410,7 +420,7 @@ const vacancyAm = `
                         </div>
 
                         <!-- No Jobs Found State -->
-                        <div id="job-no-results" class="hidden text-center py-16 bg-white rounded-2xl border border-dashed border-slate-200 p-8">
+                        <div id="job-no-results" class="hidden text-center py-16 bg-white rounded-lg border border-dashed border-slate-200 p-8">
                             <div class="w-12 h-12 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-3 text-lg">
                                 <i class="fa-solid fa-briefcase"></i>
                             </div>
@@ -423,8 +433,11 @@ const vacancyAm = `
                 <!-- Right Column: Info Sidebar -->
                 <div class="lg:w-1/3 xl:w-1/4">
                     <!-- General Application Card -->
-                    <div class="bg-primary-600 rounded-xl p-6 text-white mb-8 shadow-md relative overflow-hidden">
-                        <div class="text-white bg-primary-500/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-xl border border-white/20">
+                    <div class="rounded-lg p-6 text-white mb-8 shadow-md relative overflow-hidden">
+                          <div class="absolute inset-0 z-0 bg-[url('/images/news_office_admin.jpg')] bg-cover bg-center animate-slow-motion"></div>
+                          <div class="absolute inset-0 z-0 bg-black/50"></div>
+                          <div class="relative z-10">
+                              <div class="text-white bg-primary-500/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-xl border border-white/20">
                             <i class="fa-solid fa-file-arrow-up"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">ተስማሚ የሥራ መደብ አላገኙም?</h3>
@@ -442,7 +455,7 @@ const vacancyAm = `
                     </div>
 
                     <div class="space-y-4">
-                        <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-sm flex items-start gap-4">
+                        <div class="bg-white border border-slate-200 p-4 rounded-lg shadow-sm flex items-start gap-4">
                             <div class="bg-blue-50 text-primary-600 h-10 w-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <i class="fa-solid fa-chart-line"></i>
                             </div>
@@ -452,7 +465,7 @@ const vacancyAm = `
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-sm flex items-start gap-4">
+                        <div class="bg-white border border-slate-200 p-4 rounded-lg shadow-sm flex items-start gap-4">
                             <div class="bg-blue-50 text-primary-600 h-10 w-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
@@ -462,7 +475,7 @@ const vacancyAm = `
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-sm flex items-start gap-4">
+                        <div class="bg-white border border-slate-200 p-4 rounded-lg shadow-sm flex items-start gap-4">
                             <div class="bg-blue-50 text-primary-600 h-10 w-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <i class="fa-solid fa-heart-pulse"></i>
                             </div>

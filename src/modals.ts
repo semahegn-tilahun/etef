@@ -1204,13 +1204,13 @@ export function openBioModal(bioId: string): void {
   const closeBtnText = isAm ? "የሕይወት ታሪክ ዝጋ" : "Close Biography";
 
   container.innerHTML = `
-    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8 relative animate-in fade-in zoom-in-95 duration-200">
+    <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8 relative animate-in fade-in zoom-in-95 duration-200">
       <button type="button" class="modal-close-btn absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-colors cursor-pointer border-none" aria-label="${closeAria}">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
 
       <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-6 border-b border-slate-100">
-        <img src="${detail.image}" alt="${detail.name}" class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover object-top shadow-md border-2 border-white ring-2 ring-primary-100 shrink-0">
+        <img src="${detail.image}" alt="${detail.name}" class="w-28 h-28 sm:w-32 sm:h-32 rounded-lg object-cover object-top shadow-md border-2 border-white ring-2 ring-primary-100 shrink-0">
         <div class="text-center sm:text-left">
           <span class="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-bold rounded-full mb-2 uppercase tracking-wider">${detail.role}</span>
           <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">${detail.name}</h2>
@@ -1240,7 +1240,7 @@ export function openBioModal(bioId: string): void {
       </div>
 
       <div class="mt-8 pt-4 flex justify-end">
-        <button type="button" class="modal-close-btn px-6 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-sm rounded-xl transition-colors cursor-pointer border-none">
+        <button type="button" class="modal-close-btn px-6 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-sm rounded-lg transition-colors cursor-pointer border-none">
           ${closeBtnText}
         </button>
       </div>
@@ -1273,7 +1273,7 @@ export function openArticleModal(articleId: string): void {
   const closeBtnText = isAm ? "ንባቡን ጨርሻለሁ" : "Finished Reading";
 
   container.innerHTML = `
-    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-10 relative animate-in fade-in zoom-in-95 duration-200">
+    <div class="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-10 relative animate-in fade-in zoom-in-95 duration-200">
       <button type="button" class="modal-close-btn absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-colors cursor-pointer border-none" aria-label="${closeAria}">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
@@ -1292,7 +1292,7 @@ export function openArticleModal(articleId: string): void {
         </p>
       </div>
 
-      <div class="rounded-2xl overflow-hidden mb-6 h-64 sm:h-80 bg-slate-100">
+      <div class="rounded-lg overflow-hidden mb-6 h-64 sm:h-80 bg-slate-100">
         <img src="${detail.image}" alt="${detail.title}" class="w-full h-full object-cover">
       </div>
 
@@ -1300,7 +1300,7 @@ export function openArticleModal(articleId: string): void {
         ${detail.content.map(p => `<p>${p}</p>`).join("")}
       </div>
 
-      <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-200">
+      <div class="mt-8 p-6 bg-slate-50 rounded-lg border border-slate-200">
         <h3 class="font-bold text-slate-900 text-sm mb-3 flex items-center gap-2">
           <i class="fa-solid fa-lightbulb text-primary-600"></i> ${takeawayHeading}
         </h3>
@@ -1321,7 +1321,7 @@ export function openArticleModal(articleId: string): void {
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-primary-50 text-slate-600 hover:text-primary-600 flex items-center justify-center transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
           <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-primary-50 text-slate-600 hover:text-primary-600 flex items-center justify-center transition-colors"><i class="fa-brands fa-telegram text-xs"></i></a>
         </div>
-        <button type="button" class="modal-close-btn px-6 py-2.5 bg-primary-600 hover:bg-primary-700 text-white font-semibold text-sm rounded-xl transition-colors cursor-pointer border-none shadow-sm">
+        <button type="button" class="modal-close-btn px-6 py-2.5 bg-primary-600 hover:bg-primary-700 text-white font-semibold text-sm rounded-lg transition-colors cursor-pointer border-none shadow-sm">
           ${closeBtnText}
         </button>
       </div>
@@ -1362,7 +1362,7 @@ export function openJobModal(jobId: string): void {
   const applyBtnText = isAm ? "በኢሜይል ያመልክቱ" : "Apply via Email";
 
   container.innerHTML = `
-    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-10 relative animate-in fade-in zoom-in-95 duration-200">
+    <div class="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-10 relative animate-in fade-in zoom-in-95 duration-200">
       <button type="button" class="modal-close-btn absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-colors cursor-pointer border-none" aria-label="${closeAria}">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
@@ -1422,12 +1422,12 @@ export function openJobModal(jobId: string): void {
         </ul>
       </div>
 
-      <div class="p-6 bg-primary-50 rounded-2xl border border-primary-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="p-6 bg-primary-50 rounded-lg border border-primary-200 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <span class="font-bold text-primary-900 text-sm block">${labelApplyTitle}</span>
           <p class="text-xs text-primary-700 mt-0.5">${labelApplyDesc}</p>
         </div>
-        <a href="mailto:${detail.applyEmail}?subject=Application for ${encodeURIComponent(detail.title)}" class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold text-sm rounded-xl transition-colors shadow-sm whitespace-nowrap">
+        <a href="mailto:${detail.applyEmail}?subject=Application for ${encodeURIComponent(detail.title)}" class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold text-sm rounded-lg transition-colors shadow-sm whitespace-nowrap">
           ${applyBtnText}
         </a>
       </div>
@@ -1499,7 +1499,7 @@ export function openTalentModal(): void {
     `;
 
   container.innerHTML = `
-    <div class="bg-white rounded-3xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8 relative animate-in fade-in zoom-in-95 duration-200">
+    <div class="bg-white rounded-lg max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8 relative animate-in fade-in zoom-in-95 duration-200">
       <button type="button" class="modal-close-btn absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-colors cursor-pointer border-none" aria-label="${closeAria}">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
@@ -1511,7 +1511,7 @@ export function openTalentModal(): void {
       </div>
 
       <form id="talent-registry-form" class="space-y-4">
-        <div id="talent-form-feedback" class="hidden p-3 rounded-xl text-xs font-semibold"></div>
+        <div id="talent-form-feedback" class="hidden p-3 rounded-lg text-xs font-semibold"></div>
 
         <div>
           <label for="talent-name" class="block text-xs font-bold text-slate-700 mb-1">${labelName} <span class="text-red-500">*</span></label>
@@ -1550,7 +1550,7 @@ export function openTalentModal(): void {
         </div>
 
         <div class="pt-2">
-          <button type="submit" id="talent-submit-btn" class="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold text-sm rounded-xl transition-colors shadow-md flex items-center justify-center gap-2 cursor-pointer border-none">
+          <button type="submit" id="talent-submit-btn" class="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold text-sm rounded-lg transition-colors shadow-md flex items-center justify-center gap-2 cursor-pointer border-none">
             <span>${submitText}</span>
             <i class="fa-solid fa-arrow-right text-xs"></i>
           </button>
@@ -1574,7 +1574,7 @@ export function openTalentModal(): void {
         : '<span>Registering...</span> <i class="fa-solid fa-spinner fa-spin text-xs"></i>';
 
       setTimeout(() => {
-        feedback.className = "p-3 rounded-xl text-xs font-semibold bg-primary-50 border border-primary-200 text-primary-800 flex items-center gap-2 mb-2";
+        feedback.className = "p-3 rounded-lg text-xs font-semibold bg-primary-50 border border-primary-200 text-primary-800 flex items-center gap-2 mb-2";
         feedback.innerHTML = isAm
           ? '<i class="fa-solid fa-circle-check text-primary-600"></i> መረጃዎ በተሳካ ሁኔታ ተመዝግቧል! ክፍት የሥራ ቦታዎች ሲኖሩ የሰው ኃይል ቡድናችን ያነጋግርዎታል።'
           : '<i class="fa-solid fa-circle-check text-primary-600"></i> Profile Successfully Registered! Our HR team will reach out as matched vacancies open.';
@@ -1616,7 +1616,7 @@ export function openCorridorModal(corridorId: string): void {
 
   container.innerHTML = `
     <div class="modal-backdrop fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50"></div>
-    <div class="relative bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto z-50 shadow-2xl m-4 border border-slate-100 flex flex-col">
+    <div class="relative bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto z-50 shadow-2xl m-4 border border-slate-100 flex flex-col">
       <div class="relative h-52 sm:h-60 overflow-hidden rounded-t-3xl shrink-0 bg-slate-900">
         <img src="${detail.image}" alt="${detail.name}" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/50 to-transparent"></div>
@@ -1636,11 +1636,11 @@ export function openCorridorModal(corridorId: string): void {
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+          <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-200">
             <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">${labelTransit}</span>
             <span class="text-sm font-bold text-slate-800 mt-0.5 block">${detail.transitHours}</span>
           </div>
-          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+          <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-200">
             <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">${labelClearance}</span>
             <span class="text-sm font-bold text-primary-700 mt-0.5 block">${detail.clearanceHours}</span>
           </div>
@@ -1652,7 +1652,7 @@ export function openCorridorModal(corridorId: string): void {
           </h3>
           <div class="space-y-2">
             ${detail.keyCheckpoints.map(cp => `
-              <div class="flex items-center gap-2.5 text-xs text-slate-700 bg-slate-50 px-3.5 py-2.5 rounded-xl border border-slate-200/80">
+              <div class="flex items-center gap-2.5 text-xs text-slate-700 bg-slate-50 px-3.5 py-2.5 rounded-lg border border-slate-200/80">
                 <i class="fa-solid fa-location-dot text-primary-600 shrink-0"></i>
                 <span class="font-medium">${cp}</span>
               </div>
@@ -1660,7 +1660,7 @@ export function openCorridorModal(corridorId: string): void {
           </div>
         </div>
 
-        <div class="p-4 rounded-2xl bg-primary-50 border border-primary-200">
+        <div class="p-4 rounded-lg bg-primary-50 border border-primary-200">
           <h3 class="text-xs font-bold text-primary-900 uppercase tracking-wider mb-2 flex items-center gap-2">
             <i class="fa-solid fa-triangle-exclamation text-primary-600"></i> ${headingAdvisories}
           </h3>
@@ -1674,12 +1674,12 @@ export function openCorridorModal(corridorId: string): void {
           </ul>
         </div>
 
-        <div class="p-4 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div class="p-4 rounded-lg bg-slate-900 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div>
             <span class="text-[11px] text-slate-400 uppercase tracking-wider block">${labelHelpline}</span>
             <span class="text-sm font-bold text-white">${detail.helpline}</span>
           </div>
-          <a href="tel:+251114717787" class="w-full sm:w-auto text-center px-4 py-2 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl transition-colors shadow flex items-center justify-center gap-2">
+          <a href="tel:+251114717787" class="w-full sm:w-auto text-center px-4 py-2 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-lg transition-colors shadow flex items-center justify-center gap-2">
             <i class="fa-solid fa-phone"></i>
             <span>${callBtnText}</span>
           </a>
@@ -1767,10 +1767,10 @@ export function openIncidentModal(): void {
 
   container.innerHTML = `
     <div class="modal-backdrop fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50"></div>
-    <div class="relative bg-white rounded-3xl max-w-xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 z-50 shadow-2xl m-4 border border-slate-100">
+    <div class="relative bg-white rounded-lg max-w-xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 z-50 shadow-2xl m-4 border border-slate-100">
       <div class="flex items-center justify-between pb-4 border-b border-slate-100">
         <div class="flex items-center gap-2.5">
-          <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center text-lg">
+          <div class="w-10 h-10 rounded-lg bg-slate-900 text-white flex items-center justify-center text-lg">
             <i class="fa-solid fa-truck-medical"></i>
           </div>
           <div>
@@ -1783,12 +1783,12 @@ export function openIncidentModal(): void {
         </button>
       </div>
 
-      <div id="incident-report-feedback" class="hidden mb-4 p-4 rounded-xl border"></div>
+      <div id="incident-report-feedback" class="hidden mb-4 p-4 rounded-lg border"></div>
 
       <form id="incident-report-form" class="space-y-4 text-xs mt-4">
         <div>
           <label class="block font-bold text-slate-700 mb-1">${labelCorridor}</label>
-          <select id="inc-corridor" required class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl bg-white outline-none focus:ring-2 focus:ring-primary-500">
+          <select id="inc-corridor" required class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg bg-white outline-none focus:ring-2 focus:ring-primary-500">
             ${corridorOptions}
           </select>
         </div>
@@ -1796,13 +1796,13 @@ export function openIncidentModal(): void {
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block font-bold text-slate-700 mb-1">${labelCat}</label>
-            <select id="inc-category" required class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl bg-white outline-none focus:ring-2 focus:ring-primary-500">
+            <select id="inc-category" required class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg bg-white outline-none focus:ring-2 focus:ring-primary-500">
               ${categoryOptions}
             </select>
           </div>
           <div>
             <label class="block font-bold text-slate-700 mb-1">${labelUrgency}</label>
-            <select id="inc-urgency" required class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl bg-white outline-none focus:ring-2 focus:ring-primary-500">
+            <select id="inc-urgency" required class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg bg-white outline-none focus:ring-2 focus:ring-primary-500">
               ${urgencyOptions}
             </select>
           </div>
@@ -1811,29 +1811,29 @@ export function openIncidentModal(): void {
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block font-bold text-slate-700 mb-1">${labelPlate}</label>
-            <input type="text" id="inc-plate" required placeholder="${isAm ? "ለምሳሌ፦ 3-84920 ኢት" : "e.g. 3-84920 ET"}" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-primary-500">
+            <input type="text" id="inc-plate" required placeholder="${isAm ? "ለምሳሌ፦ 3-84920 ኢት" : "e.g. 3-84920 ET"}" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500">
           </div>
           <div>
             <label class="block font-bold text-slate-700 mb-1">${labelPhone}</label>
-            <input type="tel" id="inc-phone" required placeholder="${isAm ? "ለምሳሌ፦ 0911 234567" : "e.g. 0911 234567"}" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-primary-500">
+            <input type="tel" id="inc-phone" required placeholder="${isAm ? "ለምሳሌ፦ 0911 234567" : "e.g. 0911 234567"}" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500">
           </div>
         </div>
 
         <div>
           <label class="block font-bold text-slate-700 mb-1">${labelLocation}</label>
-          <input type="text" id="inc-location" required placeholder="${isAm ? "ለምሳሌ፦ አዋሽ 7 ኪሎ ሚዛን ጣቢያ፣ ኪሜ 142 ወደ ሰሜን" : "e.g. Awash 7 Kilo Weighbridge, KM 142 heading North"}" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-primary-500">
+          <input type="text" id="inc-location" required placeholder="${isAm ? "ለምሳሌ፦ አዋሽ 7 ኪሎ ሚዛን ጣቢያ፣ ኪሜ 142 ወደ ሰሜን" : "e.g. Awash 7 Kilo Weighbridge, KM 142 heading North"}" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500">
         </div>
 
         <div>
           <label class="block font-bold text-slate-700 mb-1">${labelDetails}</label>
-          <textarea id="inc-details" rows="3" required placeholder="${placeholderDetails}" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-primary-500 resize-none"></textarea>
+          <textarea id="inc-details" rows="3" required placeholder="${placeholderDetails}" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500 resize-none"></textarea>
         </div>
 
         <div class="pt-2 flex items-center justify-end gap-3">
-          <button type="button" class="modal-close-btn px-4 py-2.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 font-semibold cursor-pointer">
+          <button type="button" class="modal-close-btn px-4 py-2.5 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 font-semibold cursor-pointer">
             ${btnCancel}
           </button>
-          <button type="submit" id="inc-submit-btn" class="px-5 py-2.5 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold transition-all shadow-md flex items-center gap-2 cursor-pointer">
+          <button type="submit" id="inc-submit-btn" class="px-5 py-2.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-bold transition-all shadow-md flex items-center gap-2 cursor-pointer">
             <i class="fa-solid fa-paper-plane"></i>
             <span>${btnSubmit}</span>
           </button>
@@ -1861,7 +1861,7 @@ export function openIncidentModal(): void {
       }
 
       setTimeout(() => {
-        feedback.className = "mb-4 p-4 rounded-xl border bg-primary-50 border-primary-200 text-primary-800 text-xs flex items-start gap-3 shadow-sm";
+        feedback.className = "mb-4 p-4 rounded-lg border bg-primary-50 border-primary-200 text-primary-800 text-xs flex items-start gap-3 shadow-sm";
         feedback.innerHTML = isAm
           ? `
             <i class="fa-solid fa-circle-check text-primary-600 text-lg mt-0.5 shrink-0"></i>

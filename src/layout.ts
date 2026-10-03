@@ -60,7 +60,7 @@ export function renderNavbar(activePath: string, lang: Lang): string {
                         <button class="lang-dropdown-btn flex items-center gap-2 text-white hover:text-gray-200 transition-colors text-sm font-medium border border-transparent hover:border-white/30 px-2.5 py-1.5 rounded cursor-pointer" aria-label="${isAm ? "ቋንቋ ይምረጡ" : "Select Language"}">
                             <i class="fa-solid fa-globe"></i> <span class="current-lang-text">${lang}</span> <i class="fa-solid fa-chevron-down text-xs"></i>
                         </button>
-                        <div class="lang-dropdown-menu hidden absolute right-0 mt-2 w-44 bg-white rounded-xl shadow-xl border border-slate-100 py-1.5 z-50 text-slate-800 text-sm">
+                        <div class="lang-dropdown-menu hidden absolute right-0 mt-2 w-44 bg-white rounded-lg shadow-xl border border-slate-100 py-1.5 z-50 text-slate-800 text-sm">
                             <div class="px-3 py-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100">${isAm ? "ቋንቋ ይምረጡ" : "Select Language"}</div>
                             <button type="button" class="lang-select-option w-full text-left px-3 py-2 hover:bg-slate-50 flex items-center justify-between text-xs ${lang === "ENG" ? "font-semibold text-primary-700 bg-primary-50/50" : "font-medium text-slate-700 hover:text-primary-600"} cursor-pointer" data-lang="ENG" data-lang-name="English">
                                 <span class="flex items-center gap-2">🇬🇧 English</span>
@@ -83,7 +83,7 @@ export function renderNavbar(activePath: string, lang: Lang): string {
                         <button class="lang-dropdown-btn flex items-center gap-1.5 text-white hover:text-gray-200 transition-colors text-xs font-semibold px-2 py-1 rounded border border-white/30 cursor-pointer">
                             <i class="fa-solid fa-globe"></i> <span>${lang}</span>
                         </button>
-                        <div class="lang-dropdown-menu hidden absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-xl border border-slate-100 py-1.5 z-50 text-slate-800 text-sm">
+                        <div class="lang-dropdown-menu hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-slate-100 py-1.5 z-50 text-slate-800 text-sm">
                             <button type="button" class="lang-select-option w-full text-left px-3 py-2 hover:bg-slate-50 flex items-center justify-between text-xs ${lang === "ENG" ? "font-semibold text-primary-700 bg-primary-50/50" : "font-medium text-slate-700"} cursor-pointer" data-lang="ENG" data-lang-name="English">
                                 <span>🇬🇧 English</span>
                                 ${lang === "ENG" ? '<i class="fa-solid fa-check text-primary-600 text-xs"></i>' : '<span class="w-3.5"></span>'}
@@ -111,15 +111,17 @@ export function renderFooter(lang: Lang): string {
   return `
     <footer class="bg-primary-600 text-white border-t border-primary-500">
         <!-- Pre-footer CTA Banner -->
-        <div class="bg-primary-700 py-12 border-b border-white/15">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="bg-primary-700 py-12 border-b border-white/15 relative overflow-hidden">
+            <div class="absolute inset-0 z-0 bg-[url('/images/hero_truck.jpg')] bg-cover bg-center animate-slow-motion"></div>
+            <div class="absolute inset-0 z-0 bg-primary-800/85"></div>
+            <div class="max-w-7xl relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div>
                     <span class="text-xs font-bold uppercase tracking-wider text-blue-200 block mb-1">${f.preTitle}</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">${f.preHeading}</h2>
                     <p class="text-blue-100 text-sm mt-1 max-w-2xl">${isAm ? "17 የአሠሪ ማኅበራትንና ከ6,652 በላይ የንግድ ትራንስፖርት ኦፕሬተሮችን በአንድነት ያስተባበረ ብሔራዊ ፌዴሬሽን።" : "Uniting 17 employers' associations and over 6,652 commercial transport operators nationwide."}</p>
                 </div>
                 <div class="flex items-center gap-3 shrink-0">
-                    <a href="/contact" class="px-6 py-3 rounded-xl bg-white text-primary-700 hover:bg-slate-100 font-bold text-sm transition-all shadow-md">
+                    <a href="/contact" class="px-6 py-3 rounded-lg bg-white text-primary-700 hover:bg-slate-100 font-bold text-sm transition-all shadow-md">
                         ${f.connectBtn}
                     </a>
                 </div>

@@ -4,25 +4,28 @@ const contactEng = `
     ${renderNavbar("/contact", "ENG")}
 
     <main class="flex-grow pb-24">
-        <!-- Page Header / Breadcrumb -->
-        <div class="bg-slate-50 border-b border-slate-200 pt-10 pb-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
-                            <a href="/" class="hover:text-primary-600 transition-colors">Home</a>
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> Home</a>
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <span class="mx-2 text-slate-400">/</span>
-                                <span class="text-primary-600 font-medium">Contact Us</span>
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">Contact Us</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
 
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">Contact ETEF Secretariat</h1>
-                <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Contact ETEF Secretariat</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     Have questions about membership, transport policy advocacy, or corridor assistance? Our Addis Ababa Secretariat team is here to support you.
                 </p>
             </div>
@@ -32,8 +35,8 @@ const contactEng = `
             <!-- 3 Top Info Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
                 <!-- Location Card -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
+                <div class="bg-white rounded-lg border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <span class="text-[11px] font-bold text-primary-600 uppercase tracking-wider mb-2">Secretariat Headquarters</span>
@@ -47,8 +50,8 @@ const contactEng = `
                 </div>
 
                 <!-- Phone Card -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
+                <div class="bg-white rounded-lg border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <span class="text-[11px] font-bold text-primary-600 uppercase tracking-wider mb-2">Telephone Inquiries</span>
@@ -67,8 +70,8 @@ const contactEng = `
                 </div>
 
                 <!-- Email Card -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
+                <div class="bg-white rounded-lg border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <span class="text-[11px] font-bold text-primary-600 uppercase tracking-wider mb-2">Official Inboxes</span>
@@ -90,14 +93,14 @@ const contactEng = `
             <!-- Two-Column Contact Form and Directorate Directory -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
                 <!-- Left: Interactive Form -->
-                <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 shadow-sm">
+                <div class="lg:col-span-7 bg-white rounded-lg border border-slate-200 p-8 sm:p-10 shadow-sm">
                     <div class="mb-6">
                         <span class="text-xs font-bold text-primary-600 uppercase tracking-wider bg-primary-50 px-3 py-1 rounded-full border border-primary-100">Direct Communication</span>
                         <h2 class="text-2xl font-bold text-slate-900 mt-2">Send a Message to the Secretariat</h2>
                         <p class="text-slate-600 text-xs sm:text-sm mt-1">Fill out the form below and an ETEF officer will review your request and get back to you promptly.</p>
                     </div>
 
-                    <div id="contact-form-feedback" class="hidden mb-6 p-4 rounded-xl border"></div>
+                    <div id="contact-form-feedback" class="hidden mb-6 p-4 rounded-lg border"></div>
 
                     <form id="contact-form" class="space-y-5">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -109,7 +112,7 @@ const contactEng = `
                                     name="name" 
                                     required 
                                     placeholder="e.g. Abebe Kebede" 
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                                 />
                             </div>
                             <div>
@@ -119,7 +122,7 @@ const contactEng = `
                                     id="contact-org" 
                                     name="organization" 
                                     placeholder="e.g. Horn Freight Logistics" 
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                                 />
                             </div>
                         </div>
@@ -133,7 +136,7 @@ const contactEng = `
                                     name="email" 
                                     required 
                                     placeholder="name@company.com" 
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                                 />
                             </div>
                             <div>
@@ -144,7 +147,7 @@ const contactEng = `
                                     name="phone" 
                                     required 
                                     placeholder="+251 91 123 4567" 
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                                 />
                             </div>
                         </div>
@@ -155,7 +158,7 @@ const contactEng = `
                                 id="contact-subject" 
                                 name="subject" 
                                 required 
-                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                             >
                                 <option value="">Select an inquiry category</option>
                                 <option value="membership">Membership Application & Verification</option>
@@ -174,14 +177,14 @@ const contactEng = `
                                 rows="5" 
                                 required 
                                 placeholder="Describe your question, request, or proposal in detail..." 
-                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-none"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-none"
                             ></textarea>
                         </div>
 
                         <button 
                             type="submit" 
                             id="contact-submit-btn" 
-                            class="w-full sm:w-auto px-8 py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                            class="w-full sm:w-auto px-8 py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
                         >
                             <span>Send Message</span>
                             <i class="fa-solid fa-paper-plane text-xs"></i>
@@ -191,24 +194,24 @@ const contactEng = `
 
                 <!-- Right: Directorate Directory -->
                 <div class="lg:col-span-5 space-y-6">
-                    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+                    <div class="bg-white rounded-lg border border-slate-200 p-8 shadow-sm">
                         <h3 class="text-lg font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">
                             Secretariat Directorates
                         </h3>
                         <div class="space-y-4 text-xs">
-                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-100">
                                 <span class="font-bold text-slate-800 block text-sm">Membership & Credentials</span>
                                 <p class="text-slate-500 mt-0.5">Association registration, dues calculations, and general assembly credentials.</p>
                                 <span class="text-primary-600 font-semibold block mt-1.5">membership@etef.org.et</span>
                             </div>
 
-                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-100">
                                 <span class="font-bold text-slate-800 block text-sm">Legal & Labor Relations</span>
                                 <p class="text-slate-500 mt-0.5">Collective bargaining agreements, labor arbitration, and court advocacy.</p>
                                 <span class="text-primary-600 font-semibold block mt-1.5">legal@etef.org.et</span>
                             </div>
 
-                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-100">
                                 <span class="font-bold text-slate-800 block text-sm">Corridors & Logistics Watch</span>
                                 <p class="text-slate-500 mt-0.5">Customs single-window clearance, border advisories, and breakdown support.</p>
                                 <span class="text-primary-600 font-semibold block mt-1.5">logistics@etef.org.et</span>
@@ -227,25 +230,28 @@ const contactAm = `
     ${renderNavbar("/contact", "አማ")}
 
     <main class="flex-grow pb-24">
-        <!-- Page Header / Breadcrumb -->
-        <div class="bg-slate-50 border-b border-slate-200 pt-10 pb-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
-                            <a href="/" class="hover:text-primary-600 transition-colors">መነሻ</a>
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> መነሻ</a>
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <span class="mx-2 text-slate-400">/</span>
-                                <span class="text-primary-600 font-medium">ያግኙን</span>
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">ያግኙን</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
 
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">የፌዴሬሽኑን ሴክሬታሪያት ያነጋግሩ</h1>
-                <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">የፌዴሬሽኑን ሴክሬታሪያት ያነጋግሩ</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     ስለ አባልነት፣ የሕግ ድጋፍ ወይም የኮሪደሮች ሁኔታ ጥያቄ ወይም አስተያየት ካለዎት የአዲስ አበባ ዋና መሥሪያ ቤታችን ዝግጁ ነው።
                 </p>
             </div>
@@ -255,8 +261,8 @@ const contactAm = `
             <!-- 3 Top Info Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
                 <!-- Location Card -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
+                <div class="bg-white rounded-lg border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <span class="text-[11px] font-bold text-primary-600 uppercase tracking-wider mb-2">ዋና መሥሪያ ቤት</span>
@@ -270,8 +276,8 @@ const contactAm = `
                 </div>
 
                 <!-- Phone Card -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
+                <div class="bg-white rounded-lg border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <span class="text-[11px] font-bold text-primary-600 uppercase tracking-wider mb-2">የስልክ አድራሻ</span>
@@ -290,8 +296,8 @@ const contactAm = `
                 </div>
 
                 <!-- Email Card -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
+                <div class="bg-white rounded-lg border border-slate-200 p-8 shadow-sm flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-5 border border-primary-100">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <span class="text-[11px] font-bold text-primary-600 uppercase tracking-wider mb-2">ይፋዊ የኢሜይል አድራሻ</span>
@@ -313,14 +319,14 @@ const contactAm = `
             <!-- Two-Column Contact Form and Directorate Directory -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
                 <!-- Left: Interactive Form -->
-                <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 shadow-sm">
+                <div class="lg:col-span-7 bg-white rounded-lg border border-slate-200 p-8 sm:p-10 shadow-sm">
                     <div class="mb-6">
                         <span class="text-xs font-bold text-primary-600 uppercase tracking-wider bg-primary-50 px-3 py-1 rounded-full border border-primary-100">ቀጥታ መልዕክት</span>
                         <h2 class="text-2xl font-bold text-slate-900 mt-2">መልዕክትዎን ለሴክሬታሪያቱ ይላኩ</h2>
                         <p class="text-slate-600 text-xs sm:text-sm mt-1">ከታች ያለውን ቅጽ ይሙሉ፤ የፌዴሬሽኑ የሥራ ኃላፊ ተመልክቶ ፈጣን ምላሽ ይሰጥዎታል።</p>
                     </div>
 
-                    <div id="contact-form-feedback" class="hidden mb-6 p-4 rounded-xl border"></div>
+                    <div id="contact-form-feedback" class="hidden mb-6 p-4 rounded-lg border"></div>
 
                     <form id="contact-form" class="space-y-5">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -332,7 +338,7 @@ const contactAm = `
                                     name="name" 
                                     required 
                                     placeholder="ለምሳሌ፡ አበበ ከበደ" 
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                                 />
                             </div>
                             <div>
@@ -342,7 +348,7 @@ const contactAm = `
                                     id="contact-org" 
                                     name="organization" 
                                     placeholder="ለምሳሌ፡ ሆርን የጭነት ትራንስፖርት" 
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                                 />
                             </div>
                         </div>
@@ -356,7 +362,7 @@ const contactAm = `
                                     name="email" 
                                     required 
                                     placeholder="name@company.com" 
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                                 />
                             </div>
                             <div>
@@ -367,7 +373,7 @@ const contactAm = `
                                     name="phone" 
                                     required 
                                     placeholder="+251 91 123 4567" 
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                                 />
                             </div>
                         </div>
@@ -378,7 +384,7 @@ const contactAm = `
                                 id="contact-subject" 
                                 name="subject" 
                                 required 
-                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                             >
                                 <option value="">የጉዳዩን ዘርፍ ይምረጡ</option>
                                 <option value="membership">የአባልነት ማመልከቻና ማረጋገጫ</option>
@@ -397,14 +403,14 @@ const contactAm = `
                                 rows="5" 
                                 required 
                                 placeholder="ጥያቄዎን ወይም ጉዳይዎን በዝርዝር እዚህ ይጻፉ..." 
-                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-none"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-none"
                             ></textarea>
                         </div>
 
                         <button 
                             type="submit" 
                             id="contact-submit-btn" 
-                            class="w-full sm:w-auto px-8 py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                            class="w-full sm:w-auto px-8 py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
                         >
                             <span>መልዕክት ላክ</span>
                             <i class="fa-solid fa-paper-plane text-xs"></i>
@@ -414,24 +420,24 @@ const contactAm = `
 
                 <!-- Right: Directorate Directory -->
                 <div class="lg:col-span-5 space-y-6">
-                    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+                    <div class="bg-white rounded-lg border border-slate-200 p-8 shadow-sm">
                         <h3 class="text-lg font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">
                             የሴክሬታሪያቱ ዳይሬክቶሬቶች
                         </h3>
                         <div class="space-y-4 text-xs">
-                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-100">
                                 <span class="font-bold text-slate-800 block text-sm">የአባላትና ድርጅት ጉዳዮች</span>
                                 <p class="text-slate-500 mt-0.5">የማኅበራት ምዝገባ፣ ዓመታዊ መዋጮዎችና የጠቅላላ ጉባኤ ተወካዮች ማረጋገጫ።</p>
                                 <span class="text-primary-600 font-semibold block mt-1.5">membership@etef.org.et</span>
                             </div>
 
-                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-100">
                                 <span class="font-bold text-slate-800 block text-sm">የሕግና የኢንዱስትሪ ሰላም</span>
                                 <p class="text-slate-500 mt-0.5">የኅብረት ስምምነት ድርድር፣ የግልግል ዳኝነትና የፍርድ ቤት ውክልና።</p>
                                 <span class="text-primary-600 font-semibold block mt-1.5">legal@etef.org.et</span>
                             </div>
 
-                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-100">
                                 <span class="font-bold text-slate-800 block text-sm">የኮሪደሮችና ሎጂስቲክስ ክትትል</span>
                                 <p class="text-slate-500 mt-0.5">የጉምሩክ ክሊራንስ፣ የድንበር መረጃዎችና የ24/7 የድንገተኛ አደጋ እርዳታ መስመር።</p>
                                 <span class="text-primary-600 font-semibold block mt-1.5">logistics@etef.org.et</span>

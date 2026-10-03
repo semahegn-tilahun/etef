@@ -13,25 +13,25 @@ const markup = `
         </div>
 
         <nav class="flex-grow px-4 py-6 space-y-2 text-sm">
-            <a href="#dashboard" id="nav-dashboard" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-600 text-white font-semibold transition-all">
+            <a href="#dashboard" id="nav-dashboard" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-600 text-white font-semibold transition-all">
                 <i class="fa-solid fa-chart-pie w-5"></i> Dashboard
             </a>
-            <a href="#memberships" id="nav-memberships" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-400 hover:text-white transition-all">
+            <a href="#memberships" id="nav-memberships" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-all">
                 <i class="fa-solid fa-users-rectangle w-5"></i> Memberships
             </a>
-            <a href="#vacancies" id="nav-vacancies" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-400 hover:text-white transition-all">
+            <a href="#vacancies" id="nav-vacancies" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-all">
                 <i class="fa-solid fa-briefcase w-5"></i> Job Vacancies
             </a>
-            <a href="#news" id="nav-news" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-400 hover:text-white transition-all">
+            <a href="#news" id="nav-news" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-all">
                 <i class="fa-solid fa-newspaper w-5"></i> News & Updates
             </a>
-            <a href="#partners" id="nav-partners" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-400 hover:text-white transition-all">
+            <a href="#partners" id="nav-partners" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-all">
                 <i class="fa-solid fa-handshake w-5"></i> Partners & Sponsors
             </a>
         </nav>
 
         <div class="p-4 border-t border-slate-800">
-            <a href="/" class="flex items-center gap-3 px-4 py-3 rounded-xl text-red-400 hover:bg-red-500/10 transition-all font-medium text-sm">
+            <a href="/" class="flex items-center gap-3 px-4 py-3 rounded-lg text-red-400 hover:bg-red-500/10 transition-all font-medium text-sm">
                 <i class="fa-solid fa-arrow-right-from-bracket w-5"></i> Exit to Website
             </a>
         </div>
@@ -71,37 +71,37 @@ const markup = `
             <div id="tab-dashboard" class="space-y-8">
                 <!-- Stats Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
                         <div class="flex justify-between items-start mb-4">
                             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Total Members</span>
-                            <div class="w-10 h-10 bg-blue-50 text-primary-600 rounded-xl flex items-center justify-center font-bold"><i class="fa-solid fa-users"></i></div>
+                            <div class="w-10 h-10 bg-blue-50 text-primary-600 rounded-lg flex items-center justify-center font-bold"><i class="fa-solid fa-users"></i></div>
                         </div>
                         <h3 class="text-3xl font-extrabold text-slate-900 mb-1">342</h3>
                         <span class="text-xs text-primary-600 font-semibold flex items-center gap-1"><i class="fa-solid fa-arrow-up"></i> +12 this month</span>
                     </div>
 
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
                         <div class="flex justify-between items-start mb-4">
                             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Pending Applications</span>
-                            <div class="w-10 h-10 bg-slate-100 text-slate-700 rounded-xl flex items-center justify-center font-bold"><i class="fa-solid fa-clock"></i></div>
+                            <div class="w-10 h-10 bg-slate-100 text-slate-700 rounded-lg flex items-center justify-center font-bold"><i class="fa-solid fa-clock"></i></div>
                         </div>
                         <h3 class="text-3xl font-extrabold text-slate-900 mb-1">18</h3>
                         <span class="text-xs text-slate-600 font-semibold">Requires review</span>
                     </div>
 
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
                         <div class="flex justify-between items-start mb-4">
                             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Active Vacancies</span>
-                            <div class="w-10 h-10 bg-primary-50 text-primary-600 rounded-xl flex items-center justify-center font-bold"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="w-10 h-10 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center font-bold"><i class="fa-solid fa-briefcase"></i></div>
                         </div>
                         <h3 class="text-3xl font-extrabold text-slate-900 mb-1">7</h3>
                         <span class="text-xs text-primary-600 font-semibold">Across network</span>
                     </div>
 
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
                         <div class="flex justify-between items-start mb-4">
                             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Partners & Sponsors</span>
-                            <div class="w-10 h-10 bg-primary-50 text-primary-700 rounded-xl flex items-center justify-center font-bold"><i class="fa-solid fa-handshake"></i></div>
+                            <div class="w-10 h-10 bg-primary-50 text-primary-700 rounded-lg flex items-center justify-center font-bold"><i class="fa-solid fa-handshake"></i></div>
                         </div>
                         <h3 class="text-3xl font-extrabold text-slate-900 mb-1">14</h3>
                         <span class="text-xs text-primary-600 font-semibold">Institutional & Corporate</span>
@@ -109,7 +109,7 @@ const markup = `
                 </div>
 
                 <!-- Recent Applications Table -->
-                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
                     <div class="p-6 border-b border-slate-200 flex justify-between items-center">
                         <h3 class="font-bold text-lg text-slate-900">Recent Membership Applications</h3>
                         <button class="text-sm font-semibold text-primary-600 hover:underline">View All</button>
@@ -177,7 +177,7 @@ const markup = `
                 </div>
 
                 <!-- Search and Filter Bar -->
-                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row gap-4 justify-between items-center">
+                <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm flex flex-col sm:flex-row gap-4 justify-between items-center">
                     <div class="relative w-full sm:w-80">
                         <input type="text" id="admin-member-search" placeholder="Search by name or region..." class="w-full pl-10 pr-4 py-2 text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none">
                         <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-xs"></i>
@@ -195,7 +195,7 @@ const markup = `
                 </div>
 
                 <!-- Member Directory Table -->
-                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse text-sm" id="admin-members-table">
                             <thead>
@@ -295,7 +295,7 @@ const markup = `
                 </div>
 
                 <!-- Vacancies Table -->
-                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse text-sm" id="admin-vacancies-table">
                             <thead>
@@ -373,7 +373,7 @@ const markup = `
                 </div>
 
                 <!-- Articles Table -->
-                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse text-sm" id="admin-news-table">
                             <thead>
@@ -447,7 +447,7 @@ const markup = `
 
                 <!-- Partners Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="admin-partners-grid">
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-3">
                                 <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-primary-50 text-primary-700">Strategic Banking</span>
@@ -462,7 +462,7 @@ const markup = `
                         </div>
                     </div>
 
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-3">
                                 <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-primary-50 text-primary-700">Government Authority</span>
@@ -477,7 +477,7 @@ const markup = `
                         </div>
                     </div>
 
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-3">
                                 <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-primary-50 text-primary-700">Road Infrastructure</span>
@@ -492,7 +492,7 @@ const markup = `
                         </div>
                     </div>
 
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-3">
                                 <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-primary-50 text-primary-700">Municipal Transit</span>
@@ -507,7 +507,7 @@ const markup = `
                         </div>
                     </div>
 
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-3">
                                 <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-slate-100 text-slate-700">Regional Freight</span>
@@ -522,7 +522,7 @@ const markup = `
                         </div>
                     </div>
 
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-3">
                                 <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-primary-50 text-primary-700">Port Authority</span>
@@ -546,7 +546,7 @@ const markup = `
     <!-- Modal 1: Register Member -->
     <div id="admin-modal-member" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
         <div class="admin-modal-backdrop fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
-        <div class="relative bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 z-10 shadow-2xl border border-slate-100">
+        <div class="relative bg-white rounded-lg max-w-lg w-full p-6 sm:p-8 z-10 shadow-2xl border border-slate-100">
             <div class="flex justify-between items-center mb-6 pb-3 border-b border-slate-100">
                 <h3 class="font-bold text-lg text-slate-900">Register New Member Association</h3>
                 <button type="button" class="admin-modal-close text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark"></i></button>
@@ -596,7 +596,7 @@ const markup = `
     <!-- Modal 2: Post Vacancy -->
     <div id="admin-modal-vacancy" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
         <div class="admin-modal-backdrop fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
-        <div class="relative bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 z-10 shadow-2xl border border-slate-100">
+        <div class="relative bg-white rounded-lg max-w-lg w-full p-6 sm:p-8 z-10 shadow-2xl border border-slate-100">
             <div class="flex justify-between items-center mb-6 pb-3 border-b border-slate-100">
                 <h3 class="font-bold text-lg text-slate-900">Post New Career Vacancy</h3>
                 <button type="button" class="admin-modal-close text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark"></i></button>
@@ -635,7 +635,7 @@ const markup = `
     <!-- Modal 3: Create Article -->
     <div id="admin-modal-news" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
         <div class="admin-modal-backdrop fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
-        <div class="relative bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 z-10 shadow-2xl border border-slate-100">
+        <div class="relative bg-white rounded-lg max-w-lg w-full p-6 sm:p-8 z-10 shadow-2xl border border-slate-100">
             <div class="flex justify-between items-center mb-6 pb-3 border-b border-slate-100">
                 <h3 class="font-bold text-lg text-slate-900">Publish News or Bulletin</h3>
                 <button type="button" class="admin-modal-close text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark"></i></button>
@@ -674,7 +674,7 @@ const markup = `
     <!-- Modal 4: Add Partner -->
     <div id="admin-modal-partner" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
         <div class="admin-modal-backdrop fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
-        <div class="relative bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 z-10 shadow-2xl border border-slate-100">
+        <div class="relative bg-white rounded-lg max-w-lg w-full p-6 sm:p-8 z-10 shadow-2xl border border-slate-100">
             <div class="flex justify-between items-center mb-6 pb-3 border-b border-slate-100">
                 <h3 class="font-bold text-lg text-slate-900">Add Strategic Partner / Sponsor</h3>
                 <button type="button" class="admin-modal-close text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark"></i></button>
@@ -711,7 +711,7 @@ const markup = `
     </div>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-6 py-3 rounded-xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 text-sm font-medium flex items-center gap-3">
+    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-6 py-3 rounded-lg shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 text-sm font-medium flex items-center gap-3">
         <i class="fa-solid fa-circle-check text-primary-400"></i>
         <span id="toastMessage">Action completed successfully</span>
     </div>

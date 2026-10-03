@@ -49,11 +49,11 @@ const homeEng = `
 
                 <!-- Action Buttons -->
                 <div class="flex flex-wrap items-center justify-center gap-4 mb-10 sm:mb-12">
-                    <a href="/about" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md px-6 py-3.5 rounded-xl font-semibold text-sm shadow-lg transition-all hover:border-white/50">
+                    <a href="/about" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md px-6 py-3.5 rounded-lg font-semibold text-sm shadow-lg transition-all hover:border-white/50">
                         <span>Explore About Us</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
-                    <a href="/membership" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-xl shadow-primary-600/40 transition-all transform hover:-translate-y-0.5">
+                    <a href="/membership" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white px-7 py-3.5 rounded-lg font-bold text-sm shadow-xl shadow-primary-600/40 transition-all transform hover:-translate-y-0.5">
                         <span>Become a Member</span>
                         <i class="fa-solid fa-user-plus text-xs"></i>
                     </a>
@@ -62,8 +62,8 @@ const homeEng = `
                 <!-- Floating Glassmorphic Institutional Stats -->
                 <div class="max-w-5xl mx-auto">
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-                        <div class="bg-white/95 hover:bg-white p-6 rounded-2xl border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
-                            <div class="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
+                        <div class="bg-white/95 hover:bg-white p-6 rounded-lg border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
+                            <div class="w-11 h-11 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
                                 <i class="fa-solid fa-users-viewfinder"></i>
                             </div>
                             <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block">6,652+</span>
@@ -71,8 +71,8 @@ const homeEng = `
                             <span class="text-[11px] text-slate-500 block mt-0.5">Commercial Transporters</span>
                         </div>
 
-                        <div class="bg-white/95 hover:bg-white p-6 rounded-2xl border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
-                            <div class="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
+                        <div class="bg-white/95 hover:bg-white p-6 rounded-lg border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
+                            <div class="w-11 h-11 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
                                 <i class="fa-solid fa-sitemap"></i>
                             </div>
                             <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block">17</span>
@@ -80,8 +80,8 @@ const homeEng = `
                             <span class="text-[11px] text-slate-500 block mt-0.5">Regional & Sector Unions</span>
                         </div>
 
-                        <div class="bg-white/95 hover:bg-white p-6 rounded-2xl border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
-                            <div class="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
+                        <div class="bg-white/95 hover:bg-white p-6 rounded-lg border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
+                            <div class="w-11 h-11 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
                                 <i class="fa-solid fa-route"></i>
                             </div>
                             <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block">4</span>
@@ -89,8 +89,8 @@ const homeEng = `
                             <span class="text-[11px] text-slate-500 block mt-0.5">Djibouti, Modjo, Moyale, Berbera</span>
                         </div>
 
-                        <div class="bg-white/95 hover:bg-white p-6 rounded-2xl border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
-                            <div class="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
+                        <div class="bg-white/95 hover:bg-white p-6 rounded-lg border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
+                            <div class="w-11 h-11 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
                                 <i class="fa-solid fa-certificate"></i>
                             </div>
                             <span class="text-xl sm:text-2xl font-extrabold text-slate-900 block">May 12, 2018</span>
@@ -128,7 +128,7 @@ const homeEng = `
                 <!-- 4 Corridors Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Corridor 1: Ethio-Djibouti Corridor -->
-                    <div class="group bg-white rounded-2xl border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
+                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
                         <div>
                             <div class="relative h-44 overflow-hidden bg-slate-900">
                                 <img src="/images/corridor_djibouti.jpg" alt="Djibouti – Addis Ababa Expressway Corridor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -159,7 +159,7 @@ const homeEng = `
                                     <i class="fa-solid fa-location-dot text-primary-500"></i> Galafi / Dewele Border Crossing
                                 </p>
 
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
                                     <div class="flex justify-between items-center">
                                         <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> Transit Duration:</span>
                                         <span class="font-bold text-slate-800">42–48 Hours</span>
@@ -177,7 +177,7 @@ const homeEng = `
                         </div>
 
                         <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="djibouti">
+                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="djibouti">
                                 <span>View Corridor Advisory</span>
                                 <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
                             </button>
@@ -185,7 +185,7 @@ const homeEng = `
                     </div>
 
                     <!-- Corridor 2: Modjo Multimodal Dry Port -->
-                    <div class="group bg-white rounded-2xl border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
+                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
                         <div>
                             <div class="relative h-44 overflow-hidden bg-slate-900">
                                 <img src="/images/corridor_modjo.jpg" alt="Modjo Dry Port Multimodal Terminal Yard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -216,7 +216,7 @@ const homeEng = `
                                     <i class="fa-solid fa-location-dot text-primary-500"></i> Central Inbound Clearance Hub
                                 </p>
 
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
                                     <div class="flex justify-between items-center">
                                         <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-boxes-stacked text-slate-400"></i> Container Dwell:</span>
                                         <span class="font-bold text-primary-700 bg-primary-50 px-2 py-0.5 rounded border border-primary-200">3.8 Days (Optimal)</span>
@@ -234,7 +234,7 @@ const homeEng = `
                         </div>
 
                         <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="modjo">
+                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="modjo">
                                 <span>View Port Advisory</span>
                                 <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
                             </button>
@@ -242,7 +242,7 @@ const homeEng = `
                     </div>
 
                     <!-- Corridor 3: Moyale – Lamu Corridor -->
-                    <div class="group bg-white rounded-2xl border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
+                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
                         <div>
                             <div class="relative h-44 overflow-hidden bg-slate-900">
                                 <img src="/images/corridor_moyale.jpg" alt="Moyale One Stop Border Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -273,7 +273,7 @@ const homeEng = `
                                     <i class="fa-solid fa-location-dot text-primary-500"></i> Kenya One-Stop Border Post
                                 </p>
 
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
                                     <div class="flex justify-between items-center">
                                         <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> Transit Duration:</span>
                                         <span class="font-bold text-slate-800">55–60 Hours</span>
@@ -291,7 +291,7 @@ const homeEng = `
                         </div>
 
                         <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="moyale">
+                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="moyale">
                                 <span>View Border Advisory</span>
                                 <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
                             </button>
@@ -299,7 +299,7 @@ const homeEng = `
                     </div>
 
                     <!-- Corridor 4: Berbera Port Corridor -->
-                    <div class="group bg-white rounded-2xl border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
+                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
                         <div>
                             <div class="relative h-44 overflow-hidden bg-slate-900">
                                 <img src="/images/corridor_berbera.jpg" alt="Berbera to Dire Dawa Trade Corridor Highway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -330,7 +330,7 @@ const homeEng = `
                                     <i class="fa-solid fa-location-dot text-primary-500"></i> Tog Wajaale Transit Point
                                 </p>
 
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
                                     <div class="flex justify-between items-center">
                                         <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> Transit Duration:</span>
                                         <span class="font-bold text-slate-800">30–36 Hours</span>
@@ -348,7 +348,7 @@ const homeEng = `
                         </div>
 
                         <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="berbera">
+                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="berbera">
                                 <span>View Corridor Advisory</span>
                                 <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
                             </button>
@@ -356,10 +356,11 @@ const homeEng = `
                     </div>
                 </div>
 
-                <!-- Emergency Corridor Hotline Banner -->
-                <div class="mt-8 bg-primary-600 rounded-2xl p-6 text-white flex flex-col md:flex-row items-center justify-between gap-5 shadow-xl relative overflow-hidden">
+                <!-- Emergency Corridor Hotline Banner -->              <div class="mt-8 rounded-lg p-6 text-white flex flex-col md:flex-row items-center justify-between gap-5 shadow-xl relative overflow-hidden">
+                    <div class="absolute inset-0 z-0 bg-[url('/images/hero_expressway.jpg')] bg-cover bg-center animate-slow-motion"></div>
+                    <div class="absolute inset-0 z-0 bg-black/50"></div>
                     <div class="flex items-center gap-4 text-center md:text-left relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-white/20 text-white flex items-center justify-center text-xl shrink-0 shadow-inner">
+                        <div class="w-12 h-12 rounded-lg bg-white/20 text-white flex items-center justify-center text-xl shrink-0 shadow-inner">
                             <i class="fa-solid fa-truck-ramp-box"></i>
                         </div>
                         <div>
@@ -368,11 +369,11 @@ const homeEng = `
                         </div>
                     </div>
                     <div class="flex items-center gap-3 shrink-0 relative z-10 w-full sm:w-auto justify-center">
-                        <a href="tel:+251114717787" class="px-5 py-2.5 bg-white text-primary-700 hover:bg-slate-100 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 shadow-md transition-all">
+                        <a href="tel:+251114717787" class="px-5 py-2.5 bg-white text-primary-700 hover:bg-slate-100 rounded-lg text-xs sm:text-sm font-bold flex items-center gap-2 shadow-md transition-all">
                             <i class="fa-solid fa-phone"></i>
                             <span>+251 11 4717787</span>
                         </a>
-                        <button id="btn-corridor-incident-report" class="px-4 py-2.5 bg-primary-700 hover:bg-primary-800 text-white border border-white/30 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-2">
+                        <button id="btn-corridor-incident-report" class="px-4 py-2.5 bg-primary-700 hover:bg-primary-800 text-white border border-white/30 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-2">
                             <i class="fa-solid fa-triangle-exclamation text-white"></i>
                             <span>Report Road Incident</span>
                         </button>
@@ -398,8 +399,8 @@ const homeEng = `
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                     <!-- Strategic Mission Card -->
-                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
-                        <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                    <div class="bg-white rounded-lg p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                        <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-compass"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">Our Mission</h3>
@@ -426,8 +427,8 @@ const homeEng = `
                     </div>
 
                     <!-- Strategic Vision Card -->
-                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
-                        <div class="w-14 h-14 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                    <div class="bg-white rounded-lg p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                        <div class="w-14 h-14 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-eye"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">Our Vision</h3>
@@ -455,7 +456,7 @@ const homeEng = `
                 </div>
 
                 <div class="text-center">
-                    <a href="/about" class="inline-flex items-center gap-2.5 bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition-all text-sm">
+                    <a href="/about" class="inline-flex items-center gap-2.5 bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3.5 rounded-lg shadow-md transition-all text-sm">
                         <span>Explore More About ETEF</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -480,7 +481,7 @@ const homeEng = `
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Sector 1: Freight & Heavy Cargo -->
-                    <div class="card-hover-fx bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                    <div class="card-hover-fx bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
                         <div>
                             <div class="h-52 w-full overflow-hidden relative">
                                 <img src="/images/hero_truck.jpg" alt="Commercial Heavy Freight Truck" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -514,7 +515,7 @@ const homeEng = `
                     </div>
 
                     <!-- Sector 2: Passenger Transit -->
-                    <div class="card-hover-fx bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                    <div class="card-hover-fx bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
                         <div>
                             <div class="h-52 w-full overflow-hidden relative">
                                 <img src="/images/passenger_transit.jpg" alt="Passenger Bus Fleet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -548,7 +549,7 @@ const homeEng = `
                     </div>
 
                     <!-- Sector 3: Multimodal Logistics -->
-                    <div class="card-hover-fx bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                    <div class="card-hover-fx bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
                         <div>
                             <div class="h-52 w-full overflow-hidden relative">
                                 <img src="/images/about_vision.jpg" alt="Dry Port Cargo Logistics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -600,8 +601,8 @@ const homeEng = `
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-scale-balanced"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">Legal Representation & Defense</h3>
@@ -610,8 +611,8 @@ const homeEng = `
                         </p>
                     </div>
 
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-handshake-angle"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">Collective Bargaining</h3>
@@ -620,8 +621,8 @@ const homeEng = `
                         </p>
                     </div>
 
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-scroll"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">Policy & Regulatory Reform</h3>
@@ -630,8 +631,8 @@ const homeEng = `
                         </p>
                     </div>
 
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-user-graduate"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">Professional Training</h3>
@@ -640,8 +641,8 @@ const homeEng = `
                         </p>
                     </div>
 
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-network-wired"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">Freight Market Networking</h3>
@@ -650,8 +651,8 @@ const homeEng = `
                         </p>
                     </div>
 
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-globe"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">Exhibitions & Symposia</h3>
@@ -676,10 +677,10 @@ const homeEng = `
                     Join 17 employers' associations and over 6,652 commercial operators. Benefit from collective legal representation, dispute resolution, and regulatory advocacy.
                 </p>
                 <div class="flex flex-wrap items-center justify-center gap-4">
-                    <a href="/membership" class="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl text-sm shadow-md hover:shadow-lg transition-all">
+                    <a href="/membership" class="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg text-sm shadow-md hover:shadow-lg transition-all">
                         Apply for Membership
                     </a>
-                    <a href="/contact" class="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl text-sm shadow-sm transition-all">
+                    <a href="/contact" class="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-lg text-sm shadow-sm transition-all">
                         Contact Secretariat
                     </a>
                 </div>
@@ -739,11 +740,11 @@ const homeAm = `
 
                 <!-- Action Buttons -->
                 <div class="flex flex-wrap items-center justify-center gap-4 mb-10 sm:mb-12">
-                    <a href="/about" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md px-6 py-3.5 rounded-xl font-semibold text-sm shadow-lg transition-all hover:border-white/50">
+                    <a href="/about" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md px-6 py-3.5 rounded-lg font-semibold text-sm shadow-lg transition-all hover:border-white/50">
                         <span>ስለ ፌዴሬሽኑ ይወቁ</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
-                    <a href="/membership" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-xl shadow-primary-600/40 transition-all transform hover:-translate-y-0.5">
+                    <a href="/membership" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white px-7 py-3.5 rounded-lg font-bold text-sm shadow-xl shadow-primary-600/40 transition-all transform hover:-translate-y-0.5">
                         <span>አባል ይሁኑ</span>
                         <i class="fa-solid fa-user-plus text-xs"></i>
                     </a>
@@ -752,8 +753,8 @@ const homeAm = `
                 <!-- Floating Glassmorphic Institutional Stats -->
                 <div class="max-w-5xl mx-auto">
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-                        <div class="bg-white/95 hover:bg-white p-6 rounded-2xl border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
-                            <div class="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
+                        <div class="bg-white/95 hover:bg-white p-6 rounded-lg border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
+                            <div class="w-11 h-11 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
                                 <i class="fa-solid fa-users-viewfinder"></i>
                             </div>
                             <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block">6,652+</span>
@@ -761,8 +762,8 @@ const homeAm = `
                             <span class="text-[11px] text-slate-500 block mt-0.5">የትራንስፖርት ኦፕሬተሮች</span>
                         </div>
 
-                        <div class="bg-white/95 hover:bg-white p-6 rounded-2xl border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
-                            <div class="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
+                        <div class="bg-white/95 hover:bg-white p-6 rounded-lg border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
+                            <div class="w-11 h-11 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
                                 <i class="fa-solid fa-sitemap"></i>
                             </div>
                             <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block">17</span>
@@ -770,8 +771,8 @@ const homeAm = `
                             <span class="text-[11px] text-slate-500 block mt-0.5">ብሔራዊና ክልላዊ ማኅበራት</span>
                         </div>
 
-                        <div class="bg-white/95 hover:bg-white p-6 rounded-2xl border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
-                            <div class="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
+                        <div class="bg-white/95 hover:bg-white p-6 rounded-lg border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
+                            <div class="w-11 h-11 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
                                 <i class="fa-solid fa-route"></i>
                             </div>
                             <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block">4</span>
@@ -779,13 +780,13 @@ const homeAm = `
                             <span class="text-[11px] text-slate-500 block mt-0.5">ጅቡቲ፣ ሞጆ፣ ሞያሌ፣ በርበራ</span>
                         </div>
 
-                        <div class="bg-white/95 hover:bg-white p-6 rounded-2xl border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
-                            <div class="w-11 h-11 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
+                        <div class="bg-white/95 hover:bg-white p-6 rounded-lg border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
+                            <div class="w-11 h-11 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-3.5 text-lg">
                                 <i class="fa-solid fa-certificate"></i>
                             </div>
                             <span class="text-xl sm:text-2xl font-extrabold text-slate-900 block">ግንቦት 04/2010</span>
-                            <span class="text-xs font-semibold text-slate-700 block mt-1">ሕጋዊ የዕውቅና ምስክር ወረቀት</span>
-                            <span class="text-[11px] text-slate-500 block mt-0.5">በሠራተኛና ማኅበራዊ ጉዳይ ሚኒስቴር</span>
+                            <span class="text-xs font-semibold text-slate-700 block mt-1">ሕጋዊ የትራንስፖርት አሰሪዎች ፌዴሬሽን የምስረታ ጊዜ</span>
+                            <span class="text-[11px] text-slate-500 block mt-0.5">የሰራተኛና ማህበራዊ ጉዳይ ሚኒስቴር እውቅና</span>
                         </div>
                     </div>
                 </div>
@@ -818,7 +819,7 @@ const homeAm = `
                 <!-- 4 Corridors Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Corridor 1: Ethio-Djibouti Corridor -->
-                    <div class="group bg-white rounded-2xl border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
+                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
                         <div>
                             <div class="relative h-44 overflow-hidden bg-slate-900">
                                 <img src="/images/corridor_djibouti.jpg" alt="ጅቡቲ – አዲስ አበባ የፍጥነት መንገድ ኮሪደር" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -849,7 +850,7 @@ const homeAm = `
                                     <i class="fa-solid fa-location-dot text-primary-500"></i> የገላፊ / ዴወሌ ድንበር ማቋረጫ
                                 </p>
 
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
                                     <div class="flex justify-between items-center">
                                         <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> የትራንዚት ጊዜ፡</span>
                                         <span class="font-bold text-slate-800">42–48 ሰዓት</span>
@@ -867,7 +868,7 @@ const homeAm = `
                         </div>
 
                         <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="djibouti">
+                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="djibouti">
                                 <span>የኮሪደሩን መረጃ ይመልከቱ</span>
                                 <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
                             </button>
@@ -875,7 +876,7 @@ const homeAm = `
                     </div>
 
                     <!-- Corridor 2: Modjo Multimodal Dry Port -->
-                    <div class="group bg-white rounded-2xl border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
+                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
                         <div>
                             <div class="relative h-44 overflow-hidden bg-slate-900">
                                 <img src="/images/corridor_modjo.jpg" alt="የሞጆ ደረቅ ወደብ ተርሚናል" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -906,7 +907,7 @@ const homeAm = `
                                     <i class="fa-solid fa-location-dot text-primary-500"></i> ማዕከላዊ የገቢ ጭነት ክሊራንስ
                                 </p>
 
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
                                     <div class="flex justify-between items-center">
                                         <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-boxes-stacked text-slate-400"></i> የመያዣ ዕቃዎች ቆይታ፡</span>
                                         <span class="font-bold text-primary-700 bg-primary-50 px-2 py-0.5 rounded border border-primary-200">3.8 ቀናት (ተፈላጊ ደረጃ)</span>
@@ -924,7 +925,7 @@ const homeAm = `
                         </div>
 
                         <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="modjo">
+                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="modjo">
                                 <span>የወደቡን መረጃ ይመልከቱ</span>
                                 <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
                             </button>
@@ -932,7 +933,7 @@ const homeAm = `
                     </div>
 
                     <!-- Corridor 3: Moyale – Lamu Corridor -->
-                    <div class="group bg-white rounded-2xl border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
+                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
                         <div>
                             <div class="relative h-44 overflow-hidden bg-slate-900">
                                 <img src="/images/corridor_moyale.jpg" alt="የሞያሌ የጋራ ድንበር ጣቢያ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -963,7 +964,7 @@ const homeAm = `
                                     <i class="fa-solid fa-location-dot text-primary-500"></i> የሞያሌ የተቀናጀ የድንበር ፍተሻ
                                 </p>
 
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
                                     <div class="flex justify-between items-center">
                                         <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> የትራንዚት ጊዜ፡</span>
                                         <span class="font-bold text-slate-800">55–60 ሰዓት</span>
@@ -981,7 +982,7 @@ const homeAm = `
                         </div>
 
                         <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="moyale">
+                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="moyale">
                                 <span>የድንበሩን መረጃ ይመልከቱ</span>
                                 <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
                             </button>
@@ -989,7 +990,7 @@ const homeAm = `
                     </div>
 
                     <!-- Corridor 4: Berbera Port Corridor -->
-                    <div class="group bg-white rounded-2xl border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
+                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
                         <div>
                             <div class="relative h-44 overflow-hidden bg-slate-900">
                                 <img src="/images/corridor_berbera.jpg" alt="የበርበራ – ድሬዳዋ የንግድ መስመር" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -1020,7 +1021,7 @@ const homeAm = `
                                     <i class="fa-solid fa-location-dot text-primary-500"></i> የቶግ ዋቻሌ የትራንዚት መተላለፊያ
                                 </p>
 
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
                                     <div class="flex justify-between items-center">
                                         <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> የትራንዚት ጊዜ፡</span>
                                         <span class="font-bold text-slate-800">30–36 ሰዓት</span>
@@ -1038,7 +1039,7 @@ const homeAm = `
                         </div>
 
                         <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="berbera">
+                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="berbera">
                                 <span>የኮሪደሩን መረጃ ይመልከቱ</span>
                                 <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
                             </button>
@@ -1047,9 +1048,11 @@ const homeAm = `
                 </div>
 
                 <!-- Emergency Corridor Hotline Banner -->
-                <div class="mt-8 bg-primary-600 rounded-2xl p-6 text-white flex flex-col md:flex-row items-center justify-between gap-5 shadow-xl relative overflow-hidden">
+                <div class="mt-8 rounded-lg p-6 text-white flex flex-col md:flex-row items-center justify-between gap-5 shadow-xl relative overflow-hidden">
+                    <div class="absolute inset-0 z-0 bg-[url('/images/hero_expressway.jpg')] bg-cover bg-center animate-slow-motion"></div>
+                    <div class="absolute inset-0 z-0 bg-black/50"></div>
                     <div class="flex items-center gap-4 text-center md:text-left relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-white/20 text-white flex items-center justify-center text-xl shrink-0 shadow-inner">
+                        <div class="w-12 h-12 rounded-lg bg-white/20 text-white flex items-center justify-center text-xl shrink-0 shadow-inner">
                             <i class="fa-solid fa-truck-ramp-box"></i>
                         </div>
                         <div>
@@ -1058,11 +1061,11 @@ const homeAm = `
                         </div>
                     </div>
                     <div class="flex items-center gap-3 shrink-0 relative z-10 w-full sm:w-auto justify-center">
-                        <a href="tel:+251114717787" class="px-5 py-2.5 bg-white text-primary-700 hover:bg-slate-100 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 shadow-md transition-all">
+                        <a href="tel:+251114717787" class="px-5 py-2.5 bg-white text-primary-700 hover:bg-slate-100 rounded-lg text-xs sm:text-sm font-bold flex items-center gap-2 shadow-md transition-all">
                             <i class="fa-solid fa-phone"></i>
                             <span>+251 11 4717787</span>
                         </a>
-                        <button id="btn-corridor-incident-report" class="px-4 py-2.5 bg-primary-700 hover:bg-primary-800 text-white border border-white/30 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-2">
+                        <button id="btn-corridor-incident-report" class="px-4 py-2.5 bg-primary-700 hover:bg-primary-800 text-white border border-white/30 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-2">
                             <i class="fa-solid fa-triangle-exclamation text-white"></i>
                             <span>የመንገድ ችግር ሪፖርት ያድርጉ</span>
                         </button>
@@ -1088,8 +1091,8 @@ const homeAm = `
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                     <!-- Strategic Mission Card -->
-                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
-                        <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                    <div class="bg-white rounded-lg p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                        <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-compass"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">ተልዕኳችን</h3>
@@ -1116,8 +1119,8 @@ const homeAm = `
                     </div>
 
                     <!-- Strategic Vision Card -->
-                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
-                        <div class="w-14 h-14 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                    <div class="bg-white rounded-lg p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                        <div class="w-14 h-14 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-eye"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-slate-900 mb-2">ራዕያችን</h3>
@@ -1145,7 +1148,7 @@ const homeAm = `
                 </div>
 
                 <div class="text-center">
-                    <a href="/about" class="inline-flex items-center gap-2.5 bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition-all text-sm">
+                    <a href="/about" class="inline-flex items-center gap-2.5 bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3.5 rounded-lg shadow-md transition-all text-sm">
                         <span>ስለ ፌዴሬሽኑ በዝርዝር ያንብቡ</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -1170,7 +1173,7 @@ const homeAm = `
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Sector 1: Freight & Heavy Cargo -->
-                    <div class="card-hover-fx bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                    <div class="card-hover-fx bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
                         <div>
                             <div class="h-52 w-full overflow-hidden relative">
                                 <img src="/images/hero_truck.jpg" alt="የከባድ ጭነት ትራንስፖርት" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -1204,7 +1207,7 @@ const homeAm = `
                     </div>
 
                     <!-- Sector 2: Passenger Transit -->
-                    <div class="card-hover-fx bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                    <div class="card-hover-fx bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
                         <div>
                             <div class="h-52 w-full overflow-hidden relative">
                                 <img src="/images/passenger_transit.jpg" alt="የሕዝብ ትራንስፖርት አውቶቡሶች" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -1238,7 +1241,7 @@ const homeAm = `
                     </div>
 
                     <!-- Sector 3: Multimodal Logistics -->
-                    <div class="card-hover-fx bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
+                    <div class="card-hover-fx bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between group">
                         <div>
                             <div class="h-52 w-full overflow-hidden relative">
                                 <img src="/images/about_vision.jpg" alt="የደረቅ ወደብ ጭነት ሎጂስቲክስ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -1290,8 +1293,8 @@ const homeAm = `
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-scale-balanced"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">የሕግ ከለላና የፍርድ ቤት ውክልና</h3>
@@ -1300,8 +1303,8 @@ const homeAm = `
                         </p>
                     </div>
 
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-handshake-angle"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">የኅብረት ስምምነት ድርድር</h3>
@@ -1310,8 +1313,8 @@ const homeAm = `
                         </p>
                     </div>
 
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-scroll"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">የፖሊሲና መመሪያዎች ማሻሻያ</h3>
@@ -1320,8 +1323,8 @@ const homeAm = `
                         </p>
                     </div>
 
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-user-graduate"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">የሙያና አመራር አቅም ግንባታ</h3>
@@ -1330,8 +1333,8 @@ const homeAm = `
                         </p>
                     </div>
 
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-network-wired"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">የገበያና የጭነት ትስስር ማመቻቸት</h3>
@@ -1340,8 +1343,8 @@ const homeAm = `
                         </p>
                     </div>
 
-                    <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
+                    <div class="bg-white p-7 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-5">
                             <i class="fa-solid fa-globe"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 text-lg mb-2">ዓውደ ርዕዮችና ዓለም አቀፍ ሲምፖዚየሞች</h3>
@@ -1366,10 +1369,10 @@ const homeAm = `
                     ከ17 አሠሪ ማኅበራትና ከ6,652 በላይ የትራንስፖርት ባለቤቶች ጋር ይቀላቀሉ። የሕግ ጥበቃ፣ የውል ድርድርና ተደማጭ የጋራ ድምፅ ባለቤት ይሁኑ።
                 </p>
                 <div class="flex flex-wrap items-center justify-center gap-4">
-                    <a href="/membership" class="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl text-sm shadow-md hover:shadow-lg transition-all">
+                    <a href="/membership" class="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg text-sm shadow-md hover:shadow-lg transition-all">
                         የአባልነት ማመልከቻ ያስገቡ
                     </a>
-                    <a href="/contact" class="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl text-sm shadow-sm transition-all">
+                    <a href="/contact" class="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-lg text-sm shadow-sm transition-all">
                         ዋና መሥሪያ ቤቱን ያነጋግሩ
                     </a>
                 </div>

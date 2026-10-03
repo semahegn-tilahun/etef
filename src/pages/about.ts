@@ -5,7 +5,19 @@ const markupEng = `
     ${renderNavbar("/about", "ENG")}
 
     <main class="flex-grow">
-        <div class="bg-primary-600 text-white pt-10 pb-16 relative overflow-hidden">
+        <div class="relative text-white pt-10 pb-20 overflow-hidden bg-slate-950">
+            <!-- Slow-Motion Background Image relating to ETEF -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img 
+                    src="/images/about_hero_fleet.jpg" 
+                    alt="Ethiopian Transport Fleet Convoy" 
+                    class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95"
+                />
+                <!-- Deep Royal Blue & Gradient Overlays for High Contrast Readability -->
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-primary-950/50"></div>
+            </div>
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center space-x-1 md:space-x-3">
@@ -22,21 +34,21 @@ const markupEng = `
                 </nav>
                 <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
                     <div class="max-w-3xl">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/15 border border-white/25 rounded-full text-xs font-semibold text-white uppercase tracking-widest mb-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/15 backdrop-blur-md border border-white/25 rounded-full text-xs font-semibold text-white uppercase tracking-widest mb-4">
                             <i class="fa-solid fa-scale-balanced text-white"></i> FDRE Constitution Art. 31 • Proclamation No. 1156/2012
                         </div>
-                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight drop-shadow-sm">
                             Ethiopian Transport Employers' Federation
                         </h1>
-                        <p class="mt-4 text-base sm:text-lg text-blue-100 leading-relaxed">
+                        <p class="mt-4 text-base sm:text-lg text-blue-100 leading-relaxed max-w-2xl">
                             Established on May 12, 2018 (Ginbot 4, 2010 E.C.) by 17 employers' associations comprising over 6,652 members. Dedicated to industrial peace, legal advocacy, and operational efficiency across Ethiopia's transport sector.
                         </p>
                     </div>
                     <div class="flex flex-wrap items-center gap-3 shrink-0">
-                        <a href="#services-section" class="px-5 py-2.5 bg-white text-primary-700 hover:bg-slate-100 rounded-xl text-sm font-bold transition-all shadow-md flex items-center gap-2">
+                        <a href="#services-section" class="px-5 py-2.5 bg-white text-primary-700 hover:bg-slate-100 rounded-lg text-sm font-bold transition-all shadow-md flex items-center gap-2">
                             <i class="fa-solid fa-handshake-angle text-xs"></i> Federation Services
                         </a>
-                        <a href="#leadership-section" class="px-5 py-2.5 bg-primary-700 hover:bg-primary-800 text-white border border-white/30 rounded-xl text-sm font-semibold transition-all flex items-center gap-2">
+                        <a href="#leadership-section" class="px-5 py-2.5 bg-black/50 hover:bg-primary-700 text-white border border-white/30 backdrop-blur-md rounded-lg text-sm font-semibold transition-all flex items-center gap-2">
                             <i class="fa-solid fa-users text-xs"></i> Board of Directors (13)
                         </a>
                     </div>
@@ -46,8 +58,8 @@ const markupEng = `
 
         <section class="relative -mt-8 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
+                <div class="bg-white rounded-lg p-6 shadow-xl border border-slate-100 flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
                         <i class="fa-solid fa-users"></i>
                     </div>
                     <div>
@@ -56,8 +68,8 @@ const markupEng = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
+                <div class="bg-white rounded-lg p-6 shadow-xl border border-slate-100 flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
                         <i class="fa-solid fa-sitemap"></i>
                     </div>
                     <div>
@@ -66,8 +78,8 @@ const markupEng = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
+                <div class="bg-white rounded-lg p-6 shadow-xl border border-slate-100 flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
                         <i class="fa-solid fa-truck-moving"></i>
                     </div>
                     <div>
@@ -76,8 +88,8 @@ const markupEng = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
+                <div class="bg-white rounded-lg p-6 shadow-xl border border-slate-100 flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
                         <i class="fa-solid fa-certificate"></i>
                     </div>
                     <div>
@@ -130,7 +142,7 @@ const markupEng = `
                     </div>
 
                     <div class="lg:w-1/2 w-full">
-                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-900">
+                        <div class="relative rounded-lg overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-900">
                             <img src="/images/about_vision.jpg" alt="Commercial Transport Fleets in Ethiopia" class="w-full h-[420px] object-cover opacity-90 hover:scale-105 transition-transform duration-700">
                             
                             <div class="absolute top-4 left-4 bg-slate-900/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 text-white text-xs font-semibold flex items-center gap-2">
@@ -138,7 +150,7 @@ const markupEng = `
                                 <span>Certified Legal Employer Federation</span>
                             </div>
 
-                            <div class="absolute bottom-4 inset-x-4 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-slate-200">
+                            <div class="absolute bottom-4 inset-x-4 bg-white/95 backdrop-blur-md p-5 rounded-lg shadow-xl border border-slate-200">
                                 <div class="flex items-start gap-3">
                                     <img src="/images/etef_logo.png" alt="ETEF Emblem" class="w-10 h-10 object-contain rounded-full bg-white p-0.5 shadow-sm shrink-0 border border-slate-200" />
                                     <div>
@@ -157,17 +169,19 @@ const markupEng = `
             </div>
         </section>
 
-        <section class="py-16 bg-primary-600 text-white relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section class="py-16 text-white relative overflow-hidden">
+              <div class="absolute inset-0 z-0 bg-[url('/images/fleet_convoys.jpg')] bg-cover bg-center animate-slow-motion"></div>
+              <div class="absolute inset-0 z-0 bg-black/50"></div>
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-12">
                     <span class="text-blue-200 font-bold tracking-wider text-xs uppercase mb-2 block">OFFICIAL CHARTER MANDATE</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Vision, Mission & Strategic Goal</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="bg-white text-slate-900 p-8 rounded-lg shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
                         <div>
-                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mb-6">
+                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center mb-6">
                                 <i class="fa-solid fa-eye text-2xl"></i>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold mb-3 text-slate-900">Our Vision</h3>
@@ -180,9 +194,9 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="bg-white text-slate-900 p-8 rounded-lg shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
                         <div>
-                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mb-6">
+                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center mb-6">
                                 <i class="fa-solid fa-bullseye text-2xl"></i>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold mb-3 text-slate-900">Our Mission</h3>
@@ -195,9 +209,9 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="bg-white text-slate-900 p-8 rounded-lg shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
                         <div>
-                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mb-6">
+                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center mb-6">
                                 <i class="fa-solid fa-flag-checkered text-2xl"></i>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold mb-3 text-slate-900">Our Goal</h3>
@@ -224,48 +238,48 @@ const markupEng = `
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-handshake"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">Integrity</h4>
                         <span class="text-xs text-slate-500 mt-1 block">Ethical Transparency</span>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">Respect</h4>
                         <span class="text-xs text-slate-500 mt-1 block">Mutual Regard</span>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-bolt"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">Diligence</h4>
                         <span class="text-xs text-slate-500 mt-1 block">Commitment to Service</span>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">Loyalty</h4>
                         <span class="text-xs text-slate-500 mt-1 block">Fidelity to Members</span>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-people-group"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">Teamwork</h4>
                         <span class="text-xs text-slate-500 mt-1 block">Cohesive Action</span>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-dove"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">Industrial Peace</h4>
@@ -290,9 +304,9 @@ const markupEng = `
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-blue-100 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-gavel"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-600 uppercase tracking-wider">Advocacy & Defense</span>
@@ -321,9 +335,9 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-handshake"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-600 uppercase tracking-wider">Industrial Relations</span>
@@ -352,9 +366,9 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-file-signature"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">Regulatory Reform</span>
@@ -383,9 +397,9 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-chalkboard-user"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">Workforce Development</span>
@@ -405,9 +419,9 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-network-wired"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">Enterprise Growth</span>
@@ -432,9 +446,9 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-globe"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">Global Linkages</span>
@@ -475,7 +489,7 @@ const markupEng = `
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_president_dr_dawit.jpg" alt="Ato Berehane Zeru" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -495,7 +509,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_vp_tigist.jpg" alt="Ato Mesele Hagos" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -515,7 +529,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_sec_yared.jpg" alt="Ato Derje Legesse" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -535,7 +549,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_logistics_selamawit.jpg" alt="Ato Dejene Luchie" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -555,7 +569,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_regional_bereket.jpg" alt="Ato Seid Ibrahim" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -575,7 +589,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_policy_helen.jpg" alt="Ato Mekonnen Workie" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -595,7 +609,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_president_dr_dawit.jpg" alt="Ato Yergalem Sefani" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -615,7 +629,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_vp_tigist.jpg" alt="Ato Msfin Eshetu" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -635,7 +649,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_sec_yared.jpg" alt="Ato Tadsse Ejegu" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -655,7 +669,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_logistics_selamawit.jpg" alt="Ato Mohammed Hassan" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -675,7 +689,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_regional_bereket.jpg" alt="Ato Nurdin Ditamo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -695,7 +709,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_policy_helen.jpg" alt="Ato Abeba Kassa" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -715,7 +729,7 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_president_dr_dawit.jpg" alt="Ato Engeda H/Maryam" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -752,9 +766,9 @@ const markupEng = `
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
                                 <i class="fa-solid fa-book-bookmark"></i>
                             </div>
                             <span class="text-[11px] font-bold text-primary-600 uppercase tracking-wider block">Bylaws & Constitution</span>
@@ -769,9 +783,9 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
                                 <i class="fa-solid fa-certificate"></i>
                             </div>
                             <span class="text-[11px] font-bold text-primary-600 uppercase tracking-wider block">Legal Recognition</span>
@@ -786,9 +800,9 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
                                 <i class="fa-solid fa-scale-balanced"></i>
                             </div>
                             <span class="text-[11px] font-bold text-primary-700 uppercase tracking-wider block">Labor Proclamation</span>
@@ -803,9 +817,9 @@ const markupEng = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
                                 <i class="fa-solid fa-handshake-simple"></i>
                             </div>
                             <span class="text-[11px] font-bold text-primary-700 uppercase tracking-wider block">Collective Agreements</span>
@@ -823,18 +837,20 @@ const markupEng = `
             </div>
         </section>
 
-        <section class="py-16 bg-primary-600 text-white relative overflow-hidden">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <section class="py-16 text-white relative overflow-hidden">
+              <div class="absolute inset-0 z-0 bg-[url('/images/hero_truck.jpg')] bg-cover bg-center animate-slow-motion"></div>
+              <div class="absolute inset-0 z-0 bg-black/50"></div>
+              <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <span class="text-blue-200 font-bold tracking-wider text-xs uppercase mb-3 block">JOIN ETEF</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Partner with the Federation Today</h2>
                 <p class="text-base sm:text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
                     Enhance your transport services and productivity by entrusting your challenges and concerns to the Ethiopian Transport Employers' Federation.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="/membership" class="inline-flex justify-center items-center px-8 py-3.5 bg-white text-primary-700 rounded-xl text-sm font-bold hover:bg-slate-100 transition-colors shadow-md">
+                    <a href="/membership" class="inline-flex justify-center items-center px-8 py-3.5 bg-white text-primary-700 rounded-lg text-sm font-bold hover:bg-slate-100 transition-colors shadow-md">
                         Become a Member
                     </a>
-                    <a href="/contact" class="inline-flex justify-center items-center px-8 py-3.5 bg-primary-700 border border-white/30 text-white rounded-xl text-sm font-semibold hover:bg-primary-800 transition-colors shadow-sm">
+                    <a href="/contact" class="inline-flex justify-center items-center px-8 py-3.5 bg-primary-700 border border-white/30 text-white rounded-lg text-sm font-semibold hover:bg-primary-800 transition-colors shadow-sm">
                         Contact the Secretariat
                     </a>
                 </div>
@@ -849,7 +865,19 @@ const markupAm = `
     ${renderNavbar("/about", "አማ")}
 
     <main class="flex-grow">
-        <div class="bg-primary-600 text-white pt-10 pb-16 relative overflow-hidden">
+        <div class="relative text-white pt-10 pb-20 overflow-hidden bg-slate-950">
+            <!-- Slow-Motion Background Image relating to ETEF -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img 
+                    src="/images/about_hero_fleet.jpg" 
+                    alt="የኢትዮጵያ ትራንስፖርት የጭነትና የሕዝብ ተሽከርካሪዎች ኮንቮይ" 
+                    class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95"
+                />
+                <!-- Deep Royal Blue & Gradient Overlays for High Contrast Readability -->
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-primary-950/50"></div>
+            </div>
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center space-x-1 md:space-x-3">
@@ -866,21 +894,21 @@ const markupAm = `
                 </nav>
                 <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
                     <div class="max-w-3xl">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/15 border border-white/25 rounded-full text-xs font-semibold text-white uppercase tracking-widest mb-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/15 backdrop-blur-md border border-white/25 rounded-full text-xs font-semibold text-white uppercase tracking-widest mb-4">
                             <i class="fa-solid fa-scale-balanced text-white"></i> በኢ.ፌ.ዲ.ሪ. ሕገ መንግሥት አንቀጽ 31 • አዋጅ ቁጥር 1156/2012
                         </div>
-                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight drop-shadow-sm">
                             የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን
                         </h1>
-                        <p class="mt-4 text-base sm:text-lg text-blue-100 leading-relaxed">
+                        <p class="mt-4 text-base sm:text-lg text-blue-100 leading-relaxed max-w-2xl">
                             በስሩ ከ6,652 በላይ አባላት ያሏቸውን 17 የአሠሪ ማኅበራትን በማቀፍ ግንቦት 04 ቀን 2010 ዓ/ም የተመሠረተ። የኢንዱስትሪውን ሰላም ለማስፈን፣ የአሠሪዎችን መብት ለማስከበርና ዘርፉን ለማዘመን የሚሰራ ብሔራዊ ተቋም።
                         </p>
                     </div>
                     <div class="flex flex-wrap items-center gap-3 shrink-0">
-                        <a href="#services-section" class="px-5 py-2.5 bg-white text-primary-700 hover:bg-slate-100 rounded-xl text-sm font-bold transition-all shadow-md flex items-center gap-2">
+                        <a href="#services-section" class="px-5 py-2.5 bg-white text-primary-700 hover:bg-slate-100 rounded-lg text-sm font-bold transition-all shadow-md flex items-center gap-2">
                             <i class="fa-solid fa-handshake-angle text-xs"></i> የፌዴሬሽኑ አገልግሎቶች
                         </a>
-                        <a href="#leadership-section" class="px-5 py-2.5 bg-primary-700 hover:bg-primary-800 text-white border border-white/30 rounded-xl text-sm font-semibold transition-all flex items-center gap-2">
+                        <a href="#leadership-section" class="px-5 py-2.5 bg-black/50 hover:bg-primary-700 text-white border border-white/30 backdrop-blur-md rounded-lg text-sm font-semibold transition-all flex items-center gap-2">
                             <i class="fa-solid fa-users text-xs"></i> የሥራ አስፈጻሚ ቦርድ (13)
                         </a>
                     </div>
@@ -890,8 +918,8 @@ const markupAm = `
 
         <section class="relative -mt-8 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
+                <div class="bg-white rounded-lg p-6 shadow-xl border border-slate-100 flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
                         <i class="fa-solid fa-users"></i>
                     </div>
                     <div>
@@ -900,8 +928,8 @@ const markupAm = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
+                <div class="bg-white rounded-lg p-6 shadow-xl border border-slate-100 flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
                         <i class="fa-solid fa-sitemap"></i>
                     </div>
                     <div>
@@ -910,8 +938,8 @@ const markupAm = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
+                <div class="bg-white rounded-lg p-6 shadow-xl border border-slate-100 flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
                         <i class="fa-solid fa-truck-moving"></i>
                     </div>
                     <div>
@@ -920,8 +948,8 @@ const markupAm = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
+                <div class="bg-white rounded-lg p-6 shadow-xl border border-slate-100 flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
                         <i class="fa-solid fa-certificate"></i>
                     </div>
                     <div>
@@ -974,7 +1002,7 @@ const markupAm = `
                     </div>
 
                     <div class="lg:w-1/2 w-full">
-                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-900">
+                        <div class="relative rounded-lg overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-900">
                             <img src="/images/about_vision.jpg" alt="የኢትዮጵያ የጭነት ትራንስፖርት" class="w-full h-[420px] object-cover opacity-90 hover:scale-105 transition-transform duration-700">
                             
                             <div class="absolute top-4 left-4 bg-slate-900/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 text-white text-xs font-semibold flex items-center gap-2">
@@ -982,7 +1010,7 @@ const markupAm = `
                                 <span>ሕጋዊ ዕውቅና ያለው የአሠሪዎች ፌዴሬሽን</span>
                             </div>
 
-                            <div class="absolute bottom-4 inset-x-4 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-slate-200">
+                            <div class="absolute bottom-4 inset-x-4 bg-white/95 backdrop-blur-md p-5 rounded-lg shadow-xl border border-slate-200">
                                 <div class="flex items-start gap-3">
                                     <img src="/images/etef_logo.png" alt="የኢትራአፌ አርማ" class="w-10 h-10 object-contain rounded-full bg-white p-0.5 shadow-sm shrink-0 border border-slate-200" />
                                     <div>
@@ -1001,17 +1029,19 @@ const markupAm = `
             </div>
         </section>
 
-        <section class="py-16 bg-primary-600 text-white relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section class="py-16 text-white relative overflow-hidden">
+              <div class="absolute inset-0 z-0 bg-[url('/images/fleet_convoys.jpg')] bg-cover bg-center animate-slow-motion"></div>
+              <div class="absolute inset-0 z-0 bg-black/50"></div>
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-12">
                     <span class="text-blue-200 font-bold tracking-wider text-xs uppercase mb-2 block">ይፋዊ የፌዴሬሽኑ ዓላማ</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">ራዕይ፣ ተልዕኮ እና ግብ</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="bg-white text-slate-900 p-8 rounded-lg shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
                         <div>
-                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mb-6">
+                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center mb-6">
                                 <i class="fa-solid fa-eye text-2xl"></i>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold mb-3 text-slate-900">ራዕይ</h3>
@@ -1024,9 +1054,9 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="bg-white text-slate-900 p-8 rounded-lg shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
                         <div>
-                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mb-6">
+                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center mb-6">
                                 <i class="fa-solid fa-bullseye text-2xl"></i>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold mb-3 text-slate-900">ተልዕኮ</h3>
@@ -1039,9 +1069,9 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div class="bg-white text-slate-900 p-8 rounded-lg shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
                         <div>
-                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mb-6">
+                            <div class="h-14 w-14 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center mb-6">
                                 <i class="fa-solid fa-flag-checkered text-2xl"></i>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold mb-3 text-slate-900">ግብ</h3>
@@ -1068,48 +1098,48 @@ const markupAm = `
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-handshake"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">ታማኝነት</h4>
                         <span class="text-xs text-slate-500 mt-1 block">ግልጽነትና ፍትሃዊነት</span>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-heart"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">ክብር</h4>
                         <span class="text-xs text-slate-500 mt-1 block">የጋራ አክብሮት</span>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-bolt"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">ትጋት</h4>
                         <span class="text-xs text-slate-500 mt-1 block">ተግቶ ማገልገል</span>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">ታማኝነት</h4>
                         <span class="text-xs text-slate-500 mt-1 block">ለአባላት ታማኝ መሆን</span>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-people-group"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">የቡድን ስራ</h4>
                         <span class="text-xs text-slate-500 mt-1 block">የተቀናጀ ጥረት</span>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
+                    <div class="bg-white rounded-lg p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl mb-3">
                             <i class="fa-solid fa-dove"></i>
                         </div>
                         <h4 class="font-bold text-slate-900 text-sm">የኢንዱስትሪ ሰላም</h4>
@@ -1134,9 +1164,9 @@ const markupAm = `
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-blue-100 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-gavel"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-600 uppercase tracking-wider">የውትወታና መሟገት</span>
@@ -1165,9 +1195,9 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-handshake"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-600 uppercase tracking-wider">የኢንዱስትሪ ሰላም</span>
@@ -1196,9 +1226,9 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-file-signature"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">የሕግ ማሻሻያ</span>
@@ -1227,9 +1257,9 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-chalkboard-user"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">የአቅም ግንባታ</span>
@@ -1249,9 +1279,9 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-network-wired"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">የገበያ ትስስር</span>
@@ -1276,9 +1306,9 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
+                    <div class="bg-slate-50 rounded-lg p-8 border border-slate-200 hover:border-primary-400 transition-all flex flex-col justify-between">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold mb-5">
                                 <i class="fa-solid fa-globe"></i>
                             </div>
                             <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">ኤግዚቪሽንና ልምድ</span>
@@ -1319,7 +1349,7 @@ const markupAm = `
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_president_dr_dawit.jpg" alt="አቶ ብርሃኔ ዘርዑ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1339,7 +1369,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_vp_tigist.jpg" alt="አቶ መሠለ ሐጎስ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1359,7 +1389,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_sec_yared.jpg" alt="አቶ ደረጀ ለገሠ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1379,7 +1409,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_logistics_selamawit.jpg" alt="አቶ ደጀኔ ሉጬ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1399,7 +1429,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_regional_bereket.jpg" alt="አቶ ሰዒድ ኢብራሂም" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1419,7 +1449,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_policy_helen.jpg" alt="አቶ መኮንን ወርቄ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1439,7 +1469,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_president_dr_dawit.jpg" alt="አቶ ይርጋዓለም ሰፋኒ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1459,7 +1489,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_vp_tigist.jpg" alt="አቶ መስፍን እሸቱ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1479,7 +1509,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_sec_yared.jpg" alt="አቶ ታደሰ እጅጉ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1499,7 +1529,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_logistics_selamawit.jpg" alt="አቶ መሐመድ ሀሰን" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1519,7 +1549,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_regional_bereket.jpg" alt="አቶ ኑረዲን ዲታሞ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1539,7 +1569,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_policy_helen.jpg" alt="አቶ አበባው ካሣ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1559,7 +1589,7 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
                         <div class="relative h-64 overflow-hidden bg-slate-200">
                             <img src="/images/board_president_dr_dawit.jpg" alt="አቶ እንግዳ ኃ/ማርያም" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
@@ -1596,9 +1626,9 @@ const markupAm = `
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
                                 <i class="fa-solid fa-book-bookmark"></i>
                             </div>
                             <span class="text-[11px] font-bold text-primary-600 uppercase tracking-wider block">መተዳደሪያ ደንብ</span>
@@ -1613,9 +1643,9 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
                                 <i class="fa-solid fa-certificate"></i>
                             </div>
                             <span class="text-[11px] font-bold text-primary-600 uppercase tracking-wider block">የዕውቅና ምስክር</span>
@@ -1630,9 +1660,9 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
                                 <i class="fa-solid fa-scale-balanced"></i>
                             </div>
                             <span class="text-[11px] font-bold text-primary-700 uppercase tracking-wider block">የአሠሪና ሠራተኛ አዋጅ</span>
@@ -1647,9 +1677,9 @@ const markupAm = `
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-primary-400 transition-colors">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-700 flex items-center justify-center font-bold text-xl mb-4">
                                 <i class="fa-solid fa-handshake-simple"></i>
                             </div>
                             <span class="text-[11px] font-bold text-primary-700 uppercase tracking-wider block">የሕብረት ስምምነት</span>
@@ -1667,18 +1697,20 @@ const markupAm = `
             </div>
         </section>
 
-        <section class="py-16 bg-primary-600 text-white relative overflow-hidden">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <section class="py-16 text-white relative overflow-hidden">
+              <div class="absolute inset-0 z-0 bg-[url('/images/hero_truck.jpg')] bg-cover bg-center animate-slow-motion"></div>
+              <div class="absolute inset-0 z-0 bg-black/50"></div>
+              <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <span class="text-blue-200 font-bold tracking-wider text-xs uppercase mb-3 block">አባል ይሁኑ</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">ከፌዴሬሽኑ ጋር ዛሬውኑ አብረው ይስሩ</h2>
                 <p class="text-base sm:text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
                     እርስዎ የሚያጋጥምዎትን ዘርፈ ብዙ ችግሮችና ሀሳብዎን ለኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን በመተው አገልግሎትዎንና ምርትዎን ያሳድጉ።
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="/membership" class="inline-flex justify-center items-center px-8 py-3.5 bg-white text-primary-700 rounded-xl text-sm font-bold hover:bg-slate-100 transition-colors shadow-md">
+                    <a href="/membership" class="inline-flex justify-center items-center px-8 py-3.5 bg-white text-primary-700 rounded-lg text-sm font-bold hover:bg-slate-100 transition-colors shadow-md">
                         የፌዴሬሽኑ አባል ይሁኑ
                     </a>
-                    <a href="/contact" class="inline-flex justify-center items-center px-8 py-3.5 bg-primary-700 border border-white/30 text-white rounded-xl text-sm font-semibold hover:bg-primary-800 transition-colors shadow-sm">
+                    <a href="/contact" class="inline-flex justify-center items-center px-8 py-3.5 bg-primary-700 border border-white/30 text-white rounded-lg text-sm font-semibold hover:bg-primary-800 transition-colors shadow-sm">
                         ጽሕፈት ቤቱን ያነጋግሩ
                     </a>
                 </div>

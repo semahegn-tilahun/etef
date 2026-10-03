@@ -4,25 +4,28 @@ const faqEng = `
     ${renderNavbar("/faq", "ENG")}
 
     <main class="flex-grow pb-24">
-        <!-- Page Header / Breadcrumb -->
-        <div class="bg-slate-50 border-b border-slate-200 pt-10 pb-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
-                            <a href="/" class="hover:text-primary-600 transition-colors">Home</a>
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> Home</a>
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <span class="mx-2 text-slate-400">/</span>
-                                <span class="text-primary-600 font-medium">FAQ</span>
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">FAQ</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
 
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">Frequently Asked Questions</h1>
-                <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Frequently Asked Questions</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     Find authoritative answers regarding ETEF membership criteria, policy and regulatory advocacy, corridor operations, and transport sector services.
                 </p>
             </div>
@@ -38,7 +41,7 @@ const faqEng = `
                         type="text" 
                         id="faq-search-input" 
                         placeholder="Search questions or keywords (e.g. membership, dues, corridors, regulations)..." 
-                        class="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-300 rounded-xl shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                        class="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-300 rounded-lg shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     />
                 </div>
 
@@ -65,7 +68,7 @@ const faqEng = `
             <!-- FAQ Accordion List -->
             <div class="space-y-4" id="faq-items-container">
                 <!-- Item 1 -->
-                <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all" data-category="advocacy">
+                <div class="faq-item bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all" data-category="advocacy">
                     <button type="button" class="faq-accordion-header w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 text-xs font-bold flex items-center justify-center shrink-0">01</span>
@@ -81,7 +84,7 @@ const faqEng = `
                 </div>
 
                 <!-- Item 2 -->
-                <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all" data-category="membership">
+                <div class="faq-item bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all" data-category="membership">
                     <button type="button" class="faq-accordion-header w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 text-xs font-bold flex items-center justify-center shrink-0">02</span>
@@ -97,7 +100,7 @@ const faqEng = `
                 </div>
 
                 <!-- Item 3 -->
-                <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all" data-category="membership">
+                <div class="faq-item bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all" data-category="membership">
                     <button type="button" class="faq-accordion-header w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 text-xs font-bold flex items-center justify-center shrink-0">03</span>
@@ -113,7 +116,7 @@ const faqEng = `
                 </div>
 
                 <!-- Item 4 -->
-                <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all" data-category="operations">
+                <div class="faq-item bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all" data-category="operations">
                     <button type="button" class="faq-accordion-header w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 text-xs font-bold flex items-center justify-center shrink-0">04</span>
@@ -129,7 +132,7 @@ const faqEng = `
                 </div>
 
                 <!-- Item 5 -->
-                <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all" data-category="advocacy">
+                <div class="faq-item bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all" data-category="advocacy">
                     <button type="button" class="faq-accordion-header w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 text-xs font-bold flex items-center justify-center shrink-0">05</span>
@@ -154,25 +157,28 @@ const faqAm = `
     ${renderNavbar("/faq", "አማ")}
 
     <main class="flex-grow pb-24">
-        <!-- Page Header / Breadcrumb -->
-        <div class="bg-slate-50 border-b border-slate-200 pt-10 pb-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
-                            <a href="/" class="hover:text-primary-600 transition-colors">መነሻ</a>
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> መነሻ</a>
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <span class="mx-2 text-slate-400">/</span>
-                                <span class="text-primary-600 font-medium">ተደጋጋሚ ጥያቄዎች</span>
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">በየጥ</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
 
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">ተደጋጋሚ ጥያቄዎችና መልሶች</h1>
-                <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">ተደጋጋሚ ጥያቄዎችና መልሶች</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     ስለ ፌዴሬሽኑ አባልነት፣ የሕግ ድጋፍ፣ የኮሪደር ክትትልና አሰራሮች አስተማማኝና ይፋዊ መረጃዎችን እዚህ ያገኛሉ።
                 </p>
             </div>
@@ -188,7 +194,7 @@ const faqAm = `
                         type="text" 
                         id="faq-search-input" 
                         placeholder="ጥያቄዎችን ወይም ቁልፍ ቃላትን ይፈልጉ (ለምሳሌ፡ አባልነት፣ መዋጮ፣ ኮሪደር፣ ደንቦች)..." 
-                        class="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-300 rounded-xl shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                        class="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-300 rounded-lg shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     />
                 </div>
 
@@ -215,7 +221,7 @@ const faqAm = `
             <!-- FAQ Accordion List -->
             <div class="space-y-4" id="faq-items-container">
                 <!-- Item 1 -->
-                <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all" data-category="advocacy">
+                <div class="faq-item bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all" data-category="advocacy">
                     <button type="button" class="faq-accordion-header w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 text-xs font-bold flex items-center justify-center shrink-0">01</span>
@@ -231,7 +237,7 @@ const faqAm = `
                 </div>
 
                 <!-- Item 2 -->
-                <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all" data-category="membership">
+                <div class="faq-item bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all" data-category="membership">
                     <button type="button" class="faq-accordion-header w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 text-xs font-bold flex items-center justify-center shrink-0">02</span>
@@ -247,7 +253,7 @@ const faqAm = `
                 </div>
 
                 <!-- Item 3 -->
-                <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all" data-category="membership">
+                <div class="faq-item bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all" data-category="membership">
                     <button type="button" class="faq-accordion-header w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 text-xs font-bold flex items-center justify-center shrink-0">03</span>
@@ -263,7 +269,7 @@ const faqAm = `
                 </div>
 
                 <!-- Item 4 -->
-                <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all" data-category="operations">
+                <div class="faq-item bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all" data-category="operations">
                     <button type="button" class="faq-accordion-header w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 text-xs font-bold flex items-center justify-center shrink-0">04</span>
@@ -279,7 +285,7 @@ const faqAm = `
                 </div>
 
                 <!-- Item 5 -->
-                <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all" data-category="advocacy">
+                <div class="faq-item bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm transition-all" data-category="advocacy">
                     <button type="button" class="faq-accordion-header w-full text-left p-6 flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 text-xs font-bold flex items-center justify-center shrink-0">05</span>

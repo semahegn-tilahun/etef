@@ -4,30 +4,35 @@ const newsEng = `
     ${renderNavbar("/news", "ENG")}
 
     <main class="flex-grow pb-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10 relative z-10">
             <!-- Breadcrumbs -->
-            <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-2">
-                    <li class="inline-flex items-center">
-                        <a href="/" class="hover:text-primary-600 transition-colors">Home</a>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                            <span class="mx-2 text-slate-400">/</span>
-                            <span class="text-primary-600 font-medium">News</span>
-                        </div>
-                    </li>
-                </ol>
-            </nav>
+            <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> Home</a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">News & Updates</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
 
             <!-- Page Title -->
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">News and Operational Bulletins</h1>
-            <p class="text-lg text-slate-600 max-w-3xl">Strategic insights, trade corridor advisories, and policy perspectives for Ethiopia's commercial transport employers.</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">News and Operational Bulletins</h1>
+            <p class="text-lg text-blue-100 max-w-3xl">Strategic insights, trade corridor advisories, and policy perspectives for Ethiopia's commercial transport employers.</p>
         </div>
-
+        </div>
         <!-- Featured Story -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl shadow-slate-200/60 border border-slate-200 flex flex-col lg:flex-row group cursor-pointer transition-all duration-300">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl shadow-slate-200/60 border border-slate-200 flex flex-col lg:flex-row group cursor-pointer transition-all duration-300">
                 <div class="lg:w-3/5 h-64 lg:h-[400px] overflow-hidden relative">
                     <img src="/images/news_mountain_truck.jpg" alt="Transport Truck on Mountain Road" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out">
                 </div>
@@ -88,7 +93,7 @@ const newsEng = `
             <!-- Articles Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
                 <!-- Article Card 1 -->
-                <article data-article-id="safer-journeys" data-category="safety" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="safer-journeys" data-category="safety" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_mechanic_tire.jpg" alt="Mechanic working on commercial truck tire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -108,7 +113,7 @@ const newsEng = `
                 </article>
 
                 <!-- Article Card 2 -->
-                <article data-article-id="employer-voice" data-category="association" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="employer-voice" data-category="association" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_association_meeting.jpg" alt="Association Executive Meeting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -128,7 +133,7 @@ const newsEng = `
                 </article>
 
                 <!-- Article Card 3 -->
-                <article data-article-id="everyday-costs" data-category="industry" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="everyday-costs" data-category="industry" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_logistics_hub.jpg" alt="Multimodal Logistics Freight Terminal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -148,7 +153,7 @@ const newsEng = `
                 </article>
 
                 <!-- Article Card 4 -->
-                <article data-article-id="transport-roundtable" data-category="events" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="transport-roundtable" data-category="events" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_roundtable.jpg" alt="Industry Stakeholders in Dialogue" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -168,7 +173,7 @@ const newsEng = `
                 </article>
 
                 <!-- Article Card 5 -->
-                <article data-article-id="better-maintenance" data-category="safety" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="better-maintenance" data-category="safety" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_workshop_records.jpg" alt="Workshop Quality Inspection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -188,7 +193,7 @@ const newsEng = `
                 </article>
 
                 <!-- Article Card 6 -->
-                <article data-article-id="meaningful-membership" data-category="association" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="meaningful-membership" data-category="association" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_office_admin.jpg" alt="Federation Member Coordination Desk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -208,7 +213,7 @@ const newsEng = `
                 </article>
 
                 <!-- No Results State -->
-                <div id="news-no-results" class="hidden col-span-1 md:col-span-2 lg:col-span-3 text-center py-16 bg-white rounded-2xl border border-dashed border-slate-200 p-8">
+                <div id="news-no-results" class="hidden col-span-1 md:col-span-2 lg:col-span-3 text-center py-16 bg-white rounded-lg border border-dashed border-slate-200 p-8">
                     <div class="w-12 h-12 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-3 text-lg">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
@@ -226,30 +231,35 @@ const newsAm = `
     ${renderNavbar("/news", "አማ")}
 
     <main class="flex-grow pb-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10 relative z-10">
             <!-- Breadcrumbs -->
-            <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-2">
-                    <li class="inline-flex items-center">
-                        <a href="/" class="hover:text-primary-600 transition-colors">መነሻ</a>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                            <span class="mx-2 text-slate-400">/</span>
-                            <span class="text-primary-600 font-medium">ዜና</span>
-                        </div>
-                    </li>
-                </ol>
-            </nav>
+            <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> መነሻ</a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">ዜና እና መረጃ</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
 
             <!-- Page Title -->
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">ዜናዎችና ወቅታዊ መረጃዎች</h1>
-            <p class="text-lg text-slate-600 max-w-3xl">ለኢትዮጵያ የንግድ ትራንስፖርት አሠሪዎች ጠቃሚ የሆኑ ስትራቴጂካዊ ግንዛቤዎች፣ የኮሪደር ማሳሰቢያዎችና የፖሊሲ መረጃዎች።</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">ዜናዎችና ወቅታዊ መረጃዎች</h1>
+            <p class="text-lg text-blue-100 max-w-3xl">ለኢትዮጵያ የንግድ ትራንስፖርት አሠሪዎች ጠቃሚ የሆኑ ስትራቴጂካዊ ግንዛቤዎች፣ የኮሪደር ማሳሰቢያዎችና የፖሊሲ መረጃዎች።</p>
         </div>
-
+        </div>
         <!-- Featured Story -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl shadow-slate-200/60 border border-slate-200 flex flex-col lg:flex-row group cursor-pointer transition-all duration-300">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl shadow-slate-200/60 border border-slate-200 flex flex-col lg:flex-row group cursor-pointer transition-all duration-300">
                 <div class="lg:w-3/5 h-64 lg:h-[400px] overflow-hidden relative">
                     <img src="/images/news_mountain_truck.jpg" alt="የጭነት መኪና በተራራማ መንገድ ላይ" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out">
                 </div>
@@ -310,7 +320,7 @@ const newsAm = `
             <!-- Articles Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
                 <!-- Article Card 1 -->
-                <article data-article-id="safer-journeys" data-category="safety" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="safer-journeys" data-category="safety" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_mechanic_tire.jpg" alt="የተሽከርካሪ ጎማ ምርመራ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -330,7 +340,7 @@ const newsAm = `
                 </article>
 
                 <!-- Article Card 2 -->
-                <article data-article-id="employer-voice" data-category="association" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="employer-voice" data-category="association" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_association_meeting.jpg" alt="የማኅበራት አመራሮች ስብሰባ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -350,7 +360,7 @@ const newsAm = `
                 </article>
 
                 <!-- Article Card 3 -->
-                <article data-article-id="everyday-costs" data-category="industry" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="everyday-costs" data-category="industry" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_logistics_hub.jpg" alt="የመልቲሞዳል ሎጂስቲክስ ማዕከል" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -370,7 +380,7 @@ const newsAm = `
                 </article>
 
                 <!-- Article Card 4 -->
-                <article data-article-id="transport-roundtable" data-category="events" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="transport-roundtable" data-category="events" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_roundtable.jpg" alt="የዘርፉ ባለድርሻ አካላት የውይይት መድረክ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -390,7 +400,7 @@ const newsAm = `
                 </article>
 
                 <!-- Article Card 5 -->
-                <article data-article-id="better-maintenance" data-category="safety" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="better-maintenance" data-category="safety" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_workshop_records.jpg" alt="የጥገና መዝገብ አያያዝ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -410,7 +420,7 @@ const newsAm = `
                 </article>
 
                 <!-- Article Card 6 -->
-                <article data-article-id="meaningful-membership" data-category="association" class="news-card article-modal-trigger bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
+                <article data-article-id="meaningful-membership" data-category="association" class="news-card article-modal-trigger bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group cursor-pointer">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                         <img src="/images/news_office_admin.jpg" alt="የአባላት አስተዳደር ጽህፈት ቤት" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
@@ -430,7 +440,7 @@ const newsAm = `
                 </article>
 
                 <!-- No Results State -->
-                <div id="news-no-results" class="hidden col-span-1 md:col-span-2 lg:col-span-3 text-center py-16 bg-white rounded-2xl border border-dashed border-slate-200 p-8">
+                <div id="news-no-results" class="hidden col-span-1 md:col-span-2 lg:col-span-3 text-center py-16 bg-white rounded-lg border border-dashed border-slate-200 p-8">
                     <div class="w-12 h-12 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-3 text-lg">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>

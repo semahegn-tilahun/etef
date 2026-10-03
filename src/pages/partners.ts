@@ -4,26 +4,30 @@ const partnersEng = `
     ${renderNavbar("/partners", "ENG")}
 
     <main class="flex-grow pb-24">
-        <div class="bg-white pt-10 pb-12 border-b border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
-                <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2">
+                <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
-                            <a href="/" class="hover:text-primary-600 transition-colors">Home</a>
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> Home</a>
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <span class="mx-2 text-slate-400">/</span>
-                                <span class="text-primary-600 font-medium">Partners</span>
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">Partners & Affiliates</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
 
                 <!-- Page Title -->
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">Strategic Partners & Network</h1>
-                <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">Strategic Partners & Network</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     Advancing Ethiopia's commercial transport ecosystem through institutional collaboration with federal ministries, regulatory authorities, regional employers' associations, and international tripartite partners.
                 </p>
             </div>
@@ -38,7 +42,7 @@ const partnersEng = `
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
                 <!-- Strategic Partner 1 -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-lg hover:border-primary-300 transition-all group">
+                <div class="bg-white rounded-lg border border-slate-200 p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-lg hover:border-primary-300 transition-all group">
                     <div class="w-24 h-24 flex-shrink-0 bg-white shadow-sm rounded-full border border-slate-100 flex items-center justify-center p-3">
                         <img src="/images/partner_mot.png" alt="Ministry of Transport and Logistics Logo" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
                     </div>
@@ -52,7 +56,7 @@ const partnersEng = `
                 </div>
 
                 <!-- Strategic Partner 2 -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-lg hover:border-primary-300 transition-all group">
+                <div class="bg-white rounded-lg border border-slate-200 p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-lg hover:border-primary-300 transition-all group">
                     <div class="w-24 h-24 flex-shrink-0 bg-white shadow-sm rounded-full border border-slate-100 flex items-center justify-center p-3">
                         <img src="/images/partner_era.png" alt="Ethiopian Roads Authority Logo" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
                     </div>
@@ -74,7 +78,7 @@ const partnersEng = `
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <img src="/images/partner_aartb.png" alt="Addis Ababa Logo" class="w-full h-full object-contain">
                     </div>
@@ -85,7 +89,7 @@ const partnersEng = `
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <img src="/images/partner_oromia_freight.png" alt="Oromia Freight Logo" class="w-full h-full object-contain">
                     </div>
@@ -96,7 +100,7 @@ const partnersEng = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <div class="w-full h-full rounded bg-blue-50 flex items-center justify-center text-primary-700 font-bold text-xs">DDLC</div>
                     </div>
@@ -107,7 +111,7 @@ const partnersEng = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <div class="w-full h-full rounded bg-primary-50 flex items-center justify-center text-primary-700 font-bold text-xs">SPTA</div>
                     </div>
@@ -118,7 +122,7 @@ const partnersEng = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <div class="w-full h-full rounded bg-slate-100 flex items-center justify-center text-slate-800 font-bold text-xs">AMFA</div>
                     </div>
@@ -129,7 +133,7 @@ const partnersEng = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <div class="w-full h-full rounded bg-primary-50 flex items-center justify-center text-primary-700 font-bold text-xs">EDFA</div>
                     </div>
@@ -142,14 +146,14 @@ const partnersEng = `
             </div>
 
             <!-- Partnership Callout (Clean White / Light Brand Card) -->
-            <div class="bg-white rounded-3xl p-8 sm:p-12 text-slate-900 border border-slate-200 shadow-md mb-20 relative overflow-hidden">
+            <div class="bg-white rounded-lg p-8 sm:p-12 text-slate-900 border border-slate-200 shadow-md mb-20 relative overflow-hidden">
                 <div class="max-w-2xl relative z-10">
                     <span class="text-primary-700 font-bold tracking-wider text-xs uppercase bg-primary-50 px-3 py-1 rounded-full border border-primary-200 inline-block mb-3">Institutional Alliance</span>
                     <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4">Partner with the Apex Transport Federation</h3>
                     <p class="text-slate-600 text-sm leading-relaxed mb-6">
                         ETEF collaborates with commercial vehicle manufacturers, financial institutions, insurance syndicates, and international trade bodies to advance the transport industry.
                     </p>
-                    <a href="/contact" class="inline-flex items-center gap-2 px-6 py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl text-sm transition-all shadow-md">
+                    <a href="/contact" class="inline-flex items-center gap-2 px-6 py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg text-sm transition-all shadow-md">
                         <span>Inquire About Partnership</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
@@ -165,26 +169,30 @@ const partnersAm = `
     ${renderNavbar("/partners", "አማ")}
 
     <main class="flex-grow pb-24">
-        <div class="bg-white pt-10 pb-12 border-b border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
-                <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2">
+                <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
-                            <a href="/" class="hover:text-primary-600 transition-colors">መነሻ</a>
+                            <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> መነሻ</a>
                         </li>
                         <li>
                             <div class="flex items-center">
-                                <span class="mx-2 text-slate-400">/</span>
-                                <span class="text-primary-600 font-medium">አጋሮች</span>
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-blue-200"></i>
+                                <span class="text-white font-semibold">አጋሮች</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
 
                 <!-- Page Title -->
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">ስትራቴጂካዊ አጋሮችና አባል ማኅበራት</h1>
-                <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">ስትራቴጂካዊ አጋሮችና አባል ማኅበራት</h1>
+                <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     በኢትዮጵያ አስተማማኝና ዘመናዊ የትራንስፖርት ሥርዓት ለመገንባት ከመንግሥት አስፈፃሚ አካላት፣ ከተቆጣጣሪ ባለሥልጣናት፣ ከክልል አሠሪ ማኅበራትና ከዓለም አቀፍ አጋሮች ጋር በቅንጅት እንሰራለን።
                 </p>
             </div>
@@ -199,7 +207,7 @@ const partnersAm = `
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
                 <!-- Strategic Partner 1 -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-lg hover:border-primary-300 transition-all group">
+                <div class="bg-white rounded-lg border border-slate-200 p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-lg hover:border-primary-300 transition-all group">
                     <div class="w-24 h-24 flex-shrink-0 bg-white shadow-sm rounded-full border border-slate-100 flex items-center justify-center p-3">
                         <img src="/images/partner_mot.png" alt="የትራንስፖርትና ሎጂስቲክስ ሚኒስቴር" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
                     </div>
@@ -213,7 +221,7 @@ const partnersAm = `
                 </div>
 
                 <!-- Strategic Partner 2 -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-lg hover:border-primary-300 transition-all group">
+                <div class="bg-white rounded-lg border border-slate-200 p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-lg hover:border-primary-300 transition-all group">
                     <div class="w-24 h-24 flex-shrink-0 bg-white shadow-sm rounded-full border border-slate-100 flex items-center justify-center p-3">
                         <img src="/images/partner_era.png" alt="የኢትዮጵያ መንገዶች አስተዳደር" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
                     </div>
@@ -235,7 +243,7 @@ const partnersAm = `
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <img src="/images/partner_aartb.png" alt="አዲስ አበባ አርማ" class="w-full h-full object-contain">
                     </div>
@@ -246,7 +254,7 @@ const partnersAm = `
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <img src="/images/partner_oromia_freight.png" alt="ኦሮሚያ ጭነት አርማ" class="w-full h-full object-contain">
                     </div>
@@ -257,7 +265,7 @@ const partnersAm = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <div class="w-full h-full rounded bg-blue-50 flex items-center justify-center text-primary-700 font-bold text-xs">ድሬዳዋ</div>
                     </div>
@@ -268,7 +276,7 @@ const partnersAm = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <div class="w-full h-full rounded bg-primary-50 flex items-center justify-center text-primary-700 font-bold text-xs">ደቡብ</div>
                     </div>
@@ -279,7 +287,7 @@ const partnersAm = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <div class="w-full h-full rounded bg-slate-100 flex items-center justify-center text-slate-800 font-bold text-xs">አማራ</div>
                     </div>
@@ -290,7 +298,7 @@ const partnersAm = `
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
+                <div class="bg-white rounded-lg border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md hover:border-primary-300 transition-all cursor-pointer group">
                     <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg border border-slate-100 shadow-sm flex items-center justify-center overflow-hidden p-1">
                         <div class="w-full h-full rounded bg-primary-50 flex items-center justify-center text-primary-700 font-bold text-xs">ኢት-ጅቡቲ</div>
                     </div>
@@ -303,14 +311,14 @@ const partnersAm = `
             </div>
 
             <!-- Partnership Callout (Clean White / Light Brand Card) -->
-            <div class="bg-white rounded-3xl p-8 sm:p-12 text-slate-900 border border-slate-200 shadow-md mb-20 relative overflow-hidden">
+            <div class="bg-white rounded-lg p-8 sm:p-12 text-slate-900 border border-slate-200 shadow-md mb-20 relative overflow-hidden">
                 <div class="max-w-2xl relative z-10">
                     <span class="text-primary-700 font-bold tracking-wider text-xs uppercase bg-primary-50 px-3 py-1 rounded-full border border-primary-200 inline-block mb-3">ተቋማዊ ጥምረት</span>
                     <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4">ከከፍተኛው የትራንስፖርት ፌዴሬሽን ጋር አጋር ይሁኑ</h3>
                     <p class="text-slate-600 text-sm leading-relaxed mb-6">
                         ኢትራአፌ ከተሽከርካሪ አምራቾች፣ ከፋይናንስና ከኢንሹራንስ ተቋማት እንዲሁም ከዓለም አቀፍ የንግድ ድርጅቶች ጋር በትብብር ይሰራል::
                     </p>
-                    <a href="/contact" class="inline-flex items-center gap-2 px-6 py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl text-sm transition-all shadow-md">
+                    <a href="/contact" class="inline-flex items-center gap-2 px-6 py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg text-sm transition-all shadow-md">
                         <span>ስለ አጋርነት ያነጋግሩን</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>

@@ -6,20 +6,20 @@ const privacyEng = `
     <main class="flex-grow bg-slate-50 py-12">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-2">
-                    <li class="inline-flex items-center">
-                        <a href="/" class="hover:text-primary-600 transition-colors">Home</a>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                            <span class="mx-2 text-slate-400">/</span>
-                            <span class="text-primary-600 font-medium">Privacy Policy</span>
-                        </div>
-                    </li>
-                </ol>
-            </nav>
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="/" class="hover:text-primary-600 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> Home</a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-slate-300"></i>
+                                <span class="text-slate-800 font-semibold">Privacy Policy</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
 
-            <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 sm:p-12">
+            <article class="bg-white rounded-lg shadow-sm border border-slate-200 p-8 sm:p-12">
                 <header class="border-b border-slate-200 pb-8 mb-8">
                     <span class="text-xs font-bold text-primary-600 uppercase tracking-wider mb-2 block">Official Governance</span>
                     <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Privacy & Data Governance Policy</h1>
@@ -79,7 +79,7 @@ const privacyEng = `
                     </section>
 
                     <section class="border-t border-slate-200 pt-6 mt-8">
-                        <div class="bg-primary-50 rounded-xl p-5 border border-primary-100 flex items-start gap-4">
+                        <div class="bg-primary-50 rounded-lg p-5 border border-primary-100 flex items-start gap-4">
                             <div class="text-primary-600 text-2xl mt-1">
                                 <i class="fa-solid fa-building-columns"></i>
                             </div>
@@ -107,20 +107,20 @@ const privacyAm = `
     <main class="flex-grow bg-slate-50 py-12">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-2">
-                    <li class="inline-flex items-center">
-                        <a href="/" class="hover:text-primary-600 transition-colors">መነሻ</a>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                            <span class="mx-2 text-slate-400">/</span>
-                            <span class="text-primary-600 font-medium">የግላዊነት ፖሊሲ</span>
-                        </div>
-                    </li>
-                </ol>
-            </nav>
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="/" class="hover:text-primary-600 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-xs"></i> መነሻ</a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-chevron-right text-xs mx-2 text-slate-300"></i>
+                                <span class="text-slate-800 font-semibold">የግላዊነት ፖሊሲ</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
 
-            <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 sm:p-12">
+            <article class="bg-white rounded-lg shadow-sm border border-slate-200 p-8 sm:p-12">
                 <header class="border-b border-slate-200 pb-8 mb-8">
                     <span class="text-xs font-bold text-primary-600 uppercase tracking-wider mb-2 block">ይፋዊ ደንብ</span>
                     <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">የግላዊነትና የመረጃ ጥበቃ ፖሊሲ</h1>
@@ -179,7 +179,7 @@ const privacyAm = `
                     </section>
 
                     <section class="border-t border-slate-200 pt-6 mt-8">
-                        <div class="bg-primary-50 rounded-xl p-5 border border-primary-100 flex items-start gap-4">
+                        <div class="bg-primary-50 rounded-lg p-5 border border-primary-100 flex items-start gap-4">
                             <div class="text-primary-600 text-2xl mt-1">
                                 <i class="fa-solid fa-building-columns"></i>
                             </div>
