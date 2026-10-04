@@ -4,10 +4,11 @@ const newsEng = `
     ${renderNavbar("/news", "ENG")}
 
     <main class="flex-grow pb-24">
-        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-primary-900 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <img src="/images/news_hero_media.jpg" alt="Transport News & Media Briefing" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-105" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-900/75 via-blue-700/35 to-blue-400/15"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/25 via-transparent to-transparent"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10 relative z-10">
             <!-- Breadcrumbs -->
@@ -26,7 +27,7 @@ const newsEng = `
                 </nav>
 
             <!-- Page Title -->
-            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">News and Operational Bulletins</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4 drop-shadow-md">News and Operational Bulletins</h1>
             <p class="text-lg text-blue-100 max-w-3xl">Strategic insights, trade corridor advisories, and policy perspectives for Ethiopia's commercial transport employers.</p>
         </div>
         </div>
@@ -231,10 +232,11 @@ const newsAm = `
     ${renderNavbar("/news", "አማ")}
 
     <main class="flex-grow pb-24">
-        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-primary-900 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <img src="/images/news_hero_media.jpg" alt="የትራንስፖርት ዜናዎችና ጋዜጣዊ መግለጫ" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-105" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-900/75 via-blue-700/35 to-blue-400/15"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/25 via-transparent to-transparent"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10 relative z-10">
             <!-- Breadcrumbs -->
@@ -253,7 +255,7 @@ const newsAm = `
                 </nav>
 
             <!-- Page Title -->
-            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">ዜናዎችና ወቅታዊ መረጃዎች</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4 drop-shadow-md">ዜናዎችና ወቅታዊ መረጃዎች</h1>
             <p class="text-lg text-blue-100 max-w-3xl">ለኢትዮጵያ የንግድ ትራንስፖርት አሠሪዎች ጠቃሚ የሆኑ ስትራቴጂካዊ ግንዛቤዎች፣ የኮሪደር ማሳሰቢያዎችና የፖሊሲ መረጃዎች።</p>
         </div>
         </div>

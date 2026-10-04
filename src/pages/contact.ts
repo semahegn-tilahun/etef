@@ -4,10 +4,11 @@ const contactEng = `
     ${renderNavbar("/contact", "ENG")}
 
     <main class="flex-grow pb-24">
-        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-primary-900 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <img src="/images/contact_hero_secretariat.jpg" alt="ETEF Secretariat Contact & Transport Operations" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-105" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-900/75 via-blue-700/35 to-blue-400/15"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/25 via-transparent to-transparent"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
@@ -24,7 +25,7 @@ const contactEng = `
                     </ol>
                 </nav>
 
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Contact ETEF Secretariat</h1>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 drop-shadow-md">Contact ETEF Secretariat</h1>
                 <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     Have questions about membership, transport policy advocacy, or corridor assistance? Our Addis Ababa Secretariat team is here to support you.
                 </p>
@@ -230,10 +231,11 @@ const contactAm = `
     ${renderNavbar("/contact", "አማ")}
 
     <main class="flex-grow pb-24">
-        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-primary-900 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <img src="/images/contact_hero_secretariat.jpg" alt="የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን ሴክሬታሪያት" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-105" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-900/75 via-blue-700/35 to-blue-400/15"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/25 via-transparent to-transparent"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
@@ -250,7 +252,7 @@ const contactAm = `
                     </ol>
                 </nav>
 
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">የፌዴሬሽኑን ሴክሬታሪያት ያነጋግሩ</h1>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 drop-shadow-md">የፌዴሬሽኑን ሴክሬታሪያት ያነጋግሩ</h1>
                 <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     ስለ አባልነት፣ የሕግ ድጋፍ ወይም የኮሪደሮች ሁኔታ ጥያቄ ወይም አስተያየት ካለዎት የአዲስ አበባ ዋና መሥሪያ ቤታችን ዝግጁ ነው።
                 </p>

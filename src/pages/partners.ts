@@ -4,10 +4,11 @@ const partnersEng = `
     ${renderNavbar("/partners", "ENG")}
 
     <main class="flex-grow pb-24">
-        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-primary-900 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <img src="/images/partners_hero_network.jpg" alt="Strategic Partners & Transport Network" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-105" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-900/75 via-blue-700/35 to-blue-400/15"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/25 via-transparent to-transparent"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
@@ -26,7 +27,7 @@ const partnersEng = `
                 </nav>
 
                 <!-- Page Title -->
-                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">Strategic Partners & Network</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4 drop-shadow-md">Strategic Partners & Network</h1>
                 <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     Advancing Ethiopia's commercial transport ecosystem through institutional collaboration with federal ministries, regulatory authorities, regional employers' associations, and international tripartite partners.
                 </p>
@@ -169,10 +170,11 @@ const partnersAm = `
     ${renderNavbar("/partners", "አማ")}
 
     <main class="flex-grow pb-24">
-        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-primary-900 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <img src="/images/partners_hero_network.jpg" alt="ስትራቴጂካዊ አጋሮችና የትራንስፖርት መረብ" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-105" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-900/75 via-blue-700/35 to-blue-400/15"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/25 via-transparent to-transparent"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
@@ -191,7 +193,7 @@ const partnersAm = `
                 </nav>
 
                 <!-- Page Title -->
-                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">ስትራቴጂካዊ አጋሮችና አባል ማኅበራት</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4 drop-shadow-md">ስትራቴጂካዊ አጋሮችና አባል ማኅበራት</h1>
                 <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     በኢትዮጵያ አስተማማኝና ዘመናዊ የትራንስፖርት ሥርዓት ለመገንባት ከመንግሥት አስፈፃሚ አካላት፣ ከተቆጣጣሪ ባለሥልጣናት፣ ከክልል አሠሪ ማኅበራትና ከዓለም አቀፍ አጋሮች ጋር በቅንጅት እንሰራለን።
                 </p>

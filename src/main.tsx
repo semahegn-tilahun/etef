@@ -1131,8 +1131,8 @@ function Page({ page }: { page: PageData }) {
                 "md:hidden bg-primary-700 text-white px-6 py-5 border-t border-primary-500/30 flex flex-col space-y-2 shadow-lg";
               const subL = t.aboutSub || {
                 history: "History",
-                vision: "Vision",
-                missionValues: "Mission & Value",
+                vision: "Vision & Mission",
+                missionValues: "Core Value",
                 service: "Service",
               };
               drawer.innerHTML = `

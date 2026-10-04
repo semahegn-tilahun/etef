@@ -4,10 +4,11 @@ const vacancyEng = `
     ${renderNavbar("/vacancies", "ENG")}
 
     <main class="flex-grow pb-24">
-        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-primary-900 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/vacancy_hero_career.jpg" alt="Transport & Logistics Careers" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-primary-950/75 to-slate-950/90"></div>
+                <img src="/images/vacancy_hero_career.jpg" alt="Transport & Logistics Careers" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-105" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-900/75 via-blue-700/35 to-blue-400/15"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/25 via-transparent to-transparent"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
@@ -26,7 +27,7 @@ const vacancyEng = `
                 </nav>
 
                 <!-- Page Title -->
-                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">Career Opportunities</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4 drop-shadow-md">Career Opportunities</h1>
                 <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     Join ETEF Secretariat or our affiliated national network of member transport associations and commercial fleet operators.
                 </p>
@@ -251,10 +252,11 @@ const vacancyAm = `
     ${renderNavbar("/vacancies", "አማ")}
 
     <main class="flex-grow pb-24">
-        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-primary-900 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/vacancy_hero_career.jpg" alt="ክፍት የስራ ቦታዎችና የሙያ ዕድሎች" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-primary-950/75 to-slate-950/90"></div>
+                <img src="/images/vacancy_hero_career.jpg" alt="ክፍት የስራ ቦታዎችና የሙያ ዕድሎች" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-105" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-900/75 via-blue-700/35 to-blue-400/15"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/25 via-transparent to-transparent"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
@@ -273,7 +275,7 @@ const vacancyAm = `
                 </nav>
 
                 <!-- Page Title -->
-                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">የሥራ ዕድሎች</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4 drop-shadow-md">የሥራ ዕድሎች</h1>
                 <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን ሴክሬታሪያትን ወይም በአባልነት የታቀፉ ብሔራዊ የትራንስፖርት ድርጅቶችን ይቀላቀሉ።
                 </p>

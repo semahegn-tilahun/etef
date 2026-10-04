@@ -4,10 +4,11 @@ const faqEng = `
     ${renderNavbar("/faq", "ENG")}
 
     <main class="flex-grow pb-24">
-        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-primary-900 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <img src="/images/faq_hero_support.jpg" alt="Transport Advisory & FAQ Services" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-105" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-900/75 via-blue-700/35 to-blue-400/15"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/25 via-transparent to-transparent"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
@@ -24,7 +25,7 @@ const faqEng = `
                     </ol>
                 </nav>
 
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Frequently Asked Questions</h1>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 drop-shadow-md">Frequently Asked Questions</h1>
                 <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     Find authoritative answers regarding ETEF membership criteria, policy and regulatory advocacy, corridor operations, and transport sector services.
                 </p>
@@ -157,10 +158,11 @@ const faqAm = `
     ${renderNavbar("/faq", "አማ")}
 
     <main class="flex-grow pb-24">
-        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
+        <div class="relative text-white pt-12 pb-16 overflow-hidden bg-primary-900 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <img src="/images/faq_hero_support.jpg" alt="የትራንስፖርት መረጃና ተደጋጋሚ ጥያቄዎች" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-105" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-900/75 via-blue-700/35 to-blue-400/15"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400/25 via-transparent to-transparent"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <nav class="flex text-sm text-blue-100 mb-6" aria-label="Breadcrumb">
@@ -177,7 +179,7 @@ const faqAm = `
                     </ol>
                 </nav>
 
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">ተደጋጋሚ ጥያቄዎችና መልሶች</h1>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 drop-shadow-md">ተደጋጋሚ ጥያቄዎችና መልሶች</h1>
                 <p class="text-lg text-blue-100 max-w-3xl leading-relaxed">
                     ስለ ፌዴሬሽኑ አባልነት፣ የሕግ ድጋፍ፣ የኮሪደር ክትትልና አሰራሮች አስተማማኝና ይፋዊ መረጃዎችን እዚህ ያገኛሉ።
                 </p>
