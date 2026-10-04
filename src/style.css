@@ -172,3 +172,59 @@ body {
 .back-to-top-btn:hover {
   box-shadow: 0 15px 30px -5px rgba(29, 100, 214, 0.6), 0 10px 12px -5px rgba(29, 100, 214, 0.4);
 }
+
+/* About Us dropdown menu hover & focus support */
+.about-dropdown-container:not(.menu-closed):hover .about-dropdown-menu,
+.about-dropdown-container:not(.menu-closed):focus-within .about-dropdown-menu {
+  display: block !important;
+}
+
+.about-dropdown-container.menu-closed .about-dropdown-menu,
+.about-dropdown-menu.force-hidden {
+  display: none !important;
+}
+
+.about-dropdown-container:not(.menu-closed):hover .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.about-dropdown-container.menu-closed .dropdown-chevron {
+  transform: rotate(0deg) !important;
+}
+
+/* Admin container full viewport lock */
+#page-content:has(#admin-root-container) {
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Modal lock: freeze main body scroll and interactions */
+body.modal-open,
+html.modal-open {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+#etef-modal-container {
+  overscroll-behavior: contain !important;
+}
+
+#etef-modal-container > div {
+  overscroll-behavior: contain !important;
+}
+
+[id^="admin-modal-"] {
+  overscroll-behavior: contain !important;
+}
+
+/* Scroll margin offset for sticky header */
+#history,
+#vision,
+#mission,
+#mission-values,
+#values,
+#services-section,
+#services {
+  scroll-margin-top: 5.5rem;
+}

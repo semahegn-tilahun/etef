@@ -6,8 +6,8 @@ const vacancyEng = `
     <main class="flex-grow pb-24">
         <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <img src="/images/vacancy_hero_career.jpg" alt="Transport & Logistics Careers" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-primary-950/75 to-slate-950/90"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
@@ -253,8 +253,8 @@ const vacancyAm = `
     <main class="flex-grow pb-24">
         <div class="relative text-white pt-12 pb-16 overflow-hidden bg-slate-950 mb-10">
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <img src="/images/hero_expressway.jpg" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/80 to-primary-950/90"></div>
+                <img src="/images/vacancy_hero_career.jpg" alt="ክፍት የስራ ቦታዎችና የሙያ ዕድሎች" class="w-full h-full object-cover object-center animate-slow-motion filter brightness-95" />
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-primary-950/75 to-slate-950/90"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Breadcrumbs -->
@@ -447,7 +447,8 @@ const vacancyAm = `
                         <button type="button" data-talent-modal class="talent-modal-trigger block w-full text-center px-4 py-3 bg-white text-primary-700 font-bold rounded-lg hover:bg-slate-50 transition-colors cursor-pointer border-none shadow-sm">
                             የሙያ መገለጫዎን ያስመዝግቡ
                         </button>
-                    </div>
+                          </div>
+                      </div>
 
                     <div class="mb-6">
                         <h3 class="text-lg font-bold text-slate-900 mb-2">ከትራንስፖርት አሠሪዎች ጋር መሥራት</h3>

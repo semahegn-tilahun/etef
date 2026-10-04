@@ -100,7 +100,7 @@ const markupEng = `
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-white">
+        <section id="history" class="py-16 md:py-24 bg-white scroll-mt-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col lg:flex-row gap-14 items-center">
                     <div class="lg:w-1/2">
@@ -169,7 +169,7 @@ const markupEng = `
             </div>
         </section>
 
-        <section class="py-16 text-white relative overflow-hidden">
+        <section id="vision" class="py-16 text-white relative overflow-hidden scroll-mt-20">
               <div class="absolute inset-0 z-0 bg-[url('/images/fleet_convoys.jpg')] bg-cover bg-center animate-slow-motion"></div>
               <div class="absolute inset-0 z-0 bg-black/50"></div>
               <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -227,7 +227,7 @@ const markupEng = `
             </div>
         </section>
 
-        <section class="py-20 bg-slate-50 border-b border-slate-200">
+        <section id="mission-values" class="py-20 bg-slate-50 border-b border-slate-200 scroll-mt-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-primary-600 font-bold tracking-wider text-xs uppercase mb-2 block">FEDERATION VALUES</span>
@@ -289,7 +289,7 @@ const markupEng = `
             </div>
         </section>
 
-        <section id="services-section" class="py-20 bg-white">
+        <section id="services-section" class="py-20 bg-white scroll-mt-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-14">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-50 border border-primary-200 rounded-full text-xs font-bold text-primary-700 uppercase tracking-wider mb-3">
@@ -960,7 +960,7 @@ const markupAm = `
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-white">
+        <section id="history" class="py-16 md:py-24 bg-white scroll-mt-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col lg:flex-row gap-14 items-center">
                     <div class="lg:w-1/2">
@@ -1029,7 +1029,7 @@ const markupAm = `
             </div>
         </section>
 
-        <section class="py-16 text-white relative overflow-hidden">
+        <section id="vision" class="py-16 text-white relative overflow-hidden scroll-mt-20">
               <div class="absolute inset-0 z-0 bg-[url('/images/fleet_convoys.jpg')] bg-cover bg-center animate-slow-motion"></div>
               <div class="absolute inset-0 z-0 bg-black/50"></div>
               <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1087,7 +1087,7 @@ const markupAm = `
             </div>
         </section>
 
-        <section class="py-20 bg-slate-50 border-b border-slate-200">
+        <section id="mission-values" class="py-20 bg-slate-50 border-b border-slate-200 scroll-mt-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-primary-600 font-bold tracking-wider text-xs uppercase mb-2 block">የፌዴሬሽኑ እሴቶች</span>
@@ -1149,7 +1149,7 @@ const markupAm = `
             </div>
         </section>
 
-        <section id="services-section" class="py-20 bg-white">
+        <section id="services-section" class="py-20 bg-white scroll-mt-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-14">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-50 border border-primary-200 rounded-full text-xs font-bold text-primary-700 uppercase tracking-wider mb-3">

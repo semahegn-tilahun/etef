@@ -39,6 +39,12 @@ export const commonText = {
     nav: {
       home: "Home",
       about: "About Us",
+      aboutSub: {
+        history: "History",
+        vision: "Vision",
+        missionValues: "Mission & Value",
+        service: "Service",
+      },
       news: "News",
       vacancies: "Vacancy",
       partners: "Partners",
@@ -70,6 +76,12 @@ export const commonText = {
     nav: {
       home: "መነሻ",
       about: "ስለ እኛ",
+      aboutSub: {
+        history: "የመመሥረት ታሪክ",
+        vision: "ራዕይ",
+        missionValues: "ተልዕኮ እና እሴቶች",
+        service: "አገልግሎቶች",
+      },
       news: "ዜና",
       vacancies: "ክፍት የሥራ ቦታ",
       partners: "አጋሮች",

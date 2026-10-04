@@ -28,6 +28,8 @@ import {
   openTalentModal,
   openCorridorModal,
   openIncidentModal,
+  lockBodyScroll,
+  unlockBodyScroll,
 } from "./modals";
 import { Lang, getCurrentLang, setCurrentLang, onLangChange, commonText } from "./i18n";
 
@@ -92,7 +94,26 @@ function Page({ page }: { page: PageData }) {
     if (!root) return;
 
     root.innerHTML = pageMarkup;
-    window.scrollTo({ top: 0, behavior: "instant" });
+    if (location.hash) {
+      setTimeout(() => {
+        try {
+          const targetEl = document.querySelector(location.hash);
+          if (targetEl) {
+            if ((window as any).lenis?.scrollTo) {
+              (window as any).lenis.scrollTo(targetEl, { offset: -80 });
+            } else {
+              targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          } else {
+            window.scrollTo({ top: 0, behavior: "instant" });
+          }
+        } catch {
+          window.scrollTo({ top: 0, behavior: "instant" });
+        }
+      }, 120);
+    } else {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
 
     // If on /admin, initialize default dashboard tab
     if (location.pathname === "/admin") {
@@ -101,6 +122,16 @@ function Page({ page }: { page: PageData }) {
       const dashboardTab = document.getElementById("tab-dashboard");
       if (dashboardTab) dashboardTab.classList.remove("hidden");
     }
+
+    // Set up About dropdown hover reset
+    root.querySelectorAll<HTMLElement>(".about-dropdown-container").forEach((container) => {
+      const resetMenu = () => {
+        container.classList.remove("menu-closed");
+        container.querySelector<HTMLElement>(".about-dropdown-menu")?.classList.remove("force-hidden");
+      };
+      container.addEventListener("mouseleave", resetMenu);
+      container.addEventListener("mouseenter", resetMenu);
+    });
 
     // Set up FAQ search filtering if on FAQ page
     const faqSearchInput = root.querySelector<HTMLInputElement>("#faq-search-input");
@@ -265,12 +296,13 @@ function Page({ page }: { page: PageData }) {
     };
 
     if (location.pathname === "/admin") {
-      // Modal Triggers
       const openModal = (id: string) => {
         const modal = document.getElementById(id);
         if (modal) {
           modal.classList.remove("hidden");
           modal.classList.add("flex");
+          modal.style.zIndex = "100000";
+          lockBodyScroll();
         }
       };
 
@@ -280,6 +312,7 @@ function Page({ page }: { page: PageData }) {
           m.classList.add("hidden");
           m.classList.remove("flex");
         });
+        unlockBodyScroll();
       };
 
       root.querySelector("#admin-open-member-modal")?.addEventListener("click", () => openModal("admin-modal-member"));
@@ -474,6 +507,52 @@ function Page({ page }: { page: PageData }) {
             actionsCell.innerHTML = '<button class="px-3 py-1 bg-slate-100 text-slate-700 font-semibold rounded hover:bg-slate-200 transition-colors">Re-evaluate</button>';
           }
           showAdminToast("Membership application rejected.");
+        }
+      });
+    });
+
+    // Admin vacancy toggle button
+    root.querySelectorAll<HTMLButtonElement>(".admin-vacancy-toggle-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const row = btn.closest("tr");
+        const pill = row?.querySelector<HTMLElement>(".vacancy-status-pill");
+        if (pill) {
+          const isCurrentlyActive = pill.textContent?.trim().toLowerCase() === "active";
+          if (isCurrentlyActive) {
+            pill.textContent = "Closed";
+            pill.className = "vacancy-status-pill px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full";
+            btn.textContent = "Reopen";
+            showAdminToast("Vacancy status set to Closed");
+          } else {
+            pill.textContent = "Active";
+            pill.className = "vacancy-status-pill px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full border border-emerald-200/60";
+            btn.textContent = "Close";
+            showAdminToast("Vacancy status reopened as Active");
+          }
+        }
+      });
+    });
+
+    // Admin news publish/unpublish toggle button
+    root.querySelectorAll<HTMLButtonElement>(".admin-news-status-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const row = btn.closest("tr");
+        const pill = row?.querySelector<HTMLElement>("td:nth-child(5) span");
+        if (pill) {
+          const isPublished = pill.textContent?.trim().toLowerCase() === "published";
+          if (isPublished) {
+            pill.textContent = "Draft";
+            pill.className = "px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full";
+            btn.textContent = "Publish";
+            btn.className = "admin-news-status-btn px-3 py-1 bg-primary-50 hover:bg-primary-100 text-primary-700 text-xs font-bold rounded-lg transition-colors cursor-pointer";
+            showAdminToast("Article moved to Drafts");
+          } else {
+            pill.textContent = "Published";
+            pill.className = "px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full border border-emerald-200/60";
+            btn.textContent = "Unpublish";
+            btn.className = "admin-news-status-btn px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-lg transition-colors cursor-pointer";
+            showAdminToast("Article published successfully");
+          }
         }
       });
     });
@@ -989,43 +1068,110 @@ function Page({ page }: { page: PageData }) {
         });
       }
 
-      // Handle mobile hamburger button clicks
-      const mobileBtn = target.closest("button");
-      if (mobileBtn && mobileBtn.querySelector(".fa-bars, .fa-xmark")) {
-        const existingDrawer = document.getElementById("etef-mobile-drawer");
-        if (existingDrawer) {
-          existingDrawer.remove();
-          const icon = mobileBtn.querySelector("i");
-          if (icon) {
-            icon.className = "fa-solid fa-bars text-2xl";
+      // Handle About dropdown item click (auto-close immediately on selection)
+      const aboutLink = target.closest<HTMLElement>(".about-sub-link, #nav-about-link");
+      if (aboutLink) {
+        const container = aboutLink.closest<HTMLElement>(".about-dropdown-container");
+        if (container) {
+          container.classList.add("menu-closed");
+          const menu = container.querySelector<HTMLElement>(".about-dropdown-menu");
+          if (menu) {
+            menu.classList.add("force-hidden");
           }
-        } else {
-          const header = root.querySelector("header");
-          if (header) {
-            const currentL = getCurrentLang();
-            const t = commonText[currentL].nav;
-            const drawer = document.createElement("div");
-            drawer.id = "etef-mobile-drawer";
-            drawer.className =
-              "md:hidden bg-primary-700 text-white px-6 py-5 border-t border-primary-500/30 flex flex-col space-y-2 shadow-lg";
-            drawer.innerHTML = `
-              <a href="/" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.home}</a>
-              <a href="/about" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.about}</a>
-              <a href="/news" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.news}</a>
-              <a href="/vacancies" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.vacancies}</a>
-              <a href="/partners" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.partners}</a>
-              <a href="/faq" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.faq}</a>
-              <a href="/contact" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.contact}</a>
-              <a href="/membership" class="mt-2 text-center py-2.5 px-4 bg-white text-primary-600 rounded-lg font-bold shadow-sm">${t.join}</a>
-            `;
-            header.insertAdjacentElement("afterend", drawer);
-            const icon = mobileBtn.querySelector("i");
-            if (icon) {
-              icon.className = "fa-solid fa-xmark text-2xl";
-            }
+        }
+        (document.activeElement as HTMLElement)?.blur();
+      }
+
+      // Close About dropdown if clicked outside
+      if (!target.closest(".about-dropdown-container")) {
+        root.querySelectorAll<HTMLElement>(".about-dropdown-container").forEach((c) => {
+          c.classList.add("menu-closed");
+          c.querySelector<HTMLElement>(".about-dropdown-menu")?.classList.add("force-hidden");
+        });
+      }
+
+      // Handle admin mobile sidebar drawer toggle
+      const adminMobileTrigger = target.closest<HTMLElement>("#admin-mobile-menu-btn, #admin-mobile-close-btn, #admin-mobile-backdrop");
+      if (adminMobileTrigger || (location.pathname === "/admin" && target.closest("#admin-mobile-menu-btn"))) {
+        event.preventDefault();
+        const sidebar = root.querySelector<HTMLElement>("#admin-sidebar");
+        const backdrop = root.querySelector<HTMLElement>("#admin-mobile-backdrop");
+        if (sidebar && backdrop) {
+          const isClosed = sidebar.classList.contains("-translate-x-full");
+          if (isClosed) {
+            sidebar.classList.remove("-translate-x-full");
+            backdrop.classList.remove("hidden");
+          } else {
+            sidebar.classList.add("-translate-x-full");
+            backdrop.classList.add("hidden");
           }
         }
         return;
+      }
+
+      // Handle public mobile hamburger button clicks
+      if (location.pathname !== "/admin") {
+        const mobileBtn = target.closest("button");
+        if (mobileBtn && mobileBtn.querySelector(".fa-bars, .fa-xmark")) {
+          const existingDrawer = document.getElementById("etef-mobile-drawer");
+          if (existingDrawer) {
+            existingDrawer.remove();
+            const icon = mobileBtn.querySelector("i");
+            if (icon) {
+              icon.className = "fa-solid fa-bars text-2xl";
+            }
+          } else {
+            const header = root.querySelector("header");
+            if (header) {
+              const currentL = getCurrentLang();
+              const t = commonText[currentL].nav;
+              const drawer = document.createElement("div");
+              drawer.id = "etef-mobile-drawer";
+              drawer.className =
+                "md:hidden bg-primary-700 text-white px-6 py-5 border-t border-primary-500/30 flex flex-col space-y-2 shadow-lg";
+              const subL = t.aboutSub || {
+                history: "History",
+                vision: "Vision",
+                missionValues: "Mission & Value",
+                service: "Service",
+              };
+              drawer.innerHTML = `
+                <a href="/" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.home}</a>
+                <div class="flex flex-col">
+                  <a href="/about" class="py-2 text-white font-medium hover:text-primary-100 transition-colors flex items-center justify-between">
+                    <span>${t.about}</span>
+                  </a>
+                  <div class="pl-4 flex flex-col space-y-2 pb-2 text-xs text-blue-100 border-l border-white/25 ml-2 mt-1">
+                    <a href="/about#history" class="hover:text-white py-1 transition-colors flex items-center gap-2">
+                      <i class="fa-solid fa-landmark text-[11px] text-blue-200"></i> ${subL.history}
+                    </a>
+                    <a href="/about#vision" class="hover:text-white py-1 transition-colors flex items-center gap-2">
+                      <i class="fa-solid fa-eye text-[11px] text-blue-200"></i> ${subL.vision}
+                    </a>
+                    <a href="/about#mission-values" class="hover:text-white py-1 transition-colors flex items-center gap-2">
+                      <i class="fa-solid fa-bullseye text-[11px] text-blue-200"></i> ${subL.missionValues}
+                    </a>
+                    <a href="/about#services-section" class="hover:text-white py-1 transition-colors flex items-center gap-2">
+                      <i class="fa-solid fa-handshake-angle text-[11px] text-blue-200"></i> ${subL.service}
+                    </a>
+                  </div>
+                </div>
+                <a href="/news" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.news}</a>
+                <a href="/vacancies" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.vacancies}</a>
+                <a href="/partners" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.partners}</a>
+                <a href="/faq" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.faq}</a>
+                <a href="/contact" class="py-2 text-white font-medium hover:text-primary-100 transition-colors">${t.contact}</a>
+                <a href="/membership" class="mt-2 text-center py-2.5 px-4 bg-white text-primary-600 rounded-lg font-bold shadow-sm">${t.join}</a>
+              `;
+              header.insertAdjacentElement("afterend", drawer);
+              const icon = mobileBtn.querySelector("i");
+              if (icon) {
+                icon.className = "fa-solid fa-xmark text-2xl";
+              }
+            }
+          }
+          return;
+        }
       }
 
       const anchor = target.closest("a");
@@ -1057,11 +1203,11 @@ function Page({ page }: { page: PageData }) {
 
           const navItems = root.querySelectorAll("aside nav a");
           navItems.forEach((link) => {
-            link.classList.remove("bg-primary-600", "text-white");
-            link.classList.add("hover:bg-slate-800", "text-slate-400", "hover:text-white");
+            link.classList.remove("bg-primary-600", "text-white", "font-semibold", "shadow-sm");
+            link.classList.add("text-slate-400", "hover:text-slate-100", "hover:bg-slate-800/60");
           });
-          anchor.classList.add("bg-primary-600", "text-white");
-          anchor.classList.remove("hover:bg-slate-800", "text-slate-400", "hover:text-white");
+          anchor.classList.add("bg-primary-600", "text-white", "font-semibold", "shadow-sm");
+          anchor.classList.remove("text-slate-400", "hover:text-slate-100", "hover:bg-slate-800/60");
 
           const pageTitle = root.querySelector("#pageTitle");
           if (pageTitle) {
@@ -1073,6 +1219,14 @@ function Page({ page }: { page: PageData }) {
               partners: "Partners & Sponsors",
             };
             pageTitle.textContent = titles[tabId] || "Secretariat Portal";
+          }
+
+          // Auto-close mobile sidebar if open
+          const sidebar = root.querySelector<HTMLElement>("#admin-sidebar");
+          const backdrop = root.querySelector<HTMLElement>("#admin-mobile-backdrop");
+          if (sidebar && backdrop) {
+            sidebar.classList.add("-translate-x-full");
+            backdrop.classList.add("hidden");
           }
         }
         return;
@@ -1094,6 +1248,27 @@ function Page({ page }: { page: PageData }) {
         if (url.origin === window.location.origin) {
           event.preventDefault();
           const cleanPath = url.pathname.replace(/\.html$/, "") || "/";
+          if (cleanPath === location.pathname && url.hash) {
+            // Auto-close About dropdown menu immediately
+            root.querySelectorAll<HTMLElement>(".about-dropdown-container").forEach((c) => {
+              c.classList.add("menu-closed");
+              c.querySelector<HTMLElement>(".about-dropdown-menu")?.classList.add("force-hidden");
+            });
+            (document.activeElement as HTMLElement)?.blur();
+
+            window.history.pushState(null, "", cleanPath + url.search + url.hash);
+            try {
+              const targetEl = document.querySelector(url.hash);
+              if (targetEl) {
+                if ((window as any).lenis?.scrollTo) {
+                  (window as any).lenis.scrollTo(targetEl, { offset: -80 });
+                } else {
+                  targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }
+            } catch {}
+            return;
+          }
           navigate(cleanPath + url.search + url.hash);
         }
       } catch {

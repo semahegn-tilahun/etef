@@ -16,6 +16,7 @@ export function renderNavbar(activePath: string, lang: Lang): string {
 
   const isActive = (p: string, key: string) => {
     if (key === "home") return activePath === "/" || activePath === "/home";
+    if (key === "about") return activePath === "/about" || activePath.startsWith("/about#");
     if (key === "vacancies") return activePath === "/vacancies" || activePath === "/vacancy";
     if (key === "partners") return activePath === "/partners" || activePath === "/partner";
     if (key === "faq") return activePath === "/faq" || activePath === "/faqs";
@@ -29,6 +30,36 @@ export function renderNavbar(activePath: string, lang: Lang): string {
       const cls = active
         ? "bg-white text-primary-600 px-3 py-2 rounded-md text-sm font-semibold transition-colors shadow-sm"
         : "text-white hover:bg-primary-700 px-3 py-2 rounded-md text-sm font-medium transition-colors";
+      if (item.key === "about") {
+        return `
+          <div class="relative group about-dropdown-container">
+              <a href="${item.path}" class="${cls} inline-flex items-center gap-1.5 cursor-pointer" id="nav-about-link">
+                  <span>${item.label}</span>
+                  <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 dropdown-chevron opacity-80"></i>
+              </a>
+              <div class="about-dropdown-menu hidden absolute left-0 top-full pt-2 w-56 z-50">
+                  <div class="bg-white rounded-lg shadow-xl border border-slate-100 py-1.5 text-slate-800 text-sm overflow-hidden ring-1 ring-black/5 animate-in fade-in slide-in-from-top-1 duration-150">
+                      <a href="/about#history" class="about-sub-link flex items-center gap-3 px-4 py-2.5 text-xs font-semibold text-slate-700 hover:text-primary-600 hover:bg-slate-50 transition-colors">
+                          <i class="fa-solid fa-landmark text-primary-600 w-4 text-center"></i>
+                          <span>${t.aboutSub?.history || "History"}</span>
+                      </a>
+                      <a href="/about#vision" class="about-sub-link flex items-center gap-3 px-4 py-2.5 text-xs font-semibold text-slate-700 hover:text-primary-600 hover:bg-slate-50 transition-colors">
+                          <i class="fa-solid fa-eye text-primary-600 w-4 text-center"></i>
+                          <span>${t.aboutSub?.vision || "Vision"}</span>
+                      </a>
+                      <a href="/about#mission-values" class="about-sub-link flex items-center gap-3 px-4 py-2.5 text-xs font-semibold text-slate-700 hover:text-primary-600 hover:bg-slate-50 transition-colors">
+                          <i class="fa-solid fa-bullseye text-primary-600 w-4 text-center"></i>
+                          <span>${t.aboutSub?.missionValues || "Mission & Value"}</span>
+                      </a>
+                      <a href="/about#services-section" class="about-sub-link flex items-center gap-3 px-4 py-2.5 text-xs font-semibold text-slate-700 hover:text-primary-600 hover:bg-slate-50 transition-colors border-t border-slate-100 mt-0.5">
+                          <i class="fa-solid fa-handshake-angle text-primary-600 w-4 text-center"></i>
+                          <span>${t.aboutSub?.service || "Service"}</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+        `;
+      }
       return `<a href="${item.path}" class="${cls}">${item.label}</a>`;
     })
     .join("\n                    ");

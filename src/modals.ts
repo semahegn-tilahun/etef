@@ -1151,28 +1151,126 @@ export const corridorAdvisoriesAm: Record<string, CorridorDetail> = {
 export const corridorAdvisories = corridorAdvisoriesEng;
 
 // ==========================================
-// 5. MODAL SYSTEM SETUP & RENDERING
+// 5. MODAL SYSTEM SETUP & SCROLL LOCK
 // ==========================================
+export function lockBodyScroll(): void {
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+  if (scrollbarWidth > 0) {
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+    const header = document.querySelector("header");
+    if (header) {
+      (header as HTMLElement).style.paddingRight = `${scrollbarWidth}px`;
+    }
+  }
+
+  document.body.classList.add("modal-open");
+  document.documentElement.classList.add("modal-open");
+  document.body.style.overflow = "hidden";
+  document.documentElement.style.overflow = "hidden";
+
+  // Pause Lenis smooth scrolling so wheel cannot scroll window underneath
+  try {
+    (window as any).lenis?.stop();
+  } catch {}
+
+  // Lock interaction with the main page underneath
+  const root = document.getElementById("root");
+  if (root) {
+    root.setAttribute("inert", "");
+  }
+
+  // Deactivate floating back-to-top button
+  const backToTop = document.getElementById("globalBackToTop");
+  if (backToTop) {
+    backToTop.style.pointerEvents = "none";
+    backToTop.style.visibility = "hidden";
+  }
+}
+
+export function unlockBodyScroll(): void {
+  // If any public or admin modal is still open, do not release lock
+  const etefContainer = document.getElementById("etef-modal-container");
+  const isEtefOpen = etefContainer && !etefContainer.classList.contains("hidden");
+  const isAdminOpen = document.querySelectorAll('[id^="admin-modal-"]:not(.hidden)').length > 0;
+  if (isEtefOpen || isAdminOpen) {
+    return;
+  }
+
+  document.body.classList.remove("modal-open");
+  document.documentElement.classList.remove("modal-open");
+  document.body.style.overflow = "";
+  document.documentElement.style.overflow = "";
+  document.body.style.paddingRight = "";
+
+  const header = document.querySelector("header");
+  if (header) {
+    header.style.paddingRight = "";
+  }
+
+  // Resume Lenis smooth scrolling
+  try {
+    (window as any).lenis?.start();
+  } catch {}
+
+  // Restore main page interactions
+  const root = document.getElementById("root");
+  if (root) {
+    root.removeAttribute("inert");
+  }
+
+  // Restore back-to-top button if scrolled
+  const backToTop = document.getElementById("globalBackToTop");
+  if (backToTop) {
+    backToTop.style.pointerEvents = "";
+    if (window.scrollY > 400) {
+      backToTop.style.visibility = "visible";
+    }
+  }
+}
+
 export function setupModals(): void {
   let container = document.getElementById("etef-modal-container");
   if (!container) {
     container = document.createElement("div");
     container.id = "etef-modal-container";
-    container.className = "fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm overflow-y-auto";
+    container.setAttribute("data-lenis-prevent", "true");
+    container.className =
+      "fixed inset-0 z-[100000] hidden items-center justify-center p-4 bg-slate-900/75 backdrop-blur-sm overflow-y-auto";
+    container.style.overscrollBehavior = "contain";
     document.body.appendChild(container);
+
+    container.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      if (
+        target === container ||
+        target.classList.contains("modal-backdrop") ||
+        target.hasAttribute("data-modal-backdrop")
+      ) {
+        closeModal();
+      }
+    });
+
+    // Prevent wheel scrolling on the backdrop from leaking to the page
+    container.addEventListener(
+      "wheel",
+      (e) => {
+        const target = e.target as HTMLElement;
+        if (target === container || target.classList.contains("modal-backdrop")) {
+          e.preventDefault();
+        }
+      },
+      { passive: false }
+    );
   }
 
-  container.addEventListener("click", (e) => {
-    if (e.target === container) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      closeModal();
-    }
-  });
+  if (!(window as any)._etef_modal_esc_bound) {
+    (window as any)._etef_modal_esc_bound = true;
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    });
+  }
 }
 
 export function closeModal(): void {
@@ -1181,8 +1279,8 @@ export function closeModal(): void {
     container.classList.add("hidden");
     container.classList.remove("flex");
     container.innerHTML = "";
-    document.body.style.overflow = "";
   }
+  unlockBodyScroll();
 }
 
 // ------------------------------------------
@@ -1250,7 +1348,7 @@ export function openBioModal(bioId: string): void {
   attachModalCloseHandlers(container);
   container.classList.remove("hidden");
   container.classList.add("flex");
-  document.body.style.overflow = "hidden";
+  lockBodyScroll();
 }
 
 // ------------------------------------------
@@ -1331,7 +1429,7 @@ export function openArticleModal(articleId: string): void {
   attachModalCloseHandlers(container);
   container.classList.remove("hidden");
   container.classList.add("flex");
-  document.body.style.overflow = "hidden";
+  lockBodyScroll();
 }
 
 // ------------------------------------------
@@ -1437,7 +1535,7 @@ export function openJobModal(jobId: string): void {
   attachModalCloseHandlers(container);
   container.classList.remove("hidden");
   container.classList.add("flex");
-  document.body.style.overflow = "hidden";
+  lockBodyScroll();
 }
 
 // ------------------------------------------
@@ -1590,7 +1688,7 @@ export function openTalentModal(): void {
 
   container.classList.remove("hidden");
   container.classList.add("flex");
-  document.body.style.overflow = "hidden";
+  lockBodyScroll();
 }
 
 // ------------------------------------------
@@ -1691,7 +1789,7 @@ export function openCorridorModal(corridorId: string): void {
   attachModalCloseHandlers(container);
   container.classList.remove("hidden");
   container.classList.add("flex");
-  document.body.style.overflow = "hidden";
+  lockBodyScroll();
 }
 
 // ------------------------------------------
@@ -1845,7 +1943,7 @@ export function openIncidentModal(): void {
   attachModalCloseHandlers(container);
   container.classList.remove("hidden");
   container.classList.add("flex");
-  document.body.style.overflow = "hidden";
+  lockBodyScroll();
 
   const form = container.querySelector<HTMLFormElement>("#incident-report-form");
   const feedback = container.querySelector<HTMLElement>("#incident-report-feedback");
