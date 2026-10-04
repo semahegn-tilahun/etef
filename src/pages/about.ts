@@ -1,7 +1,6 @@
-import { Lang } from "../i18n";
 import { renderNavbar, renderFooter } from "../layout";
 
-const markupEng = `
+const aboutEng = `
     ${renderNavbar("/about", "ENG")}
 
     <main class="flex-grow">
@@ -489,266 +488,279 @@ const markupEng = `
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_president_dr_dawit.jpg" alt="Ato Berehane Zeru" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider">President</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Berehane Zeru</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                President of the Board of Directors. Leading executive governance and national policy advocacy.
-                            </p>
-                            <button type="button" data-bio="berehane" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Berehane Zeru.jpg" alt="Ato Berehane Zeru" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">President</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Berehane Zeru</h3>
                         </div>
                     </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_vp_tigist.jpg" alt="Ato Mesele Hagos" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-sky-600 rounded-full text-[11px] font-bold uppercase tracking-wider">Vice President</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Mesele Hagos</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Vice President of the Board of Directors. Directing collective bargaining and operational efficiency.
-                            </p>
-                            <button type="button" data-bio="mesele" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_sec_yared.jpg" alt="Ato Derje Legesse" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider">Secretary</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Derje Legesse</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Secretary of the Board of Directors. Managing institutional governance, statutory filings, and legal records.
-                            </p>
-                            <button type="button" data-bio="derje" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_logistics_selamawit.jpg" alt="Ato Dejene Luchie" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">Board Member</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Dejene Luchie</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Board Member representing dry cargo freight carriers and regional operator associations.
-                            </p>
-                            <button type="button" data-bio="dejene" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_regional_bereket.jpg" alt="Ato Seid Ibrahim" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">Board Member</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Seid Ibrahim</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Board Member advocating for corridor route security, fair tariffs, and carrier rights.
-                            </p>
-                            <button type="button" data-bio="seid" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_policy_helen.jpg" alt="Ato Mekonnen Workie" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">Board Member</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Mekonnen Workie</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Board Member spearheading enterprise business planning and market networking programs.
-                            </p>
-                            <button type="button" data-bio="mekonnen" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_president_dr_dawit.jpg" alt="Ato Yergalem Sefani" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">Board Member</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Yergalem Sefani</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Board Member leading legal dispute advisory and court representation coordination.
-                            </p>
-                            <button type="button" data-bio="yergalem" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_vp_tigist.jpg" alt="Ato Msfin Eshetu" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">Board Member</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Msfin Eshetu</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Board Member focusing on occupational safety, roadworthiness, and labor law compliance.
-                            </p>
-                            <button type="button" data-bio="msfin" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_sec_yared.jpg" alt="Ato Tadsse Ejegu" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">Board Member</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Tadsse Ejegu</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Board Member providing expert input on transport proclamations, directives, and operator rights.
-                            </p>
-                            <button type="button" data-bio="tadsse" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_logistics_selamawit.jpg" alt="Ato Mohammed Hassan" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">Board Member</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Mohammed Hassan</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Board Member coordinating regional association relations, bilateral forums, and member consultations.
-                            </p>
-                            <button type="button" data-bio="mohammed" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_regional_bereket.jpg" alt="Ato Nurdin Ditamo" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">Board Member</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Nurdin Ditamo</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Board Member promoting fleet technology adoption, Kaizen productivity methods, and tax counseling.
-                            </p>
-                            <button type="button" data-bio="nurdin" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_policy_helen.jpg" alt="Ato Abeba Kassa" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">Board Member</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Abeba Kassa</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Board Member supporting commercial partnerships, trade exhibitions, and collective agreement documentation.
-                            </p>
-                            <button type="button" data-bio="abeba" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_president_dr_dawit.jpg" alt="Ato Engeda H/Maryam" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">Board Member</span>
-                                <h3 class="text-xl font-bold text-white mt-1">Ato Engeda H/Maryam</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                Board Member organizing experience-sharing programs, technological adoption, and fleet modernization.
-                            </p>
-                            <button type="button" data-bio="engeda" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>Read Full Biography</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            President of the Board of Directors. Leading executive governance and national policy advocacy.
+                        </p>
+                        <button type="button" data-bio="berehane" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
                     </div>
                 </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Mesele Hagos.jpg" alt="Ato Mesele Hagos" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Vice President</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Mesele Hagos</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Vice President of the Board of Directors. Directing collective bargaining and operational efficiency.
+                        </p>
+                        <button type="button" data-bio="mesele" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Derje Legesse.jpg" alt="Ato Derje Legesse" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Secretary</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Derje Legesse</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Secretary of the Board of Directors. Managing institutional governance, statutory filings, and legal records.
+                        </p>
+                        <button type="button" data-bio="derje" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex flex-col items-center justify-center p-6 border-b border-white/5">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-600/20 via-transparent to-transparent pointer-events-none"></div>
+                        <div class="relative z-10 w-24 h-24 rounded-full bg-slate-800/90 border-2 border-primary-400/40 flex items-center justify-center shadow-xl mb-3 group-hover:scale-105 group-hover:border-primary-400/70 transition-all duration-300">
+                            <i class="fa-solid fa-user-tie text-4xl text-primary-300"></i>
+                        </div>
+                        <span class="relative z-10 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 text-[11px] font-semibold rounded-full uppercase tracking-wider shadow-sm">
+                            Board of Directors
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Board Member</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Tadsse Ejegu</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Commercial Haulier Operations & Fleet Coordination. Advising on route operations and regional transport logistics.
+                        </p>
+                        <button type="button" data-bio="tadsse" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Dejene Luchie.jpg" alt="Ato Dejene Luchie" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Board Member</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Dejene Luchie</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Dry Cargo Logistics & Fleet Governance. Championing transport operators and cross-regional haulier interests.
+                        </p>
+                        <button type="button" data-bio="dejene" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Nurdin Ditamo.jpg" alt="Ato Nurdin Ditamo" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Board Member</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Nurdin Ditamo</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Fleet Modernization & Kaizen Management. Driving vehicle safety standards and fleet maintenance best practices.
+                        </p>
+                        <button type="button" data-bio="nurdin" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Mekonnen Workie.jpg" alt="Ato Mekonnen Workie" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Board Member</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Mekonnen Workie</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Transport Economics & Business Planning. Spearheading market linkages, tariff models, and operator competitiveness.
+                        </p>
+                        <button type="button" data-bio="mekonnen" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Seid Ibrahim.jpg" alt="Ato Seid Ibrahim" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Board Member</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Seid Ibrahim</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Corridor Operations & Regional Transport. Ensuring checkpoint efficiency, transit safety, and driver welfare.
+                        </p>
+                        <button type="button" data-bio="seid" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Msfin Eshetu.jpg" alt="Ato Msfin Eshetu" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Board Member</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Msfin Eshetu</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Passenger & Freight Operations. Coordinating vocational certifications, labor law standards, and fleet inspections.
+                        </p>
+                        <button type="button" data-bio="msfin" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Mohammed Hassan.jpg" alt="Ato Mohammed Hassan" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Board Member</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Mohammed Hassan</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Regional Operator Relations. Bridging inter-regional associations with national transport policy agendas.
+                        </p>
+                        <button type="button" data-bio="mohammed" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex flex-col items-center justify-center p-6 border-b border-white/5">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-600/20 via-transparent to-transparent pointer-events-none"></div>
+                        <div class="relative z-10 w-24 h-24 rounded-full bg-slate-800/90 border-2 border-primary-400/40 flex items-center justify-center shadow-xl mb-3 group-hover:scale-105 group-hover:border-primary-400/70 transition-all duration-300">
+                            <i class="fa-solid fa-user-tie text-4xl text-primary-300"></i>
+                        </div>
+                        <span class="relative z-10 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 text-[11px] font-semibold rounded-full uppercase tracking-wider shadow-sm">
+                            Board of Directors
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Board Member</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Abeba Kassa</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Commercial Logistics & Transport Enterprise Growth. Promoting public-private dialogue and trade exhibitions.
+                        </p>
+                        <button type="button" data-bio="abeba" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Yergalem Sefani.jpg" alt="Ato Yergalem Sefani" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Board Member</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Yergalem Sefani</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Legal Defense & Regulatory Compliance. Advocating before arbitration benches, judicial forums, and statutory bodies.
+                        </p>
+                        <button type="button" data-bio="yergalem" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Engeda H.Maryam.jpg" alt="Ato Engeda H/Maryam" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">Board Member</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">Ato Engeda H/Maryam</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            Transport Innovation & Fleet Technology. Advancing digital logbooks, fuel conservation, and technical benchmarking.
+                        </p>
+                        <button type="button" data-bio="engeda" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>Read Full Biography</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
 
@@ -861,7 +873,7 @@ const markupEng = `
     ${renderFooter("ENG")}
 `;
 
-const markupAm = `
+const aboutAm = `
     ${renderNavbar("/about", "አማ")}
 
     <main class="flex-grow">
@@ -1349,266 +1361,279 @@ const markupAm = `
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_president_dr_dawit.jpg" alt="አቶ ብርሃኔ ዘርዑ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ ፕሬዚዳንት</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ ብርሃኔ ዘርዑ</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ ፕሬዚዳንት። የፌዴሬሽኑን ሥራ አስፈጻሚ አመራር እና የብሔራዊ የሦስትዮሽ ውይይት በበላይነት ይመራሉ።
-                            </p>
-                            <button type="button" data-bio="berehane" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Berehane Zeru.jpg" alt="አቶ ብርሃኔ ዘርዑ" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">ፕሬዝዳንት</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ ብርሃኔ ዘርዑ</h3>
                         </div>
                     </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_vp_tigist.jpg" alt="አቶ መሠለ ሐጎስ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-sky-600 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ ም/ፕሬዚዳንት</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ መሠለ ሐጎስ</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ ም/ፕሬዚዳንት። የጋራ ድርድር እና የኢንዱስትሪ ሰላም ማስፈን ስራዎችን በኃላፊነት ያስተባብራሉ።
-                            </p>
-                            <button type="button" data-bio="mesele" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_sec_yared.jpg" alt="አቶ ደረጀ ለገሠ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ ዋና ፀሐፊ</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ ደረጀ ለገሠ</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ ዋና ፀሐፊ። የሕግ ሰነዶችን፣ የቦርድ መዝገቦችን እና የተቋማዊ አሰራር ተገዢነትን ይመራሉ።
-                            </p>
-                            <button type="button" data-bio="derje" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_logistics_selamawit.jpg" alt="አቶ ደጀኔ ሉጬ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ አባል</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ ደጀኔ ሉጬ</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ አባል። የደረቅ ጭነት አሠሪዎችና የክልል ማኅበራት ተወካይ።
-                            </p>
-                            <button type="button" data-bio="dejene" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_regional_bereket.jpg" alt="አቶ ሰዒድ ኢብራሂም" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ አባል</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ ሰዒድ ኢብራሂም</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ አባል። የኮሪደር መስመሮች ደህንነትና የአሠሪዎች መብት ተሟጋች።
-                            </p>
-                            <button type="button" data-bio="seid" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_policy_helen.jpg" alt="አቶ መኮንን ወርቄ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ አባል</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ መኮንን ወርቄ</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ አባል። የቢዝነስ ፕላን ዝግጅትና የገበያ ትስስር አማካሪ።
-                            </p>
-                            <button type="button" data-bio="mekonnen" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_president_dr_dawit.jpg" alt="አቶ ይርጋዓለም ሰፋኒ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ አባል</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ ይርጋዓለም ሰፋኒ</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ አባል። የክርክር አፈታትና የፍርድ ቤት ውክልና አስተባባሪ።
-                            </p>
-                            <button type="button" data-bio="yergalem" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_vp_tigist.jpg" alt="አቶ መስፍን እሸቱ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ አባል</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ መስፍን እሸቱ</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ አባል። የስራ ላይ ደህንነት እና የሕግ ተገዢነት አማካሪ።
-                            </p>
-                            <button type="button" data-bio="msfin" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_sec_yared.jpg" alt="አቶ ታደሰ እጅጉ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ አባል</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ ታደሰ እጅጉ</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ አባል። የትራንስፖርት አዋጆችና ደንቦች ማሻሻያ አማካሪ።
-                            </p>
-                            <button type="button" data-bio="tadsse" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_logistics_selamawit.jpg" alt="አቶ መሐመድ ሀሰን" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ አባል</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ መሐመድ ሀሰን</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ አባል። የክልል ማኅበራት ትስስርና የሁለትዮሽ መድረኮች አስተባባሪ።
-                            </p>
-                            <button type="button" data-bio="mohammed" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_regional_bereket.jpg" alt="አቶ ኑረዲን ዲታሞ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ አባል</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ ኑረዲን ዲታሞ</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ አባል። የቴክኖሎጂ አሰራርና የካይዘን ምርታማነት ዘዴዎች አስተባባሪ።
-                            </p>
-                            <button type="button" data-bio="nurdin" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_policy_helen.jpg" alt="አቶ አበባው ካሣ" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ አባል</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ አበባው ካሣ</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ አባል። የንግድ ውሎች ዝግጅት እና የኤግዚቪሽኖች አስተባባሪ።
-                            </p>
-                            <button type="button" data-bio="abeba" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
-                        <div class="relative h-64 overflow-hidden bg-slate-200">
-                            <img src="/images/board_president_dr_dawit.jpg" alt="አቶ እንግዳ ኃ/ማርያም" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-3 left-4 right-4 text-white">
-                                <span class="px-2.5 py-0.5 bg-slate-700 rounded-full text-[11px] font-bold uppercase tracking-wider">የቦርድ አባል</span>
-                                <h3 class="text-xl font-bold text-white mt-1">አቶ እንግዳ ኃ/ማርያም</h3>
-                            </div>
-                        </div>
-                        <div class="p-5 flex-grow flex flex-col justify-between">
-                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
-                                የቦርድ አባል። የልምድ ልውውጥ እና የቴክኖሎጂ አጠቃቀም አስተባባሪ።
-                            </p>
-                            <button type="button" data-bio="engeda" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
-                                <span>ሙሉ የሕይወት ታሪክ</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
-                        </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የዳይሬክተሮች ቦርድ ፕሬዝዳንት። የፌዴሬሽኑን ከፍተኛ አመራርና ሀገራዊ የጥብቅና ስራዎችን በበላይነት ይመራሉ፤ የአባላትን መብት ያስከብራሉ።
+                        </p>
+                        <button type="button" data-bio="berehane" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
                     </div>
                 </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Mesele Hagos.jpg" alt="አቶ መሠለ ሐጎስ" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">ም/ፕሬዝዳንት</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ መሠለ ሐጎስ</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የዳይሬክተሮች ቦርድ ም/ፕሬዝዳንት። የጋራ ድርድር ስምምነቶችንና የትራንስፖርት ስምሪት ቅልጥፍናን በበላይነት ይመራሉ።
+                        </p>
+                        <button type="button" data-bio="mesele" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Derje Legesse.jpg" alt="አቶ ደረጀ ለገሠ" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">ዋና ፀሐፊ</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ ደረጀ ለገሠ</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የዳይሬክተሮች ቦርድ ዋና ፀሐፊ። የተቋማዊ አስተዳደር መዛግብትን፣ ሕጋዊ ሰነዶችን እና የአባላት ግንኙነትን ይመራሉ።
+                        </p>
+                        <button type="button" data-bio="derje" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex flex-col items-center justify-center p-6 border-b border-white/5">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-600/20 via-transparent to-transparent pointer-events-none"></div>
+                        <div class="relative z-10 w-24 h-24 rounded-full bg-slate-800/90 border-2 border-primary-400/40 flex items-center justify-center shadow-xl mb-3 group-hover:scale-105 group-hover:border-primary-400/70 transition-all duration-300">
+                            <i class="fa-solid fa-user-tie text-4xl text-primary-300"></i>
+                        </div>
+                        <span class="relative z-10 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 text-[11px] font-semibold rounded-full uppercase tracking-wider shadow-sm">
+                            የዳይሬክተሮች ቦርድ አባል
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">የቦርድ አባል</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ ታደሰ እጅጉ</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የንግድ ጭነት ትራንስፖርት ኦፕሬሽን እና የስምሪት ቅንጅት። በመስመር ስምሪት እና በክልላዊ ትራንስፖርት ሎጂስቲክስ ላይ የማማከር ድጋፍ መስጠት።
+                        </p>
+                        <button type="button" data-bio="tadsse" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Dejene Luchie.jpg" alt="አቶ ደጀኔ ሉጬ" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">የቦርድ አባል</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ ደጀኔ ሉጬ</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የደረቅ ጭነት ሎጂስቲክስ እና የክልል ማኅበራት ጉዳዮች። የጭነት አጓጓዦች እና የአባል ማኅበራት ድምፅ ሆነው ያገለግላሉ።
+                        </p>
+                        <button type="button" data-bio="dejene" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Nurdin Ditamo.jpg" alt="አቶ ኑረዲን ዲታሞ" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">የቦርድ አባል</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ ኑረዲን ዲታሞ</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የተሽከርካሪዎች አስተዳደር እና የንግድ አጓጓዦች ውክልና። ዘመናዊ የፍሊት ቴክኖሎጂዎችን እና የካይዘን የአሰራር ጥበቦችን ማስተዋወቅ።
+                        </p>
+                        <button type="button" data-bio="nurdin" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Mekonnen Workie.jpg" alt="አቶ መኮንን ወርቄ" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">የቦርድ አባል</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ መኮንን ወርቄ</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የትራንስፖርት ኦፕሬሽን እና ስትራቴጂካዊ የድርጅት እቅድ። የገበያ ትስስር እና የቢዝነስ ፕላን ተነሳሽነቶችን በበላይነት ይመራሉ።
+                        </p>
+                        <button type="button" data-bio="mekonnen" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Seid Ibrahim.jpg" alt="አቶ ሰዒድ ኢብራሂም" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">የቦርድ አባል</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ ሰዒድ ኢብራሂም</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የኮሪደር ተሻጋሪ ጭነት እና የማኅበራት አመራር። የተቀላጠፈ የኬላ አሰራርና ፍትሃዊ የትራንዚት ታሪፍ እንዲረጋገጥ ይሰራሉ።
+                        </p>
+                        <button type="button" data-bio="seid" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Msfin Eshetu.jpg" alt="አቶ መስፍን እሸቱ" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">የቦርድ አባል</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ መስፍን እሸቱ</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የተሳፋሪ እና የጭነት ተሽከርካሪዎች ስምሪት ቅንጅት። የደህንነት ደረጃዎችን መቆጣጠር እና የተሽከርካሪዎች የብቃት ማረጋገጫ ድጋፍ።
+                        </p>
+                        <button type="button" data-bio="msfin" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Mohammed Hassan.jpg" alt="አቶ መሐመድ ሀሰን" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">የቦርድ አባል</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ መሐመድ ሀሰን</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የክልል ትራንስፖርት ማኅበራት እና የንግድ ጭነት አገልግሎት። የክልል ትራንስፖርት ኦፕሬተሮችን ድምፅ ያሰማሉ።
+                        </p>
+                        <button type="button" data-bio="mohammed" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex flex-col items-center justify-center p-6 border-b border-white/5">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-600/20 via-transparent to-transparent pointer-events-none"></div>
+                        <div class="relative z-10 w-24 h-24 rounded-full bg-slate-800/90 border-2 border-primary-400/40 flex items-center justify-center shadow-xl mb-3 group-hover:scale-105 group-hover:border-primary-400/70 transition-all duration-300">
+                            <i class="fa-solid fa-user-tie text-4xl text-primary-300"></i>
+                        </div>
+                        <span class="relative z-10 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 text-[11px] font-semibold rounded-full uppercase tracking-wider shadow-sm">
+                            የዳይሬክተሮች ቦርድ አባል
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">የቦርድ አባል</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ አበባው ካሣ</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የንግድ ሎጂስቲክስ እና የትራንስፖርት ድርጅት ዕድገት። የመንግሥትና የግል ዘርፍ ውይይቶችንና የንግድ ኤግዚቢሽኖችን ማስተዋወቅ።
+                        </p>
+                        <button type="button" data-bio="abeba" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Yergalem Sefani.jpg" alt="አቶ ይርጋዓለም ሰፋኒ" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">የቦርድ አባል</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ ይርጋዓለም ሰፋኒ</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የትራንስፖርት ኦፕሬሽን እና የሕግ ድጋፍ አስተባባሪነት። የሕግ ምክር አገልግሎት፣ የክርክር አፈታት እና የፍርድ ቤት ውክልና ድጋፍ።
+                        </p>
+                        <button type="button" data-bio="yergalem" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 group flex flex-col">
+                    <div class="relative h-72 overflow-hidden bg-gradient-to-b from-slate-900 via-primary-950 to-slate-950 flex items-center justify-center">
+                        <img src="/images/Ato Engeda H.Maryam.jpg" alt="አቶ እንግዳ ኃ/ማርያም" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[1.02] contrast-[1.02]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white z-10">
+                            <span class="px-2.5 py-0.5 bg-primary-600 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">የቦርድ አባል</span>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mt-1 drop-shadow-md">አቶ እንግዳ ኃ/ማርያም</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">
+                            የንግድ ትራንስፖርት አስተዳደር እና የተሽከርካሪዎች ፈጠራ። ዘመናዊ የቴክኖሎጂ መሳሪያዎችን ተግባራዊ ለማድረግ ይሰራሉ።
+                        </p>
+                        <button type="button" data-bio="engeda" class="bio-modal-trigger text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors inline-flex items-center gap-1.5 cursor-pointer bg-transparent border-none p-0">
+                            <span>የሕይወት ታሪክ ይመልከቱ</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
 
@@ -1727,7 +1752,10 @@ export default {
     "አማ": "ስለ እኛ - የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን",
   },
   markup: {
-    ENG: markupEng,
-    "አማ": markupAm,
+    ENG: aboutEng,
+    "አማ": aboutAm,
   },
 };
+
+export { aboutEng, aboutAm };
+

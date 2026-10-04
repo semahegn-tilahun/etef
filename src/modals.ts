@@ -58,7 +58,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Berehane Zeru",
     role: "President, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_president_dr_dawit.jpg",
+    image: "/images/Ato Berehane Zeru.jpg",
     experience: "Founding Leader & Senior Transport Industry Principal",
     education: "Transport Enterprise Leadership & Commercial Fleet Governance",
     bio: [
@@ -76,7 +76,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Mesele Hagos",
     role: "Vice President, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_vp_tigist.jpg",
+    image: "/images/Ato Mesele Hagos.jpg",
     experience: "Senior Transport Executive & Collective Bargaining Leader",
     education: "Business Management & Industrial Relations",
     bio: [
@@ -94,7 +94,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Derje Legesse",
     role: "Secretary, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_sec_yared.jpg",
+    image: "/images/Ato Derje Legesse.jpg",
     experience: "Secretariat Administration, Regulatory Law & Documentation",
     education: "Law & Public Administration",
     bio: [
@@ -112,7 +112,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Tadsse Ejegu",
     role: "Member, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_regional_bereket.jpg",
+    image: "/images/placeholder_avatar.svg",
     experience: "Commercial Haulier Operations & Fleet Coordination",
     education: "Transport Logistics Management",
     bio: [
@@ -128,7 +128,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Dejene Luchie",
     role: "Member, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_logistics_selamawit.jpg",
+    image: "/images/Ato Dejene Luchie.jpg",
     experience: "Dry Cargo Logistics & Regional Association Affairs",
     education: "Business Administration & Logistics",
     bio: [
@@ -143,7 +143,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Nurdin Ditamo",
     role: "Member, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_policy_helen.jpg",
+    image: "/images/Ato Nurdin Ditamo.jpg",
     experience: "Fleet Management & Commercial Operator Representation",
     education: "Transport Administration",
     bio: [
@@ -158,7 +158,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Mekonnen Workie",
     role: "Member, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_president_dr_dawit.jpg",
+    image: "/images/Ato Mekonnen Workie.jpg",
     experience: "Transport Operations & Strategic Enterprise Planning",
     education: "Economics & Transport Management",
     bio: [
@@ -173,7 +173,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Seid Ibrahim",
     role: "Member, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_vp_tigist.jpg",
+    image: "/images/Ato Seid Ibrahim.jpg",
     experience: "Cross-Corridor Freight & Association Leadership",
     education: "Transport Operations",
     bio: [
@@ -188,7 +188,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Msfin Eshetu",
     role: "Member, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_sec_yared.jpg",
+    image: "/images/Ato Msfin Eshetu.jpg",
     experience: "Passenger & Freight Fleet Coordination",
     education: "Automotive Technology & Fleet Management",
     bio: [
@@ -203,7 +203,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Mohammed Hassan",
     role: "Member, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_regional_bereket.jpg",
+    image: "/images/Ato Mohammed Hassan.jpg",
     experience: "Regional Transport Associations & Commercial Haulage",
     education: "Public Relations & Transport Management",
     bio: [
@@ -218,7 +218,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Abeba Kassa",
     role: "Member, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_logistics_selamawit.jpg",
+    image: "/images/placeholder_avatar.svg",
     experience: "Commercial Logistics & Transport Enterprise Growth",
     education: "Logistics & Supply Chain Management",
     bio: [
@@ -233,7 +233,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Yergalem Sefani",
     role: "Member, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_policy_helen.jpg",
+    image: "/images/Ato Yergalem Sefani.jpg",
     experience: "Transport Operations & Legal Defense Coordination",
     education: "Commercial Law & Transport Operations",
     bio: [
@@ -248,7 +248,7 @@ export const boardBiosEng: Record<string, BioDetail> = {
     name: "Ato Engeda H/Maryam",
     role: "Member, Board of Directors",
     org: "Ethiopian Transport Employers' Federation (ETEF)",
-    image: "/images/board_president_dr_dawit.jpg",
+    image: "/images/Ato Engeda H.Maryam.jpg",
     experience: "Commercial Transport Management & Fleet Innovation",
     education: "Business Administration & Fleet Systems",
     bio: [
@@ -267,7 +267,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ ብርሃኔ ዘርዑ",
     role: "የዳይሬክተሮች ቦርድ ፕሬዝዳንት",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_president_dr_dawit.jpg",
+    image: "/images/Ato Berehane Zeru.jpg",
     experience: "መሥራች መሪ እና የትራንስፖርት ዘርፍ ከፍተኛ ባለሙያ",
     education: "የትራንስፖርት ድርጅት አመራር እና የንግድ ተሽከርካሪዎች አስተዳደር",
     bio: [
@@ -285,7 +285,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ መሠለ ሐጎስ",
     role: "የዳይሬክተሮች ቦርድ ም/ፕሬዝዳንት",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_vp_tigist.jpg",
+    image: "/images/Ato Mesele Hagos.jpg",
     experience: "ከፍተኛ የትራንስፖርት ሥራ አስፈፃሚ እና የጋራ ድርድር መሪ",
     education: "የቢዝነስ ማኔጅመንት እና የኢንዱስትሪ ግንኙነት",
     bio: [
@@ -303,7 +303,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ ደረጀ ለገሠ",
     role: "የዳይሬክተሮች ቦርድ ዋና ፀሐፊ",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_sec_yared.jpg",
+    image: "/images/Ato Derje Legesse.jpg",
     experience: "የጽሕፈት ቤት አስተዳደር፣ የሕግ ጉዳዮች እና የሰነድ ዝግጅት",
     education: "ሕግ እና የሕዝብ አስተዳደር",
     bio: [
@@ -321,7 +321,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ ታደሰ እጅጉ",
     role: "የዳይሬክተሮች ቦርድ አባል",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_regional_bereket.jpg",
+    image: "/images/placeholder_avatar_am.svg",
     experience: "የንግድ ጭነት ትራንስፖርት ኦፕሬሽን እና የስምሪት ቅንጅት",
     education: "የትራንስፖርት ሎጂስቲክስ ማኔጅመንት",
     bio: [
@@ -337,7 +337,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ ደጀኔ ሉጬ",
     role: "የዳይሬክተሮች ቦርድ አባል",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_logistics_selamawit.jpg",
+    image: "/images/Ato Dejene Luchie.jpg",
     experience: "የደረቅ ጭነት ሎጂስቲክስ እና የክልል ማኅበራት ጉዳዮች",
     education: "የንግድ አስተዳደር እና ሎጂስቲክስ",
     bio: [
@@ -352,7 +352,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ ኑረዲን ዲታሞ",
     role: "የዳይሬክተሮች ቦርድ አባል",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_policy_helen.jpg",
+    image: "/images/Ato Nurdin Ditamo.jpg",
     experience: "የተሽከርካሪዎች አስተዳደር እና የንግድ አጓጓዦች ውክልና",
     education: "የትራንስፖርት አስተዳደር",
     bio: [
@@ -367,7 +367,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ መኮንን ወርቄ",
     role: "የዳይሬክተሮች ቦርድ አባል",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_president_dr_dawit.jpg",
+    image: "/images/Ato Mekonnen Workie.jpg",
     experience: "የትራንስፖርት ኦፕሬሽን እና ስትራቴጂካዊ የድርጅት እቅድ",
     education: "ኢኮኖሚክስ እና የትራንስፖርት ማኔጅመንት",
     bio: [
@@ -382,7 +382,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ ሰዒድ ኢብራሂም",
     role: "የዳይሬክተሮች ቦርድ አባል",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_vp_tigist.jpg",
+    image: "/images/Ato Seid Ibrahim.jpg",
     experience: "የኮሪደር ተሻጋሪ ጭነት እና የማኅበራት አመራር",
     education: "የትራንስፖርት ኦፕሬሽን",
     bio: [
@@ -397,7 +397,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ መስፍን እሸቱ",
     role: "የዳይሬክተሮች ቦርድ አባል",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_sec_yared.jpg",
+    image: "/images/Ato Msfin Eshetu.jpg",
     experience: "የተሳፋሪ እና የጭነት ተሽከርካሪዎች ስምሪት ቅንጅት",
     education: "አውቶሞቲቭ ቴክኖሎጂ እና የፍሊት ማኔጅመንት",
     bio: [
@@ -412,7 +412,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ መሐመድ ሀሰን",
     role: "የዳይሬክተሮች ቦርድ አባል",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_regional_bereket.jpg",
+    image: "/images/Ato Mohammed Hassan.jpg",
     experience: "የክልል ትራንስፖርት ማኅበራት እና የንግድ ጭነት አገልግሎት",
     education: "የሕዝብ ግንኙነት እና የትራንስፖርት ማኔጅመንት",
     bio: [
@@ -427,7 +427,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ አበባው ካሣ",
     role: "የዳይሬክተሮች ቦርድ አባል",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_logistics_selamawit.jpg",
+    image: "/images/placeholder_avatar_am.svg",
     experience: "የንግድ ሎጂስቲክስ እና የትራንስፖርት ድርጅት ዕድገት",
     education: "ሎጂስቲክስ እና የአቅርቦት ሰንሰለት አስተዳደር",
     bio: [
@@ -442,7 +442,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ ይርጋዓለም ሰፋኒ",
     role: "የዳይሬክተሮች ቦርድ አባል",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_policy_helen.jpg",
+    image: "/images/Ato Yergalem Sefani.jpg",
     experience: "የትራንስፖርት ኦፕሬሽን እና የሕግ ድጋፍ አስተባባሪነት",
     education: "የንግድ ሕግ እና የትራንስፖርት ኦፕሬሽን",
     bio: [
@@ -457,7 +457,7 @@ export const boardBiosAm: Record<string, BioDetail> = {
     name: "አቶ እንግዳ ኃ/ማርያም",
     role: "የዳይሬክተሮች ቦርድ አባል",
     org: "የኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን (ኢትራአፌ)",
-    image: "/images/board_president_dr_dawit.jpg",
+    image: "/images/Ato Engeda H.Maryam.jpg",
     experience: "የንግድ ትራንስፖርት አስተዳደር እና የተሽከርካሪዎች ፈጠራ",
     education: "የቢዝነስ አስተዳደር እና የተሽከርካሪዎች ቴክኖሎጂ",
     bio: [

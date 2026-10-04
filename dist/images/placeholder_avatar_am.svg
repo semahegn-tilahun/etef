@@ -1,0 +1,44 @@
+<svg width="600" height="750" viewBox="0 0 600 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradAm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.2" />
+    </linearGradient>
+    <radialGradient id="glowAm" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="avatarGradAm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="750" fill="url(#bgGradAm)" />
+  <rect width="600" height="750" fill="url(#glowAm)" />
+
+  <!-- Geometric Subtle Accents -->
+  <circle cx="300" cy="300" r="160" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="2" stroke-dasharray="6 6" />
+  <circle cx="300" cy="300" r="130" fill="#1e293b" fill-opacity="0.7" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="2" />
+
+  <!-- Executive Profile Icon (Head & Torso with Tie) -->
+  <g transform="translate(300, 300) scale(1.15)">
+    <!-- Head -->
+    <circle cx="0" cy="-35" r="42" fill="url(#avatarGradAm)" />
+    
+    <!-- Torso / Shoulders -->
+    <path d="M-85 75 C-85 20, -50 0, 0 0 C50 0, 85 20, 85 75 Z" fill="url(#avatarGradAm)" />
+    
+    <!-- Suit Collar Cutouts & Necktie -->
+    <path d="M-22 10 L0 42 L22 10 L14 0 L-14 0 Z" fill="#0f172a" />
+    <path d="M-7 44 L7 44 L11 90 L0 102 L-11 90 Z" fill="#0284c7" />
+  </g>
+
+  <!-- Badge / Pill -->
+  <g transform="translate(300, 520)">
+    <rect x="-140" y="-18" width="280" height="36" rx="18" fill="#1e293b" fill-opacity="0.9" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5" />
+    <text x="0" y="6" fill="#bae6fd" font-family="'Noto Sans Ethiopic', Nyala, system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="1" text-anchor="middle">የዳይሬክተሮች ቦርድ አባል</text>
+  </g>
+</svg>
