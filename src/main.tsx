@@ -1806,9 +1806,9 @@ function Page({ page }: { page: PageData }) {
       sectorBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
           sectorBtns.forEach((b) => {
-            b.className = "calc-sector-btn px-3 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer";
+            b.className = "calc-sector-btn px-3 py-2.5 rounded-xl border border-white/15 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer backdrop-blur-sm";
           });
-          btn.className = "calc-sector-btn active px-3 py-2.5 rounded-xl border border-primary-400 bg-primary-600 text-white font-bold text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer shadow-sm";
+          btn.className = "calc-sector-btn active px-3 py-2.5 rounded-xl border border-primary-400 bg-primary-600/95 text-white font-bold text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer shadow-lg ring-2 ring-primary-400/40";
 
           activeRate = parseInt(btn.getAttribute("data-rate") || "450", 10);
           activeBase = parseInt(btn.getAttribute("data-base") || "15000", 10);

@@ -35,7 +35,14 @@ const membershipEng = `
 
         <!-- FLEET TIER & DUES ESTIMATOR -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-12">
-            <div class="bg-primary-600 rounded-lg p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
+            <div class="relative rounded-2xl p-6 sm:p-10 text-white shadow-2xl overflow-hidden border border-white/20 bg-slate-950/85 backdrop-blur-md">
+                <!-- Background Image & Translucent Glassmorphism Cover -->
+                <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                    <img src="/images/about_hero_fleet.jpg" alt="Commercial transport fleet" class="w-full h-full object-cover object-center filter brightness-60 scale-105 animate-slow-motion" />
+                    <!-- Translucent glassmorphism cover overlays -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-slate-950/92 via-slate-900/85 to-primary-950/90 backdrop-blur-[2px]"></div>
+                    <div class="absolute inset-0 bg-primary-950/25 mix-blend-multiply"></div>
+                </div>
                 <div class="max-w-3xl mb-8 relative z-10">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white border border-white/25 mb-3">
                         <i class="fa-solid fa-calculator text-white"></i>
@@ -55,19 +62,19 @@ const membershipEng = `
                         <div>
                             <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Select Transport Sector / Operation Type</label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="calc-sector-selector">
-                                <button type="button" class="calc-sector-btn active px-3 py-2.5 rounded-lg border border-primary-400 bg-primary-600 text-white font-bold text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer shadow-sm" data-sector="Freight Transport" data-rate="450" data-base="15000">
+                                <button type="button" class="calc-sector-btn active px-3 py-2.5 rounded-xl border border-primary-400 bg-primary-600/95 text-white font-bold text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer shadow-lg ring-2 ring-primary-400/40" data-sector="Freight Transport" data-rate="450" data-base="15000">
                                     <i class="fa-solid fa-truck-moving text-base text-primary-200"></i>
                                     <span>Heavy Freight</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="Passenger Transport" data-rate="300" data-base="10000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/15 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer backdrop-blur-sm" data-sector="Passenger Transport" data-rate="300" data-base="10000">
                                     <i class="fa-solid fa-bus text-base text-primary-300"></i>
                                     <span>Intercity Bus</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="Urban Transit" data-rate="150" data-base="5000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/15 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer backdrop-blur-sm" data-sector="Urban Transit" data-rate="150" data-base="5000">
                                     <i class="fa-solid fa-van-shuttle text-base text-primary-300"></i>
                                     <span>Urban Transit</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="Logistics & Customs" data-rate="600" data-base="25000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/15 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer backdrop-blur-sm" data-sector="Logistics & Customs" data-rate="600" data-base="25000">
                                     <i class="fa-solid fa-boxes-stacked text-base text-primary-300"></i>
                                     <span>Logistics Depot</span>
                                 </button>
@@ -91,7 +98,7 @@ const membershipEng = `
                     </div>
 
                     <!-- Results Card -->
-                    <div class="lg:col-span-5 bg-white/5 border border-white/15 rounded-lg p-6 backdrop-blur-md flex flex-col justify-between">
+                    <div class="lg:col-span-5 bg-slate-900/70 border border-white/20 rounded-2xl p-6 backdrop-blur-md flex flex-col justify-between shadow-xl">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Calculated Federation Tier</span>
@@ -318,7 +325,14 @@ const membershipAm = `
 
         <!-- FLEET TIER & DUES ESTIMATOR (Amharic) -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-12">
-            <div class="bg-primary-600 rounded-lg p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
+            <div class="relative rounded-2xl p-6 sm:p-10 text-white shadow-2xl overflow-hidden border border-white/20 bg-slate-950/85 backdrop-blur-md">
+                <!-- Background Image & Translucent Glassmorphism Cover -->
+                <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                    <img src="/images/about_hero_fleet.jpg" alt="የንግድ ተሽከርካሪዎች ፍሊት" class="w-full h-full object-cover object-center filter brightness-60 scale-105 animate-slow-motion" />
+                    <!-- Translucent glassmorphism cover overlays -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-slate-950/92 via-slate-900/85 to-primary-950/90 backdrop-blur-[2px]"></div>
+                    <div class="absolute inset-0 bg-primary-950/25 mix-blend-multiply"></div>
+                </div>
                 <div class="max-w-3xl mb-8 relative z-10">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white border border-white/25 mb-3">
                         <i class="fa-solid fa-calculator text-white"></i>
@@ -338,19 +352,19 @@ const membershipAm = `
                         <div>
                             <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">የትራንስፖርት ዘርፍ / የስምሪት አይነት ይምረጡ</label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="calc-sector-selector">
-                                <button type="button" class="calc-sector-btn active px-3 py-2.5 rounded-lg border border-primary-400 bg-primary-600 text-white font-bold text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer shadow-sm" data-sector="የከባድ ጭነት ትራንስፖርት" data-rate="450" data-base="15000">
+                                <button type="button" class="calc-sector-btn active px-3 py-2.5 rounded-xl border border-primary-400 bg-primary-600/95 text-white font-bold text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer shadow-lg ring-2 ring-primary-400/40" data-sector="የከባድ ጭነት ትራንስፖርት" data-rate="450" data-base="15000">
                                     <i class="fa-solid fa-truck-moving text-base text-primary-200"></i>
                                     <span>የከባድ ጭነት</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="የሕዝብ አውቶቡስ" data-rate="300" data-base="10000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/15 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer backdrop-blur-sm" data-sector="የሕዝብ አውቶቡስ" data-rate="300" data-base="10000">
                                     <i class="fa-solid fa-bus text-base text-primary-300"></i>
                                     <span>የሀገር አቋራጭ</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="የከተማ ትራንስፖርት" data-rate="150" data-base="5000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/15 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer backdrop-blur-sm" data-sector="የከተማ ትራንስፖርት" data-rate="150" data-base="5000">
                                     <i class="fa-solid fa-van-shuttle text-base text-primary-300"></i>
                                     <span>የከተማ ትራንስፖርት</span>
                                 </button>
-                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-300 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer" data-sector="የሎጂስቲክስና ጉምሩክ" data-rate="600" data-base="25000">
+                                <button type="button" class="calc-sector-btn px-3 py-2.5 rounded-xl border border-white/15 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white font-medium text-xs flex flex-col items-center gap-1.5 transition-all cursor-pointer backdrop-blur-sm" data-sector="የሎጂስቲክስና ጉምሩክ" data-rate="600" data-base="25000">
                                     <i class="fa-solid fa-boxes-stacked text-base text-primary-300"></i>
                                     <span>የሎጂስቲክስ መጋዘን</span>
                                 </button>
@@ -374,7 +388,7 @@ const membershipAm = `
                     </div>
 
                     <!-- Results Card -->
-                    <div class="lg:col-span-5 bg-white/5 border border-white/15 rounded-lg p-6 backdrop-blur-md flex flex-col justify-between">
+                    <div class="lg:col-span-5 bg-slate-900/70 border border-white/20 rounded-2xl p-6 backdrop-blur-md flex flex-col justify-between shadow-xl">
                         <div>
                             <div class="flex justify-between items-start mb-4">
                                 <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">የአባልነት ደረጃ</span>

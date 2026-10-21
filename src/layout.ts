@@ -125,7 +125,7 @@ export function renderNavbar(activePath: string, lang: Lang): string {
   const brandSub = isAm ? "የትራንስፖርት አሠሪዎች" : "EMPLOYERS FEDERATION";
 
   return `
-    <div class="w-full z-50 sticky top-0 shadow-md">
+    <div class="w-full z-50 sticky top-0 shadow-md bg-primary-600">
         <!-- Narrow Floating Utility Header (Hides smoothly on page scroll) -->
         <div id="top-utility-bar" class="top-utility-bar bg-primary-700 text-white text-[11px] border-b border-primary-500/40 w-full backdrop-blur-md py-1.5 px-4 sm:px-6 lg:px-8 overflow-hidden transition-all duration-300">
             <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
@@ -231,7 +231,7 @@ export function renderNavbar(activePath: string, lang: Lang): string {
         </header>
 
         <!-- Floating Promotion Bar (Floats/docks to nav when page/hero scrolls) -->
-        <div id="nav-floating-promo" class="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-slate-950 py-1.5 px-4 text-xs font-bold shadow-lg border-t border-amber-300/40 transition-all duration-300 ease-out overflow-hidden max-h-0 opacity-0 -translate-y-2 pointer-events-none">
+        <div id="nav-floating-promo" class="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-slate-950 text-xs font-bold shadow-lg transition-all duration-300 ease-out overflow-hidden max-h-0 opacity-0 pointer-events-none p-0 m-0 border-0">
             <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
                 <a href="#promotion" class="promo-modal-trigger flex items-center gap-2.5 truncate hover:text-white transition-colors group cursor-pointer">
                     <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-950 text-amber-400 shadow-sm shrink-0">
