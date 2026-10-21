@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ETEF - Ethiopian Transport Employers Federation</title>
-    <link rel="icon" href="data:," />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-CEBBOZ8a.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CHezg0sa.css">
+    <script type="module" crossorigin src="/assets/index-Dtej6NN8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0n44hmMh.css">
   </head>
   <body>
     <div id="root"></div>
@@ -42,33 +44,6 @@
         backToTopBtn.style.transform = "translateY(0)";
       });
     </script>
-    
-    <!-- Lenis Smooth Scrolling -->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const lenis = new Lenis({
-          duration: 1.2,
-          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-          direction: 'vertical',
-          gestureDirection: 'vertical',
-          smooth: true,
-          mouseMultiplier: 1,
-          smoothTouch: false,
-          touchMultiplier: 2,
-          infinite: false,
-        });
-
-        window.lenis = lenis;
-
-        function raf(time) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-      });
-    </script>
-
+    
   </body>
 </html>

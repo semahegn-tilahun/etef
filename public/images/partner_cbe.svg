@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="320" height="100">
+  <defs>
+    <linearGradient id="cbeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#DAA520"/>
+    </linearGradient>
+    <linearGradient id="cbePurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#581845"/>
+      <stop offset="100%" stop-color="#3B092B"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- CBE Icon Badge -->
+  <g transform="translate(10, 10)" filter="url(#shadow)">
+    <!-- Hexagon Outer Shape -->
+    <polygon points="40,2 78,22 78,58 40,78 2,58 2,22" fill="url(#cbePurple)" stroke="url(#cbeGold)" stroke-width="2.5"/>
+    
+    <!-- Central Interlocking Geometric Lines / Star of CBE -->
+    <path d="M 40 14 L 66 52 L 14 52 Z" fill="none" stroke="url(#cbeGold)" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M 40 66 L 14 28 L 66 28 Z" fill="none" stroke="url(#cbeGold)" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="40" cy="40" r="5" fill="url(#cbeGold)"/>
+  </g>
+
+  <!-- CBE Text Typography -->
+  <text x="100" y="38" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800" fill="#2E0854" letter-spacing="0.3">Commercial Bank of Ethiopia</text>
+  <text x="100" y="58" font-family="'Nyala', 'Abyssinica SIL', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#DAA520">የኢትዮጵያ ንግድ ባንክ</text>
+  <text x="100" y="74" font-family="'Inter', Arial, sans-serif" font-size="9" font-weight="600" fill="#64748B" letter-spacing="1.2">THE BANK YOU CAN ALWAYS RELY ON</text>
+</svg>

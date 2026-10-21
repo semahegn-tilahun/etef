@@ -1997,3 +1997,131 @@ function attachModalCloseHandlers(container: HTMLElement): void {
     btn.addEventListener("click", () => closeModal());
   });
 }
+
+export function openPromotionModal(): void {
+  const lang = getCurrentLang();
+  const isAm = lang === "አማ";
+  setupModals();
+  const container = document.getElementById("etef-modal-container");
+  if (!container) return;
+
+  lockBodyScroll();
+  container.classList.remove("hidden");
+  container.classList.add("flex");
+
+  container.innerHTML = `
+    <div class="modal-backdrop fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50"></div>
+    <div class="relative bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto z-50 shadow-2xl m-4 border border-slate-200/90 flex flex-col animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Header Band: Uniform ETEF Brand Blue Gradient Header -->
+      <div class="bg-gradient-to-r from-primary-800 via-primary-700 to-blue-700 text-white p-6 sm:p-8 relative overflow-hidden shrink-0">
+        <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+        <button type="button" class="modal-close-btn absolute top-5 right-5 w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors cursor-pointer border border-white/30 shadow-sm" aria-label="${isAm ? "ዝጋ" : "Close dialog"}">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/20 backdrop-blur-sm text-white mb-3">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          <i class="fa-solid fa-bullhorn text-[10px] text-amber-300"></i>
+          <span>${isAm ? "ይፋዊ ልዩ ማስተዋወቂያ 2026" : "OFFICIAL PROMOTION 2026"}</span>
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">
+          ${isAm ? "ብሔራዊ የንግድ ትራንስፖርት ጉባኤና የፍሊት ኢኖቬሽን ኤክስፖ" : "National Commercial Transport Summit & Fleet Innovation Expo"}
+        </h2>
+        <p class="text-blue-100 text-xs sm:text-sm mt-2 leading-relaxed max-w-2xl">
+          ${isAm 
+            ? "ከ6,652 በላይ የንግድ ተሽከርካሪ ባለንብረቶችን፣ 17 የአሠሪዎች ማኅበራትን፣ የመንግሥት ከፍተኛ ባለሥልጣናትንና የቴክኖሎጂ አቅራቢዎችን የሚያገናኝ ታላቅ ሀገራዊ መድረክ።" 
+            : "Ethiopia's premier commercial transport and logistics convention, uniting 6,652+ fleet operators, 17 regional employers' unions, government policymakers, and leading multimodal technology providers."
+          }
+        </p>
+      </div>
+
+      <!-- Modal Content Body: Clean White, Structured Slate Cards -->
+      <div class="p-6 sm:p-8 space-y-6 text-slate-700 bg-white">
+        <!-- Schedule, Venue & Quick Stats Grid -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-xs">
+            <div class="flex items-center gap-2 text-primary-700 font-bold text-xs uppercase tracking-wider mb-1">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>${isAm ? "የቦታ አድራሻ" : "Venue Location"}</span>
+            </div>
+            <div class="font-bold text-sm text-slate-900">${isAm ? "ሚሊኒየም አዳራሽ፣ አዲስ አበባ" : "Millennium Hall, Addis Ababa"}</div>
+            <div class="text-xs text-slate-500 mt-0.5">${isAm ? "ዋና ኤግዚቢሽንና ሲምፖዚየም ማዕከል" : "Main Exhibition & Plenary Pavilion"}</div>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-xs">
+            <div class="flex items-center gap-2 text-primary-700 font-bold text-xs uppercase tracking-wider mb-1">
+              <i class="fa-regular fa-clock"></i>
+              <span>${isAm ? "የመርሐ-ግብር ቀናት" : "Dates & Hours"}</span>
+            </div>
+            <div class="font-bold text-sm text-slate-900">${isAm ? "ኅዳር 05 - 08 ቀን 2019 ዓ/ም" : "November 14 - 17, 2026"}</div>
+            <div class="text-xs text-slate-500 mt-0.5">${isAm ? "ከጠዋቱ 2:30 - 12:00 (በየቀኑ)" : "8:30 AM - 6:00 PM Daily (EAT)"}</div>
+          </div>
+        </div>
+
+        <!-- Key Program Tracks -->
+        <div class="space-y-3">
+          <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-layer-group text-primary-600"></i>
+            <span>${isAm ? "ዋና ዋና የኤክስፖው መርሐ-ግብሮች" : "Key Expo Highlights & Program Tracks"}</span>
+          </h3>
+          <div class="space-y-2.5">
+            <div class="flex items-start gap-3.5 bg-slate-50 p-4 rounded-xl border border-slate-200">
+              <div class="w-9 h-9 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-sm shrink-0 mt-0.5">
+                <i class="fa-solid fa-truck-moving"></i>
+              </div>
+              <div>
+                <span class="font-bold text-slate-900 text-xs sm:text-sm block mb-0.5">${isAm ? "የከባድ ጭነትና ዘመናዊ ቦቴዎች ማሳያ (120+ ተሽከርካሪዎች)" : "Commercial Fleet & Reefer Expo (120+ Vehicles)"}</span>
+                <span class="text-xs text-slate-600 leading-relaxed block">${isAm ? "የከባድ ጭነት ቦቴዎች፣ ተሳቢዎችና ቀዝቃዛማ የጭነት መኪኖች የቀጥታ ማሳያ።" : "Heavy freight tractors, multi-axle trailers, cold-chain reefers, and EV commercial chassis."}</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 bg-slate-50 p-4 rounded-xl border border-slate-200">
+              <div class="w-9 h-9 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-sm shrink-0 mt-0.5">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <div>
+                <span class="font-bold text-slate-900 text-xs sm:text-sm block mb-0.5">${isAm ? "የፖሊሲና የታሪፍ ማሻሻያ ውይይት መድረክ" : "Ministerial Policy & Tariff Reform Plenary"}</span>
+                <span class="text-xs text-slate-600 leading-relaxed block">${isAm ? "በትራንስፖርት ሚኒስቴር፣ ጉምሩክና ደረቅ ወደብ አመራሮች የሚመራ የሦስትዮሽ ውይይት።" : "Tripartite alignment with Ministry of Transport, Customs Commission, and Dry Port authorities."}</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 bg-slate-50 p-4 rounded-xl border border-slate-200">
+              <div class="w-9 h-9 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center text-sm shrink-0 mt-0.5">
+                <i class="fa-solid fa-satellite-dish"></i>
+              </div>
+              <div>
+                <span class="font-bold text-slate-900 text-xs sm:text-sm block mb-0.5">${isAm ? "የቴሌማቲክስ፣ የነዳጅ ቁጠባና የኮሪደር ቴክኖሎጂዎች" : "Fleet Telematics, Green Fuel & Corridor Watch"}</span>
+                <span class="text-xs text-slate-600 leading-relaxed block">${isAm ? "የጅቡቲና በርበራ መስመር የጂፒኤስ ክትትልና የፈጣን እርዳታ ስርዓቶች።" : "Real-time corridor telemetry, smart weighbridges, and emergency breakdown services."}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons in Modal Footer -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-slate-100">
+          <div class="text-xs text-slate-500 font-medium">
+            <i class="fa-solid fa-id-badge text-primary-600 mr-1.5"></i>
+            ${isAm ? "ለተመዘገቡ አባላት ነፃ የክብር ባጅ ይሰጣል" : "Complimentary executive pass for verified ETEF members"}
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="/membership" class="modal-cta-btn px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-bold text-xs uppercase tracking-wider shadow-md transition-all cursor-pointer">
+              ${isAm ? "የአባልነት ምዝገባ" : "Apply as Member"}
+            </a>
+            <a href="/contact" class="modal-cta-btn px-4 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs transition-colors cursor-pointer">
+              ${isAm ? "የኤግዚቢሽን ጥያቄዎች" : "Exhibitor Inquiries"}
+            </a>
+            <button type="button" class="modal-close-btn px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-colors cursor-pointer">
+              ${isAm ? "ዝጋ" : "Close"}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  attachModalCloseHandlers(container);
+  container.querySelectorAll(".modal-cta-btn").forEach((btn) => {
+    btn.addEventListener("click", closeModal);
+  });
+}

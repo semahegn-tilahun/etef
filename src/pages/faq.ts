@@ -149,6 +149,93 @@ const faqEng = `
                 </div>
             </div>
         </section>
+
+        <!-- Question / Inquiry Submission Form Section -->
+        <section id="inquiry-form" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 scroll-mt-28">
+            <div class="rounded-3xl bg-white border border-slate-200/90 shadow-xl overflow-hidden">
+                <!-- Header Band -->
+                <div class="bg-gradient-to-r from-primary-800 via-primary-700 to-blue-700 text-white p-8 sm:p-10 relative overflow-hidden">
+                    <div class="absolute -right-16 -bottom-16 w-56 h-56 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 backdrop-blur-sm text-white mb-3">
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                            <span>Federation Inquiry Desk</span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Didn't Find Your Question? Submit Here</h2>
+                        <p class="text-blue-100 text-sm sm:text-base mt-2 max-w-2xl leading-relaxed">
+                            If you have specific inquiries regarding membership criteria, regulatory policy dialogue, corridor disputes, or federation services, submit your question directly to the ETEF secretariat.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Form Content -->
+                <div class="p-8 sm:p-10">
+                    <div id="faq-page-submit-success" class="hidden mb-8 p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 animate-in fade-in">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-base text-emerald-950">Inquiry Submitted Successfully</h4>
+                                <p class="text-xs sm:text-sm text-emerald-800 mt-1">
+                                    Thank you. Your inquiry has been routed to the relevant ETEF Directorate. A representative will contact you via email or phone within 2 business days.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="faq-page-inquiry-form" class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="faq-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name *</label>
+                                <input type="text" id="faq-name" required placeholder="e.g. Abebe Balcha" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all" />
+                            </div>
+                            <div>
+                                <label for="faq-org" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Transport Enterprise / Association *</label>
+                                <input type="text" id="faq-org" required placeholder="e.g. Ethio Freight Logistics PLC" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all" />
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="faq-email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Email Address *</label>
+                                <input type="email" id="faq-email" required placeholder="name@company.com" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all" />
+                            </div>
+                            <div>
+                                <label for="faq-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone Number *</label>
+                                <input type="tel" id="faq-phone" required placeholder="+251 9... / +251 11..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="faq-topic" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Inquiry Category *</label>
+                            <select id="faq-topic" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all">
+                                <option value="" disabled selected>Select an inquiry area...</option>
+                                <option value="membership">Membership Tiers & Annual Dues</option>
+                                <option value="advocacy">Policy, Labor & Regulatory Advocacy</option>
+                                <option value="corridor">Trade Corridor & Port Demurrage Issues</option>
+                                <option value="training">Training, Certification & Workshops</option>
+                                <option value="promotion">Summit, Expo & Promotional Event Inquiries</option>
+                                <option value="general">Other Federation Inquiries</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="faq-message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Your Question / Inquiry *</label>
+                            <textarea id="faq-message" rows="4" required placeholder="Please describe your question or issue in detail..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all leading-relaxed"></textarea>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                            <p class="text-xs text-slate-500">
+                                <i class="fa-solid fa-lock text-slate-400 mr-1"></i> Your inquiry will be treated confidentially by ETEF Secretariat.
+                            </p>
+                            <button type="submit" id="faq-submit-btn" class="px-8 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-primary-600 to-blue-600 hover:from-primary-500 hover:to-blue-500 shadow-lg shadow-primary-600/30 hover:shadow-primary-600/50 transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer">
+                                <i class="fa-solid fa-paper-plane mr-2 text-xs"></i>
+                                <span>Submit Question</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     ${renderFooter("ENG")}
@@ -300,6 +387,93 @@ const faqAm = `
                     <div class="faq-accordion-content hidden px-6 pb-6 pt-2 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-slate-50/50">
                         በአዋጅ ቁጥር 1156/2012 መሠረት ፌዴሬሽኑ የትራንስፖርት አሠሪዎችን ወክሎ ከሠራተኛ ማኅበራት ጋር ይደራደራል:: የሥራ ሁኔታዎች፣ የደህንነት መስፈርቶችና የደመወዝ ስምምነቶች የአሠሪዎችን አቅም ባገናዘበና ሰላማዊ ግንኙነትን በሚያረጋግጥ መልኩ እንዲፈጸሙ ያደርጋል።
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Question / Inquiry Submission Form Section (Amharic) -->
+        <section id="inquiry-form" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 scroll-mt-28">
+            <div class="rounded-3xl bg-white border border-slate-200/90 shadow-xl overflow-hidden">
+                <!-- Header Band -->
+                <div class="bg-gradient-to-r from-primary-800 via-primary-700 to-blue-700 text-white p-8 sm:p-10 relative overflow-hidden">
+                    <div class="absolute -right-16 -bottom-16 w-56 h-56 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 backdrop-blur-sm text-white mb-3">
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                            <span>የፌዴሬሽኑ የጥያቄዎችና አስተያየት መቀበያ ዴስክ</span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">ጥያቄዎን አላገኙም? ጥያቄዎን ወይም አስተያየትዎን እዚህ ያስገቡ</h2>
+                        <p class="text-blue-100 text-sm sm:text-base mt-2 max-w-2xl leading-relaxed">
+                            ስለ አባልነት፣ የሕግና የፖሊሲ ጥብቅና፣ የኮሪደር እንቅፋቶች ወይም የፌዴሬሽኑ አገልግሎቶች ማንኛውም ጥያቄ ካለዎት በቀጥታ ለኢትዮጵያ ትራንስፖርት አሠሪዎች ፌዴሬሽን ዋና ጽሕፈት ቤት ያስገቡ።
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Form Content -->
+                <div class="p-8 sm:p-10">
+                    <div id="faq-page-submit-success" class="hidden mb-8 p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 animate-in fade-in">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-base text-emerald-950">ጥያቄዎ በተሳካ ሁኔታ ተልኳል</h4>
+                                <p class="text-xs sm:text-sm text-emerald-800 mt-1">
+                                    እናመሰግናለን፤ የሚመለከተው የፌዴሬሽኑ የስራ ክፍል በጥያቄዎ ላይ ተገቢውን ምላሽ በኢሜይል ወይም በስልክ በ2 የስራ ቀናት ውስጥ ያደርሳል።
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="faq-page-inquiry-form" class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="faq-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">ሙሉ ስም *</label>
+                                <input type="text" id="faq-name" required placeholder="ለምሳሌ፡ አበበ ባልቻ" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all" />
+                            </div>
+                            <div>
+                                <label for="faq-org" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">የትራንስፖርት ድርጅት ወይም ማኅበር ስም *</label>
+                                <input type="text" id="faq-org" required placeholder="ለምሳሌ፡ ኢትዮ የጭነት ትራንስፖርት ኃ/የተ/የግ/ማ" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all" />
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="faq-email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">የኢሜይል አድራሻ *</label>
+                                <input type="email" id="faq-email" required placeholder="name@company.com" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all" />
+                            </div>
+                            <div>
+                                <label for="faq-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">ስልክ ቁጥር *</label>
+                                <input type="tel" id="faq-phone" required placeholder="+251 9... / +251 11..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="faq-topic" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">የጥያቄው ዘርፍ *</label>
+                            <select id="faq-topic" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all">
+                                <option value="" disabled selected>የጥያቄዎን ዘርፍ ይምረጡ...</option>
+                                <option value="membership">የአባልነትና የመዋጮ ሁኔታዎች</option>
+                                <option value="advocacy">የፖሊሲ፣ የሰራተኛና የሕግ ከለላ</option>
+                                <option value="corridor">የንግድ ኮሪደሮች፣ ወደብና የዲመሬጅ ጉዳዮች</option>
+                                <option value="training">ስልጠናዎችና የተሽከርካሪ አሽከርካሪዎች ማረጋገጫ</option>
+                                <option value="promotion">የጉባኤ፣ ኤክስፖና የማስተዋወቂያ መርሐ-ግብር</option>
+                                <option value="general">ሌሎች አጠቃላይ የፌዴሬሽኑ ጥያቄዎች</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="faq-message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">ጥያቄዎን ወይም አስተያየትዎን በዝርዝር ይግለጹ *</label>
+                            <textarea id="faq-message" rows="4" required placeholder="እባክዎን ጥያቄዎን ወይም ጉዳይዎን በዝርዝር እዚህ ያብራሩ..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all leading-relaxed"></textarea>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                            <p class="text-xs text-slate-500">
+                                <i class="fa-solid fa-lock text-slate-400 mr-1"></i> የሚያስገቡት መረጃ በፌዴሬሽኑ ዋና ጽሕፈት ቤት በሚስጥር ይጠበቃል።
+                            </p>
+                            <button type="submit" id="faq-submit-btn" class="px-8 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-primary-600 to-blue-600 hover:from-primary-500 hover:to-blue-500 shadow-lg shadow-primary-600/30 hover:shadow-primary-600/50 transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer">
+                                <i class="fa-solid fa-paper-plane mr-2 text-xs"></i>
+                                <span>ጥያቄዎን ያስገቡ</span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

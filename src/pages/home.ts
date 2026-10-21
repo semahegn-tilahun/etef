@@ -29,11 +29,18 @@ const homeEng = `
 
             <!-- Foreground Content -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
-                <!-- Badge -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/15 hover:bg-white/25 text-white border border-white/25 shadow-lg backdrop-blur-md mb-6 transition-all">
-                    <i class="fa-solid fa-shield-halved text-primary-300 text-xs"></i>
-                    <span>Official Transport Employers Federation</span>
-                </div>
+                <!-- Fancy Promotional Banner -->
+                <a href="#promotion" class="promo-modal-trigger inline-flex items-center p-1 sm:p-1.5 pr-4 rounded-full bg-slate-900/80 border border-amber-400/50 shadow-[0_0_25px_rgba(245,158,11,0.25)] hover:shadow-[0_0_35px_rgba(245,158,11,0.4)] backdrop-blur-xl mb-6 transition-all group cursor-pointer hover:border-amber-300 transform hover:-translate-y-0.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-md">
+                        <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                        <i class="fa-solid fa-bullhorn text-[10px]"></i>
+                        <span>PROMOTION 2026</span>
+                    </span>
+                    <span class="mx-3 text-xs sm:text-sm font-semibold text-white/95 group-hover:text-amber-200 transition-colors flex items-center gap-2">
+                        <span>National Commercial Transport Summit & Fleet Innovation Expo • Registration Open</span>
+                        <i class="fa-solid fa-arrow-right text-[11px] text-amber-400 group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                </a>
 
                 <!-- Headline -->
                 <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.08] max-w-4xl mx-auto mb-6 drop-shadow-md">
@@ -85,8 +92,8 @@ const homeEng = `
                                 <i class="fa-solid fa-route"></i>
                             </div>
                             <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 block">4</span>
-                            <span class="text-xs font-semibold text-slate-700 block mt-1">Key Corridors Monitored</span>
-                            <span class="text-[11px] text-slate-500 block mt-0.5">Djibouti, Modjo, Moyale, Berbera</span>
+                            <span class="text-xs font-semibold text-slate-700 block mt-1">Transport Industry Connections</span>
+                            <span class="text-[11px] text-slate-500 block mt-0.5">Across Transport Sub-Sectors</span>
                         </div>
 
                         <div class="bg-white/95 hover:bg-white p-6 rounded-lg border border-white/50 shadow-2xl hover:shadow-cyan-500/10 transition-all card-hover-fx text-left backdrop-blur-md">
@@ -102,285 +109,6 @@ const homeEng = `
             </div>
         </section>
 
-        <!-- LIVE TRADE CORRIDORS & PORT CLEARANCE TRACKER -->
-        <section class="py-12 bg-white border-b border-slate-200 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header with Live Pulsing Badge -->
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-primary-50 text-primary-700 border border-primary-200 mb-2">
-                            <span class="w-2 h-2 rounded-full bg-primary-600 animate-pulse"></span>
-                            <span>NATIONAL LOGISTICS WATCH • LIVE CORRIDOR STATUS</span>
-                        </div>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                            Strategic Trade Corridors & Port Clearance
-                        </h2>
-                        <p class="text-sm text-slate-600 mt-1">
-                            Real-time transit conditions, customs checkpoint throughput, and freight alerts across Ethiopia's principal economic arteries.
-                        </p>
-                    </div>
-                    <div class="text-xs text-slate-500 flex items-center gap-2">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        <span>Updated: Today, 08:30 EAT • Source: ETEF Secretariat Logistics Directorate</span>
-                    </div>
-                </div>
-
-                <!-- 4 Corridors Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Corridor 1: Ethio-Djibouti Corridor -->
-                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
-                        <div>
-                            <div class="relative h-44 overflow-hidden bg-slate-900">
-                                <img src="/images/corridor_djibouti.jpg" alt="Djibouti – Addis Ababa Expressway Corridor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
-                                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-slate-900/85 text-white backdrop-blur-md uppercase tracking-wider border border-white/20 shadow-sm">
-                                        Corridor 01
-                                    </span>
-                                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-primary-600 text-white backdrop-blur-md flex items-center gap-1.5 shadow-sm">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Normal Flow
-                                    </span>
-                                </div>
-                                <div class="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-white">
-                                    <span class="text-[11px] font-semibold text-primary-300 flex items-center gap-1.5 drop-shadow">
-                                        <i class="fa-solid fa-route text-[10px]"></i> Principal Sea-Trade Link
-                                    </span>
-                                    <span class="text-[10px] text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
-                                        <i class="fa-solid fa-satellite-dish text-[9px] text-primary-400 mr-1"></i> Live
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="p-5">
-                                <h3 class="font-bold text-slate-900 text-lg mb-0.5 group-hover:text-primary-600 transition-colors">
-                                    Djibouti – Addis Ababa
-                                </h3>
-                                <p class="text-xs text-slate-500 mb-4 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-location-dot text-primary-500"></i> Galafi / Dewele Border Crossing
-                                </p>
-
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> Transit Duration:</span>
-                                        <span class="font-bold text-slate-800">42–48 Hours</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-hourglass-half text-slate-400"></i> Galafi Border Queue:</span>
-                                        <span class="font-bold text-primary-700 bg-primary-50 px-2 py-0.5 rounded border border-primary-200">Under 4.2 Hours</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-scale-balanced text-slate-400"></i> Toll / Weighbridge:</span>
-                                        <span class="font-semibold text-slate-800">All 6 Scales Active</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="djibouti">
-                                <span>View Corridor Advisory</span>
-                                <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Corridor 2: Modjo Multimodal Dry Port -->
-                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
-                        <div>
-                            <div class="relative h-44 overflow-hidden bg-slate-900">
-                                <img src="/images/corridor_modjo.jpg" alt="Modjo Dry Port Multimodal Terminal Yard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
-                                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-slate-900/85 text-white backdrop-blur-md uppercase tracking-wider border border-white/20 shadow-sm">
-                                        Corridor 02
-                                    </span>
-                                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-primary-600 text-white backdrop-blur-md flex items-center gap-1.5 shadow-sm">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Terminal Open
-                                    </span>
-                                </div>
-                                <div class="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-white">
-                                    <span class="text-[11px] font-semibold text-primary-300 flex items-center gap-1.5 drop-shadow">
-                                        <i class="fa-solid fa-train-subway text-[10px]"></i> Multimodal Rail Hub
-                                    </span>
-                                    <span class="text-[10px] text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
-                                        <i class="fa-solid fa-satellite-dish text-[9px] text-primary-400 mr-1"></i> Live
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="p-5">
-                                <h3 class="font-bold text-slate-900 text-lg mb-0.5 group-hover:text-primary-600 transition-colors">
-                                    Modjo Multimodal Port
-                                </h3>
-                                <p class="text-xs text-slate-500 mb-4 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-location-dot text-primary-500"></i> Central Inbound Clearance Hub
-                                </p>
-
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-boxes-stacked text-slate-400"></i> Container Dwell:</span>
-                                        <span class="font-bold text-primary-700 bg-primary-50 px-2 py-0.5 rounded border border-primary-200">3.8 Days (Optimal)</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-truck-ramp-box text-slate-400"></i> Daily Truck Dispatch:</span>
-                                        <span class="font-bold text-slate-800">480+ Heavy Units</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-train text-slate-400"></i> Freight Rail Shunts:</span>
-                                        <span class="font-semibold text-slate-800">3 Block Trains Daily</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="modjo">
-                                <span>View Port Advisory</span>
-                                <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Corridor 3: Moyale – Lamu Corridor -->
-                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
-                        <div>
-                            <div class="relative h-44 overflow-hidden bg-slate-900">
-                                <img src="/images/corridor_moyale.jpg" alt="Moyale One Stop Border Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
-                                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-slate-900/85 text-white backdrop-blur-md uppercase tracking-wider border border-white/20 shadow-sm">
-                                        Corridor 03
-                                    </span>
-                                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-primary-600 text-white backdrop-blur-md flex items-center gap-1.5 shadow-sm">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Operating
-                                    </span>
-                                </div>
-                                <div class="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-white">
-                                    <span class="text-[11px] font-semibold text-primary-300 flex items-center gap-1.5 drop-shadow">
-                                        <i class="fa-solid fa-truck-moving text-[10px]"></i> Southern Gateway
-                                    </span>
-                                    <span class="text-[10px] text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
-                                        <i class="fa-solid fa-satellite-dish text-[9px] text-primary-400 mr-1"></i> Live
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="p-5">
-                                <h3 class="font-bold text-slate-900 text-lg mb-0.5 group-hover:text-primary-600 transition-colors">
-                                    Moyale – Lamu Corridor
-                                </h3>
-                                <p class="text-xs text-slate-500 mb-4 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-location-dot text-primary-500"></i> Kenya One-Stop Border Post
-                                </p>
-
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> Transit Duration:</span>
-                                        <span class="font-bold text-slate-800">55–60 Hours</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-check-double text-slate-400"></i> OSBP Throughput:</span>
-                                        <span class="font-bold text-primary-700 bg-primary-50 px-2 py-0.5 rounded border border-primary-200">Seamless Clearance</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-gas-pump text-slate-400"></i> Livestock & Fuel:</span>
-                                        <span class="font-semibold text-slate-800">Standard Quarantine Open</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="moyale">
-                                <span>View Border Advisory</span>
-                                <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Corridor 4: Berbera Port Corridor -->
-                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
-                        <div>
-                            <div class="relative h-44 overflow-hidden bg-slate-900">
-                                <img src="/images/corridor_berbera.jpg" alt="Berbera to Dire Dawa Trade Corridor Highway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
-                                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-slate-900/85 text-white backdrop-blur-md uppercase tracking-wider border border-white/20 shadow-sm">
-                                        Corridor 04
-                                    </span>
-                                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-900 border border-white/20 text-white backdrop-blur-md flex items-center gap-1.5 shadow-sm">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Freight Scaling
-                                    </span>
-                                </div>
-                                <div class="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-white">
-                                    <span class="text-[11px] font-semibold text-primary-300 flex items-center gap-1.5 drop-shadow">
-                                        <i class="fa-solid fa-truck-fast text-[10px]"></i> Eastern Maritime Access
-                                    </span>
-                                    <span class="text-[10px] text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
-                                        <i class="fa-solid fa-satellite-dish text-[9px] text-primary-400 mr-1"></i> Live
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="p-5">
-                                <h3 class="font-bold text-slate-900 text-lg mb-0.5 group-hover:text-primary-600 transition-colors">
-                                    Berbera – Dire Dawa
-                                </h3>
-                                <p class="text-xs text-slate-500 mb-4 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-location-dot text-primary-500"></i> Tog Wajaale Transit Point
-                                </p>
-
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> Transit Duration:</span>
-                                        <span class="font-bold text-slate-800">30–36 Hours</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-slate-400"></i> Customs Clearance:</span>
-                                        <span class="font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">5.5 Hours Avg</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-road text-slate-400"></i> Road Upgrades:</span>
-                                        <span class="font-semibold text-slate-800">Section 2 Paving Active</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="berbera">
-                                <span>View Corridor Advisory</span>
-                                <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Emergency Corridor Hotline Banner -->              <div class="mt-8 rounded-lg p-6 text-white flex flex-col md:flex-row items-center justify-between gap-5 shadow-xl relative overflow-hidden">
-                    <div class="absolute inset-0 z-0 bg-[url('/images/hero_expressway.jpg')] bg-cover bg-center animate-slow-motion"></div>
-                    <div class="absolute inset-0 z-0 bg-black/50"></div>
-                    <div class="flex items-center gap-4 text-center md:text-left relative z-10">
-                        <div class="w-12 h-12 rounded-lg bg-white/20 text-white flex items-center justify-center text-xl shrink-0 shadow-inner">
-                            <i class="fa-solid fa-truck-ramp-box"></i>
-                        </div>
-                        <div>
-                            <span class="font-bold text-base sm:text-lg block tracking-tight">ETEF National 24/7 Corridor Emergency & Breakdown Helpline</span>
-                            <p class="text-xs sm:text-sm text-blue-100 mt-0.5">Encountering arbitrary delays, security issues, or breakdown between Modjo, Galafi, or Moyale?</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 shrink-0 relative z-10 w-full sm:w-auto justify-center">
-                        <a href="tel:+251114717787" class="px-5 py-2.5 bg-white text-primary-700 hover:bg-slate-100 rounded-lg text-xs sm:text-sm font-bold flex items-center gap-2 shadow-md transition-all">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+251 11 4717787</span>
-                        </a>
-                        <button id="btn-corridor-incident-report" class="px-4 py-2.5 bg-primary-700 hover:bg-primary-800 text-white border border-white/30 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-2">
-                            <i class="fa-solid fa-triangle-exclamation text-white"></i>
-                            <span>Report Road Incident</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- INSTITUTIONAL CHARTER, MISSION & VISION (Pure English) -->
         <section class="py-20 bg-slate-50 border-b border-slate-200">
@@ -472,7 +200,7 @@ const homeEng = `
                         Sector Representation
                     </span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-                        Comprehensive Transport Sector Coverage
+                        <span id="home-coverage-heading">Comprehensive Transport Sub-Sector Coverage</span>
                     </h2>
                     <p class="text-slate-600 text-sm mt-3">
                         From heavy cross-border freight convoys to nationwide inter-city passenger transit and multimodal dry port logistics terminals.
@@ -686,6 +414,8 @@ const homeEng = `
                 </div>
             </div>
         </section>
+        <!-- Sections hydrated by the authenticated publishing CMS -->
+        <div id="homepage-cms-sections"></div>
     </main>
 
     ${renderFooter("ENG")}
@@ -720,11 +450,18 @@ const homeAm = `
 
             <!-- Foreground Content -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
-                <!-- Badge -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/15 hover:bg-white/25 text-white border border-white/25 shadow-lg backdrop-blur-md mb-6 transition-all">
-                    <i class="fa-solid fa-shield-halved text-primary-300 text-xs"></i>
-                    <span>ይፋዊ የትራንስፖርት አሠሪዎች ፌዴሬሽን</span>
-                </div>
+                <!-- Fancy Promotional Banner -->
+                <a href="#promotion" class="promo-modal-trigger inline-flex items-center p-1 sm:p-1.5 pr-4 rounded-full bg-slate-900/80 border border-amber-400/50 shadow-[0_0_25px_rgba(245,158,11,0.25)] hover:shadow-[0_0_35px_rgba(245,158,11,0.4)] backdrop-blur-xl mb-6 transition-all group cursor-pointer hover:border-amber-300 transform hover:-translate-y-0.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-md">
+                        <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                        <i class="fa-solid fa-bullhorn text-[10px]"></i>
+                        <span>ልዩ ማስተዋወቂያ 2026</span>
+                    </span>
+                    <span class="mx-3 text-xs sm:text-sm font-semibold text-white/95 group-hover:text-amber-200 transition-colors flex items-center gap-2">
+                        <span>ብሔራዊ የንግድ ትራንስፖርት ጉባኤና የፍሊት ኤክስፖ • ምዝገባ ተጀመረ</span>
+                        <i class="fa-solid fa-arrow-right text-[11px] text-amber-400 group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                </a>
 
                 <!-- Headline -->
                 <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.12] max-w-4xl mx-auto mb-6 drop-shadow-md">
@@ -793,286 +530,6 @@ const homeAm = `
             </div>
         </section>
 
-        <!-- LIVE TRADE CORRIDORS & PORT CLEARANCE TRACKER -->
-        <section class="py-12 bg-white border-b border-slate-200 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header with Live Pulsing Badge -->
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-primary-50 text-primary-700 border border-primary-200 mb-2">
-                            <span class="w-2 h-2 rounded-full bg-primary-600 animate-pulse"></span>
-                            <span>ብሔራዊ የሎጂስቲክስ ክትትል • የኮሪደር ወቅታዊ ሁኔታ</span>
-                        </div>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                            ስትራቴጂካዊ የንግድ ኮሪደሮችና የጉምሩክ ክሊራንስ ሁኔታ
-                        </h2>
-                        <p class="text-sm text-slate-600 mt-1">
-                            በኢትዮጵያ ዋና ዋና የኢኮኖሚ የንግድ መስመሮች ላይ ያሉ የትራንዚት እንቅስቃሴ፣ የፍተሻ ጣቢያዎችና የወደብ ክሊራንስ ፈጣን መረጃዎች።
-                        </p>
-                    </div>
-                    <div class="text-xs text-slate-500 flex items-center gap-2">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        <span>የተሻሻለው፡ ዛሬ 08:30 • ምንጭ፡ የኢትራአፌ የጭነት ሎጂስቲክስ ዳይሬክቶሬት</span>
-                    </div>
-                </div>
-
-                <!-- 4 Corridors Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Corridor 1: Ethio-Djibouti Corridor -->
-                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
-                        <div>
-                            <div class="relative h-44 overflow-hidden bg-slate-900">
-                                <img src="/images/corridor_djibouti.jpg" alt="ጅቡቲ – አዲስ አበባ የፍጥነት መንገድ ኮሪደር" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
-                                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-slate-900/85 text-white backdrop-blur-md uppercase tracking-wider border border-white/20 shadow-sm">
-                                        ኮሪደር 01
-                                    </span>
-                                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-primary-600 text-white backdrop-blur-md flex items-center gap-1.5 shadow-sm">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> የተረጋጋ ፍሰት
-                                    </span>
-                                </div>
-                                <div class="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-white">
-                                    <span class="text-[11px] font-semibold text-primary-300 flex items-center gap-1.5 drop-shadow">
-                                        <i class="fa-solid fa-route text-[10px]"></i> ዋነኛ የባህር ንግድ መስመር
-                                    </span>
-                                    <span class="text-[10px] text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
-                                        <i class="fa-solid fa-satellite-dish text-[9px] text-primary-400 mr-1"></i> ቀጥታ
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="p-5">
-                                <h3 class="font-bold text-slate-900 text-lg mb-0.5 group-hover:text-primary-600 transition-colors">
-                                    ጅቡቲ – አዲስ አበባ
-                                </h3>
-                                <p class="text-xs text-slate-500 mb-4 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-location-dot text-primary-500"></i> የገላፊ / ዴወሌ ድንበር ማቋረጫ
-                                </p>
-
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> የትራንዚት ጊዜ፡</span>
-                                        <span class="font-bold text-slate-800">42–48 ሰዓት</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-hourglass-half text-slate-400"></i> የገላፊ ድንበር ሰልፍ፡</span>
-                                        <span class="font-bold text-primary-700 bg-primary-50 px-2 py-0.5 rounded border border-primary-200">ከ4.2 ሰዓት በታች</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-scale-balanced text-slate-400"></i> የሚዛን ጣቢያዎች፡</span>
-                                        <span class="font-semibold text-slate-800">ሁሉም 6ቱ ሚዛኖች ክፍት</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="djibouti">
-                                <span>የኮሪደሩን መረጃ ይመልከቱ</span>
-                                <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Corridor 2: Modjo Multimodal Dry Port -->
-                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
-                        <div>
-                            <div class="relative h-44 overflow-hidden bg-slate-900">
-                                <img src="/images/corridor_modjo.jpg" alt="የሞጆ ደረቅ ወደብ ተርሚናል" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
-                                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-slate-900/85 text-white backdrop-blur-md uppercase tracking-wider border border-white/20 shadow-sm">
-                                        ኮሪደር 02
-                                    </span>
-                                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-primary-600 text-white backdrop-blur-md flex items-center gap-1.5 shadow-sm">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> ወደቡ ክፍት ነው
-                                    </span>
-                                </div>
-                                <div class="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-white">
-                                    <span class="text-[11px] font-semibold text-primary-300 flex items-center gap-1.5 drop-shadow">
-                                        <i class="fa-solid fa-train-subway text-[10px]"></i> የመልቲሞዳል ባቡር ማዕከል
-                                    </span>
-                                    <span class="text-[10px] text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
-                                        <i class="fa-solid fa-satellite-dish text-[9px] text-primary-400 mr-1"></i> ቀጥታ
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="p-5">
-                                <h3 class="font-bold text-slate-900 text-lg mb-0.5 group-hover:text-primary-600 transition-colors">
-                                    የሞጆ መልቲሞዳል ደረቅ ወደብ
-                                </h3>
-                                <p class="text-xs text-slate-500 mb-4 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-location-dot text-primary-500"></i> ማዕከላዊ የገቢ ጭነት ክሊራንስ
-                                </p>
-
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-boxes-stacked text-slate-400"></i> የመያዣ ዕቃዎች ቆይታ፡</span>
-                                        <span class="font-bold text-primary-700 bg-primary-50 px-2 py-0.5 rounded border border-primary-200">3.8 ቀናት (ተፈላጊ ደረጃ)</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-truck-ramp-box text-slate-400"></i> የቀን የጭነት ስምሪት፡</span>
-                                        <span class="font-bold text-slate-800">480+ ከባድ ተሽከርካሪዎች</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-train text-slate-400"></i> የባቡር ስምሪት፡</span>
-                                        <span class="font-semibold text-slate-800">በቀን 3 የጭነት ባቡሮች</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="modjo">
-                                <span>የወደቡን መረጃ ይመልከቱ</span>
-                                <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Corridor 3: Moyale – Lamu Corridor -->
-                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
-                        <div>
-                            <div class="relative h-44 overflow-hidden bg-slate-900">
-                                <img src="/images/corridor_moyale.jpg" alt="የሞያሌ የጋራ ድንበር ጣቢያ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
-                                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-slate-900/85 text-white backdrop-blur-md uppercase tracking-wider border border-white/20 shadow-sm">
-                                        ኮሪደር 03
-                                    </span>
-                                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-primary-600 text-white backdrop-blur-md flex items-center gap-1.5 shadow-sm">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> አገልግሎት ላይ ነው
-                                    </span>
-                                </div>
-                                <div class="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-white">
-                                    <span class="text-[11px] font-semibold text-primary-300 flex items-center gap-1.5 drop-shadow">
-                                        <i class="fa-solid fa-truck-moving text-[10px]"></i> የደቡብ ንግድ በር
-                                    </span>
-                                    <span class="text-[10px] text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
-                                        <i class="fa-solid fa-satellite-dish text-[9px] text-primary-400 mr-1"></i> ቀጥታ
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="p-5">
-                                <h3 class="font-bold text-slate-900 text-lg mb-0.5 group-hover:text-primary-600 transition-colors">
-                                    ሞያሌ – ላሙ (ኬንያ ድንበር)
-                                </h3>
-                                <p class="text-xs text-slate-500 mb-4 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-location-dot text-primary-500"></i> የሞያሌ የተቀናጀ የድንበር ፍተሻ
-                                </p>
-
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> የትራንዚት ጊዜ፡</span>
-                                        <span class="font-bold text-slate-800">55–60 ሰዓት</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-check-double text-slate-400"></i> የድንበር ክሊራንስ፡</span>
-                                        <span class="font-bold text-primary-700 bg-primary-50 px-2 py-0.5 rounded border border-primary-200">ፈጣን አሰራር</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-gas-pump text-slate-400"></i> የነዳጅና የቀንድ ከብት፡</span>
-                                        <span class="font-semibold text-slate-800">የኳራንቲን ፍተሻ ክፍት</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="moyale">
-                                <span>የድንበሩን መረጃ ይመልከቱ</span>
-                                <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Corridor 4: Berbera Port Corridor -->
-                    <div class="group bg-white rounded-lg border border-slate-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm">
-                        <div>
-                            <div class="relative h-44 overflow-hidden bg-slate-900">
-                                <img src="/images/corridor_berbera.jpg" alt="የበርበራ – ድሬዳዋ የንግድ መስመር" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
-                                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-slate-900/85 text-white backdrop-blur-md uppercase tracking-wider border border-white/20 shadow-sm">
-                                        ኮሪደር 04
-                                    </span>
-                                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-900 border border-white/20 text-white backdrop-blur-md flex items-center gap-1.5 shadow-sm">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> የፍሰት ማስተካከያ
-                                    </span>
-                                </div>
-                                <div class="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-white">
-                                    <span class="text-[11px] font-semibold text-primary-300 flex items-center gap-1.5 drop-shadow">
-                                        <i class="fa-solid fa-truck-fast text-[10px]"></i> የምስራቅ የባህር በር አማራጭ
-                                    </span>
-                                    <span class="text-[10px] text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
-                                        <i class="fa-solid fa-satellite-dish text-[9px] text-primary-400 mr-1"></i> ቀጥታ
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="p-5">
-                                <h3 class="font-bold text-slate-900 text-lg mb-0.5 group-hover:text-primary-600 transition-colors">
-                                    በርበራ – ድሬዳዋ
-                                </h3>
-                                <p class="text-xs text-slate-500 mb-4 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-location-dot text-primary-500"></i> የቶግ ዋቻሌ የትራንዚት መተላለፊያ
-                                </p>
-
-                                <div class="space-y-2.5 text-xs text-slate-600 bg-slate-50 p-3.5 rounded-lg border border-slate-100">
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-regular fa-clock text-slate-400"></i> የትራንዚት ጊዜ፡</span>
-                                        <span class="font-bold text-slate-800">30–36 ሰዓት</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-slate-400"></i> የጉምሩክ ክሊራንስ፡</span>
-                                        <span class="font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">አማካይ 5.5 ሰዓት</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-500 flex items-center gap-1.5"><i class="fa-solid fa-road text-slate-400"></i> የመንገድ ግንባታ፡</span>
-                                        <span class="font-semibold text-slate-800">ምዕራፍ 2 አስፋልት ስራ</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-5 pt-0">
-                            <button class="corridor-advisory-btn w-full py-2.5 bg-primary-50 hover:bg-primary-600 text-primary-700 hover:text-white border border-primary-200 hover:border-transparent rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm group/btn" data-corridor-id="berbera">
-                                <span>የኮሪደሩን መረጃ ይመልከቱ</span>
-                                <i class="fa-solid fa-arrow-right text-[11px] group-hover/btn:translate-x-1 transition-transform"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Emergency Corridor Hotline Banner -->
-                <div class="mt-8 rounded-lg p-6 text-white flex flex-col md:flex-row items-center justify-between gap-5 shadow-xl relative overflow-hidden">
-                    <div class="absolute inset-0 z-0 bg-[url('/images/hero_expressway.jpg')] bg-cover bg-center animate-slow-motion"></div>
-                    <div class="absolute inset-0 z-0 bg-black/50"></div>
-                    <div class="flex items-center gap-4 text-center md:text-left relative z-10">
-                        <div class="w-12 h-12 rounded-lg bg-white/20 text-white flex items-center justify-center text-xl shrink-0 shadow-inner">
-                            <i class="fa-solid fa-truck-ramp-box"></i>
-                        </div>
-                        <div>
-                            <span class="font-bold text-base sm:text-lg block tracking-tight">የኢትራአፌ የ24/7 የኮሪደር ድንገተኛ አደጋና የመኪና ብልሽት የእርዳታ መስመር</span>
-                            <p class="text-xs sm:text-sm text-blue-100 mt-0.5">በሞጆ፣ ገላፊ ወይም ሞያሌ መስመሮች ላይ ሕገወጥ መስተጓጎል፣ የጸጥታ ችግር ወይም የቴክኒክ ብልሽት ገጥሞዎታል?</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 shrink-0 relative z-10 w-full sm:w-auto justify-center">
-                        <a href="tel:+251114717787" class="px-5 py-2.5 bg-white text-primary-700 hover:bg-slate-100 rounded-lg text-xs sm:text-sm font-bold flex items-center gap-2 shadow-md transition-all">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+251 11 4717787</span>
-                        </a>
-                        <button id="btn-corridor-incident-report" class="px-4 py-2.5 bg-primary-700 hover:bg-primary-800 text-white border border-white/30 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-2">
-                            <i class="fa-solid fa-triangle-exclamation text-white"></i>
-                            <span>የመንገድ ችግር ሪፖርት ያድርጉ</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- INSTITUTIONAL CHARTER, MISSION & VISION (Pure Amharic) -->
         <section class="py-20 bg-slate-50 border-b border-slate-200">
@@ -1378,6 +835,8 @@ const homeAm = `
                 </div>
             </div>
         </section>
+        <!-- Sections hydrated by the authenticated publishing CMS -->
+        <div id="homepage-cms-sections"></div>
     </main>
 
     ${renderFooter("አማ")}
